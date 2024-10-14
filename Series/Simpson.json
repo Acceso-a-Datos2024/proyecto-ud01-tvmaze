@@ -1,0 +1,607 @@
+[
+  {
+    "score": 0.5530255,
+    "show": {
+      "id": 83,
+      "url": "https://www.tvmaze.com/shows/83/the-simpsons",
+      "name": "The Simpsons",
+      "type": "Animation",
+      "language": "English",
+      "genres": [
+        "Comedy",
+        "Family"
+      ],
+      "status": "Running",
+      "runtime": 30,
+      "averageRuntime": 30,
+      "premiered": "1989-12-17",
+      "ended": null,
+      "officialSite": "http://www.fox.com/the-simpsons/full-episodes",
+      "schedule": {
+        "time": "20:00",
+        "days": [
+          "Sunday"
+        ]
+      },
+      "rating": {
+        "average": 8.1
+      },
+      "weight": 100,
+      "network": {
+        "id": 4,
+        "name": "FOX",
+        "country": {
+          "name": "United States",
+          "code": "US",
+          "timezone": "America/New_York"
+        },
+        "officialSite": "https://www.fox.com/"
+      },
+      "webChannel": null,
+      "dvdCountry": null,
+      "externals": {
+        "tvrage": 6190,
+        "thetvdb": 71663,
+        "imdb": "tt0096697"
+      },
+      "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/488/1222067.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/488/1222067.jpg"
+      },
+      "summary": "<p><b>The Simpsons</b> is the longest running scripted show in US television history. It captures the adventures of Homer, Marge, Maggie, Bart and Lisa who are living in a fictional town called Springfield.</p>",
+      "updated": 1728725578,
+      "_links": {
+        "self": {
+          "href": "https://api.tvmaze.com/shows/83"
+        },
+        "previousepisode": {
+          "href": "https://api.tvmaze.com/episodes/2979409",
+          "name": "The Yellow Lotus"
+        },
+        "nextepisode": {
+          "href": "https://api.tvmaze.com/episodes/3013836",
+          "name": "Desperately Seeking Lisa"
+        }
+      }
+    }
+  },
+  {
+    "score": 0.5526485,
+    "show": {
+      "id": 2029,
+      "url": "https://www.tvmaze.com/shows/2029/american-crime-story",
+      "name": "American Crime Story",
+      "type": "Scripted",
+      "language": "English",
+      "genres": [
+        "Drama",
+        "Crime"
+      ],
+      "status": "Running",
+      "runtime": 60,
+      "averageRuntime": 69,
+      "premiered": "2016-02-02",
+      "ended": null,
+      "officialSite": "http://www.fxnetworks.com/shows/american-crime-story",
+      "schedule": {
+        "time": "22:00",
+        "days": [
+          "Tuesday"
+        ]
+      },
+      "rating": {
+        "average": 7.1
+      },
+      "weight": 99,
+      "network": {
+        "id": 13,
+        "name": "FX",
+        "country": {
+          "name": "United States",
+          "code": "US",
+          "timezone": "America/New_York"
+        },
+        "officialSite": null
+      },
+      "webChannel": null,
+      "dvdCountry": null,
+      "externals": {
+        "tvrage": 47016,
+        "thetvdb": 289108,
+        "imdb": "tt2788432"
+      },
+      "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/401/1004505.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/401/1004505.jpg"
+      },
+      "summary": "<p>This anthology series dramatizes historic criminal cases in the U.S.</p>",
+      "updated": 1704795131,
+      "_links": {
+        "self": {
+          "href": "https://api.tvmaze.com/shows/2029"
+        },
+        "previousepisode": {
+          "href": "https://api.tvmaze.com/episodes/2192814",
+          "name": "The Wilderness"
+        }
+      }
+    }
+  },
+  {
+    "score": 0.54282945,
+    "show": {
+      "id": 21986,
+      "url": "https://www.tvmaze.com/shows/21986/oj-made-in-america",
+      "name": "O.J.: Made in America",
+      "type": "Documentary",
+      "language": "English",
+      "genres": [
+        "Crime",
+        "Sports"
+      ],
+      "status": "Ended",
+      "runtime": 90,
+      "averageRuntime": 95,
+      "premiered": "2016-06-11",
+      "ended": "2016-06-18",
+      "officialSite": "http://www.espn.com/30for30/ojsimpsonmadeinamerica/",
+      "schedule": {
+        "time": "21:00",
+        "days": [
+          "Saturday"
+        ]
+      },
+      "rating": {
+        "average": null
+      },
+      "weight": 78,
+      "network": {
+        "id": 39,
+        "name": "ESPN",
+        "country": {
+          "name": "United States",
+          "code": "US",
+          "timezone": "America/New_York"
+        },
+        "officialSite": null
+      },
+      "webChannel": null,
+      "dvdCountry": null,
+      "externals": {
+        "tvrage": null,
+        "thetvdb": 310528,
+        "imdb": "tt5275892"
+      },
+      "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/493/1233408.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/493/1233408.jpg"
+      },
+      "summary": "<p>It is the defining cultural tale of modern America - a saga of race, celebrity, media, violence, and the criminal justice system. And two decades after its unforgettable climax, it continues to fascinate, polarize, and even, yes, develop new chapters.</p><p><b>O.J.</b> revisits - and redefines - it all. The domestic abuse. The police investigation. The white Bronco chase. The trial of the century. The motive, the blood, the glove. The verdict. The aftermath. Drawing upon more than seventy interviews - from longtime friends and colleagues of Simpson to the recognizable protagonists of the murder investigation to observers and commentators with distinct connections to the story - the documentary is an engrossing, compelling, and unforgettable look at a tantalizing saga. Because at the end of what seems like a search for the real truth about O.J. Simpson, what's revealed just as powerfully is a collection of indelible, unshakeable, and haunting truths about America, and about ourselves.</p>",
+      "updated": 1714914691,
+      "_links": {
+        "self": {
+          "href": "https://api.tvmaze.com/shows/21986"
+        },
+        "previousepisode": {
+          "href": "https://api.tvmaze.com/episodes/958938",
+          "name": "Part Five"
+        }
+      }
+    }
+  },
+  {
+    "score": 0.5154937,
+    "show": {
+      "id": 35131,
+      "url": "https://www.tvmaze.com/shows/35131/the-ashlee-simpson-show",
+      "name": "The Ashlee Simpson Show",
+      "type": "Reality",
+      "language": "English",
+      "genres": [],
+      "status": "Ended",
+      "runtime": 30,
+      "averageRuntime": 30,
+      "premiered": "2004-06-16",
+      "ended": "2005-03-30",
+      "officialSite": "https://web.archive.org/web/20060704200842/http://www.mtv.com/onair/dyn/ashlee/series.jhtml",
+      "schedule": {
+        "time": "22:30",
+        "days": [
+          "Wednesday"
+        ]
+      },
+      "rating": {
+        "average": null
+      },
+      "weight": 42,
+      "network": {
+        "id": 22,
+        "name": "MTV",
+        "country": {
+          "name": "United States",
+          "code": "US",
+          "timezone": "America/New_York"
+        },
+        "officialSite": null
+      },
+      "webChannel": null,
+      "dvdCountry": null,
+      "externals": {
+        "tvrage": null,
+        "thetvdb": 74101,
+        "imdb": "tt0414719"
+      },
+      "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/147/368134.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/147/368134.jpg"
+      },
+      "summary": "<p>Already a phenomenon at only 19 years old, Ashlee Simpson is ready to take it to the next level. We'll follow Ashlee every step of the way, as she signs her first record deal, writes her songs, auditions her band and records her very first album. Aside from the process of making her album, Ashlee lets us in on her life, and her various relationships with friends, family and of course, boys. We see the break-up with her boyfriend and then watch, as it becomes a song on her album. From band practice to label meetings, to album cover shoots and everything in between, Ashlee gives us full access to the entire process, taking us through to the album release and the band's first time ever on stage together.</p>",
+      "updated": 1702737627,
+      "_links": {
+        "self": {
+          "href": "https://api.tvmaze.com/shows/35131"
+        },
+        "previousepisode": {
+          "href": "https://api.tvmaze.com/episodes/1418533",
+          "name": "The Show Must Go On..."
+        }
+      }
+    }
+  },
+  {
+    "score": 0.45070365,
+    "show": {
+      "id": 36259,
+      "url": "https://www.tvmaze.com/shows/36259/edward-and-mrs-simpson",
+      "name": "Edward and Mrs. Simpson",
+      "type": "Scripted",
+      "language": "English",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "status": "Ended",
+      "runtime": 60,
+      "averageRuntime": 60,
+      "premiered": "1978-11-08",
+      "ended": "1978-12-20",
+      "officialSite": null,
+      "schedule": {
+        "time": "21:00",
+        "days": [
+          "Wednesday"
+        ]
+      },
+      "rating": {
+        "average": null
+      },
+      "weight": 15,
+      "network": {
+        "id": 35,
+        "name": "ITV1",
+        "country": {
+          "name": "United Kingdom",
+          "code": "GB",
+          "timezone": "Europe/London"
+        },
+        "officialSite": "https://www.itv.com/"
+      },
+      "webChannel": null,
+      "dvdCountry": null,
+      "externals": {
+        "tvrage": null,
+        "thetvdb": 70982,
+        "imdb": "tt0080212"
+      },
+      "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/153/382901.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/153/382901.jpg"
+      },
+      "summary": "<p>While still the Prince of Wales, the future Edward VIII meets the married American socialite, Wallis Simpson. Their relationship causes furor in the palace and in parliament, especially when King George V dies, Mrs. Simpson gets divorced, and King Edward announces his intentions to marry her.</p>",
+      "updated": 1704793312,
+      "_links": {
+        "self": {
+          "href": "https://api.tvmaze.com/shows/36259"
+        },
+        "previousepisode": {
+          "href": "https://api.tvmaze.com/episodes/1451054",
+          "name": "The Abdication"
+        }
+      }
+    }
+  },
+  {
+    "score": 0.44506517,
+    "show": {
+      "id": 77492,
+      "url": "https://www.tvmaze.com/shows/77492/the-life-murder-of-nicole-brown-simpson",
+      "name": "The Life & Murder of Nicole Brown Simpson",
+      "type": "Documentary",
+      "language": "English",
+      "genres": [
+        "Crime"
+      ],
+      "status": "Ended",
+      "runtime": 60,
+      "averageRuntime": 60,
+      "premiered": "2024-06-01",
+      "ended": "2024-06-02",
+      "officialSite": "https://www.mylifetime.com/shows/the-life-and-murder-of-nicole-brown-simpson",
+      "schedule": {
+        "time": "20:00",
+        "days": [
+          "Saturday",
+          "Sunday"
+        ]
+      },
+      "rating": {
+        "average": null
+      },
+      "weight": 82,
+      "network": {
+        "id": 18,
+        "name": "Lifetime",
+        "country": {
+          "name": "United States",
+          "code": "US",
+          "timezone": "America/New_York"
+        },
+        "officialSite": null
+      },
+      "webChannel": null,
+      "dvdCountry": null,
+      "externals": {
+        "tvrage": null,
+        "thetvdb": 449710,
+        "imdb": "tt32267612"
+      },
+      "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/521/1304575.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/521/1304575.jpg"
+      },
+      "summary": "<p>Nicole Brown Simpson's sisters and closest friends break their silence about her murder and O.J. Simpson's controversial trial, aiming to shed light on the truth.</p>",
+      "updated": 1718424726,
+      "_links": {
+        "self": {
+          "href": "https://api.tvmaze.com/shows/77492"
+        },
+        "previousepisode": {
+          "href": "https://api.tvmaze.com/episodes/2900276",
+          "name": "Episode 4"
+        }
+      }
+    }
+  },
+  {
+    "score": 0.42423016,
+    "show": {
+      "id": 60659,
+      "url": "https://www.tvmaze.com/shows/60659/unspun-world-with-john-simpson",
+      "name": "Unspun World with John Simpson",
+      "type": "News",
+      "language": "English",
+      "genres": [],
+      "status": "Running",
+      "runtime": 25,
+      "averageRuntime": 25,
+      "premiered": "2022-02-23",
+      "ended": null,
+      "officialSite": "https://www.bbc.co.uk/programmes/m0014tb0",
+      "schedule": {
+        "time": "",
+        "days": [
+          "Wednesday"
+        ]
+      },
+      "rating": {
+        "average": null
+      },
+      "weight": 18,
+      "network": {
+        "id": 37,
+        "name": "BBC Two",
+        "country": {
+          "name": "United Kingdom",
+          "code": "GB",
+          "timezone": "Europe/London"
+        },
+        "officialSite": "https://www.bbc.co.uk/bbctwo"
+      },
+      "webChannel": null,
+      "dvdCountry": null,
+      "externals": {
+        "tvrage": null,
+        "thetvdb": null,
+        "imdb": null
+      },
+      "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/397/993068.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/397/993068.jpg"
+      },
+      "summary": "<p>Unspun World provides an unvarnished version of the week's major global news stories - reliable, honest and essential viewing with the BBC's world affairs editor John Simpson.</p>",
+      "updated": 1717069334,
+      "_links": {
+        "self": {
+          "href": "https://api.tvmaze.com/shows/60659"
+        },
+        "previousepisode": {
+          "href": "https://api.tvmaze.com/episodes/2895078",
+          "name": "Unspun world"
+        }
+      }
+    }
+  },
+  {
+    "score": 0.3797321,
+    "show": {
+      "id": 16642,
+      "url": "https://www.tvmaze.com/shows/16642/burmas-secret-jungle-war-with-joe-simpson",
+      "name": "Burma's Secret Jungle War with Joe Simpson",
+      "type": "Documentary",
+      "language": "English",
+      "genres": [],
+      "status": "Ended",
+      "runtime": 60,
+      "averageRuntime": 60,
+      "premiered": "2016-05-08",
+      "ended": "2016-05-15",
+      "officialSite": "http://www.bbc.co.uk/programmes/b07bkdp6",
+      "schedule": {
+        "time": "20:00",
+        "days": [
+          "Sunday"
+        ]
+      },
+      "rating": {
+        "average": null
+      },
+      "weight": 19,
+      "network": {
+        "id": 37,
+        "name": "BBC Two",
+        "country": {
+          "name": "United Kingdom",
+          "code": "GB",
+          "timezone": "Europe/London"
+        },
+        "officialSite": "https://www.bbc.co.uk/bbctwo"
+      },
+      "webChannel": null,
+      "dvdCountry": null,
+      "externals": {
+        "tvrage": null,
+        "thetvdb": 311263,
+        "imdb": null
+      },
+      "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/69/174888.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/69/174888.jpg"
+      },
+      "summary": "<p>In this two-part series renowned mountaineer Joe Simpson, who told his story of near-death in the Andes in Touching the Void, travels to Myanmar (formerly Burma) to retrace the steps of his father Ian, who served with the Chindits - special forces who fought a guerilla war behind Japanese lines in 1944.</p><p>Accompanied by explorer Ed Stafford, the first man to walk the length of the Amazon, and using the secret diary his father wrote, Joe experiences the challenging jungle conditions which made this one of the toughest campaigns of WWII.</p><p>Half-way through his journey events in modern-day Myanmar threaten to derail Joe's plans. Granted special permission to travel in a part of Myanmar closed to tourists, Joe suddenly finds that the first free elections since 1990 are triggering hostilities that could thwart his 30 year-old dream of re-connecting with his father's experiences - and give him unexpected insights into modern life in a little-known country.</p>",
+      "updated": 1574010980,
+      "_links": {
+        "self": {
+          "href": "https://api.tvmaze.com/shows/16642"
+        },
+        "previousepisode": {
+          "href": "https://api.tvmaze.com/episodes/774085",
+          "name": "Episode 2"
+        }
+      }
+    }
+  },
+  {
+    "score": 0.3381255,
+    "show": {
+      "id": 56220,
+      "url": "https://www.tvmaze.com/shows/56220/the-simpsons-shorts",
+      "name": "The Simpsons Shorts",
+      "type": "Animation",
+      "language": "English",
+      "genres": [],
+      "status": "Running",
+      "runtime": null,
+      "averageRuntime": 4,
+      "premiered": "2021-05-04",
+      "ended": null,
+      "officialSite": "https://www.disneyplus.com/en-gb/series/the-simpsons/3ZoBZ52QHb4x",
+      "schedule": {
+        "time": "",
+        "days": []
+      },
+      "rating": {
+        "average": 7.7
+      },
+      "weight": 88,
+      "network": null,
+      "webChannel": {
+        "id": 287,
+        "name": "Disney+",
+        "country": null,
+        "officialSite": "https://www.disneyplus.com/"
+      },
+      "dvdCountry": null,
+      "externals": {
+        "tvrage": null,
+        "thetvdb": null,
+        "imdb": null
+      },
+      "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/517/1293638.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/517/1293638.jpg"
+      },
+      "summary": "<p>A series featuring characters from <b>The Simpsons</b> in brand new short films.</p>",
+      "updated": 1715549378,
+      "_links": {
+        "self": {
+          "href": "https://api.tvmaze.com/shows/56220"
+        },
+        "previousepisode": {
+          "href": "https://api.tvmaze.com/episodes/2847917",
+          "name": "May the 12th be with You, A Disney+ Mother's Day"
+        }
+      }
+    }
+  },
+  {
+    "score": 0.2983163,
+    "show": {
+      "id": 1499,
+      "url": "https://www.tvmaze.com/shows/1499/simon-simon",
+      "name": "Simon & Simon",
+      "type": "Scripted",
+      "language": "English",
+      "genres": [
+        "Drama"
+      ],
+      "status": "Ended",
+      "runtime": 60,
+      "averageRuntime": 60,
+      "premiered": "1981-11-24",
+      "ended": "1989-03-02",
+      "officialSite": null,
+      "schedule": {
+        "time": "21:00",
+        "days": [
+          "Thursday"
+        ]
+      },
+      "rating": {
+        "average": 7.6
+      },
+      "weight": 93,
+      "network": {
+        "id": 2,
+        "name": "CBS",
+        "country": {
+          "name": "United States",
+          "code": "US",
+          "timezone": "America/New_York"
+        },
+        "officialSite": "https://www.cbs.com/"
+      },
+      "webChannel": null,
+      "dvdCountry": null,
+      "externals": {
+        "tvrage": 5203,
+        "thetvdb": 77244,
+        "imdb": "tt0081930"
+      },
+      "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/8/21222.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/8/21222.jpg"
+      },
+      "summary": "<p>Rick and AJ Simon are two brothers working as private investigators in San Diego, California. They have different ideas on how to solve problems: Rick more laid back while AJ is more business-like and thier cases take them all over California as well as Hawai'i and France. They are more than brothers, they are the best of friends.</p>",
+      "updated": 1631290529,
+      "_links": {
+        "self": {
+          "href": "https://api.tvmaze.com/shows/1499"
+        },
+        "previousepisode": {
+          "href": "https://api.tvmaze.com/episodes/135245",
+          "name": "Simon Says 'Goodbye'"
+        }
+      }
+    }
+  }
+]
