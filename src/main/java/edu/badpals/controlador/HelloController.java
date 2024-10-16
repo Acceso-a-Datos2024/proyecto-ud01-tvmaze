@@ -1,4 +1,4 @@
-package edu.badpals.demo;
+package edu.badpals.controlador;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

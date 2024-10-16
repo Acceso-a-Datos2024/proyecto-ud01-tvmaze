@@ -1,4 +1,4 @@
-package edu.badpals.demo;
+package edu.badpals.controlador;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
