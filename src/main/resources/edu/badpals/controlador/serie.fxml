@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button layoutX="-296.0" layoutY="-173.0" mnemonicParsing="false" text="Button" />
+      <Button layoutX="1256.0" layoutY="690.0" mnemonicParsing="false" text="VER EPISODIOS">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="1256.0" layoutY="757.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="163.0" text="VER CAST">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="295.0" fitWidth="210.0" layoutX="1128.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="163.0" layoutY="75.0" prefHeight="141.0" prefWidth="518.0" text="JUEGO DE TRONOS">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+      <Label layoutX="135.0" layoutY="247.0" prefHeight="60.0" prefWidth="163.0" text="TYPE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="135.0" layoutY="307.0" prefHeight="60.0" prefWidth="163.0" text="LANGUAGE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="135.0" layoutY="367.0" prefHeight="60.0" prefWidth="163.0" text="GENRES">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="135.0" layoutY="420.0" prefHeight="60.0" prefWidth="163.0" text="STATUS">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="135.0" layoutY="480.0" prefHeight="60.0" prefWidth="163.0" text="PREMIERED">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="135.0" layoutY="540.0" prefHeight="60.0" prefWidth="163.0" text="RATING">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="135.0" layoutY="600.0" prefHeight="60.0" prefWidth="163.0" text="SCHEDULE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="259.0" layoutY="247.0" prefHeight="60.0" prefWidth="163.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="259.0" layoutY="307.0" prefHeight="60.0" prefWidth="163.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="259.0" layoutY="367.0" prefHeight="60.0" prefWidth="428.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="259.0" layoutY="420.0" prefHeight="60.0" prefWidth="163.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="259.0" layoutY="480.0" prefHeight="60.0" prefWidth="163.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="259.0" layoutY="540.0" prefHeight="60.0" prefWidth="163.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="259.0" layoutY="600.0" prefHeight="60.0" prefWidth="163.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
