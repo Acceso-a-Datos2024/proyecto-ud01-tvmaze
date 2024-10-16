@@ -12,7 +12,7 @@
       <ScrollPane fx:id="ListViewEpisodios" accessibleRole="LIST_VIEW" layoutX="35.0" layoutY="229.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-border-color: black; -fx-border-radius: 10px; -fx-border-width: 1.5px;" />
       <Button fx:id="btnVolverMenu" alignment="CENTER" contentDisplay="CENTER" layoutX="1437.0" layoutY="849.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="111.0" style="-fx-background-color: #9f9f9f; -fx-text-fill: black; -fx-border-color: black; -fx-border-width: 1px; -fx-border-radius: 5px; -fx-background-radius: 5px;" text="Volver al menú" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS">
          <font>
-            <Font name="System Italic" size="6.0" />
+            <Font name="System Italic" size="14.0" />
          </font>
       </Button>
       <Label fx:id="lblEpisodio" alignment="CENTER" layoutX="35.0" layoutY="14.0" prefHeight="96.0" prefWidth="405.0" style="-fx-background-color: #95a7be;" text="EPISODIOS" textAlignment="CENTER">
