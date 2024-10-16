@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:id="panCast" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.badpals.controlador.HelloController">
+<Pane fx:id="panCast" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.badpals.controlador.LinkPaginasController">
     <children>
         <ScrollPane fx:id="ListViewCast" accessibleRole="LIST_VIEW" layoutX="35.0" layoutY="229.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-border-color: black; -fx-border-radius: 10px; -fx-border-width: 1.5px;" />
         <Button fx:id="btnVolverMenuCast" alignment="CENTER" contentDisplay="CENTER" layoutX="1414.0" layoutY="836.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="111.0" style="-fx-background-color: #9f9f9f; -fx-text-fill: black; -fx-border-color: black; -fx-border-width: 1px; -fx-border-radius: 5px; -fx-background-radius: 5px;" text="Volver al menú" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS">

@@ -5,4 +5,6 @@ module edu.badpals.controlador {
 
     opens edu.badpals.controlador to javafx.fxml;
     exports edu.badpals.controlador;
+    exports edu.badpals;
+    opens edu.badpals to javafx.fxml;
 }
