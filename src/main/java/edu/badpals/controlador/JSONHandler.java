@@ -9,6 +9,7 @@ import edu.badpals.modelo.Image;
 import edu.badpals.modelo.Rating;
 import edu.badpals.modelo.Schedule;
 import edu.badpals.modelo.Serie;
+import edu.badpals.modelo.Episodio;
 import org.w3c.dom.Element;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
@@ -25,6 +26,7 @@ import java.io.File;
 import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Arrays;
 
 public class JSONHandler {
 
@@ -190,4 +192,85 @@ public class JSONHandler {
         }
         return new Serie();
     }
+
+    public List<Episodio> JSONtoEpisodios(String json) {
+        try {
+            if (json != null) {
+                ObjectMapper objectMapper = new ObjectMapper();
+                List<Episodio> episodios = Arrays.asList(objectMapper.readValue(json, Episodio[].class));
+                System.out.println("Episodios convertidos: " + episodios);
+                return episodios;
+            }
+        } catch (JsonProcessingException e) {
+            System.out.println(e.getMessage());
+        }
+        return new ArrayList<>();
+    }
+
+    public Document episodiosToXML(List<Episodio> episodios) throws ParserConfigurationException {
+        DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
+        Document doc = docBuilder.newDocument();
+
+        Element rootElement = doc.createElement("episodios");
+        doc.appendChild(rootElement);
+
+        for (Episodio episodio : episodios) {
+            Element episodioElement = doc.createElement("episodio");
+            rootElement.appendChild(episodioElement);
+
+            Element season = doc.createElement("season");
+            season.appendChild(doc.createTextNode(String.valueOf(episodio.getSeason())));
+            episodioElement.appendChild(season);
+
+            Element number = doc.createElement("number");
+            number.appendChild(doc.createTextNode(String.valueOf(episodio.getNumber())));
+            episodioElement.appendChild(number);
+
+            Element name = doc.createElement("name");
+            name.appendChild(doc.createTextNode(episodio.getName()));
+            episodioElement.appendChild(name);
+        }
+        return doc;
+    }
+
+    public List<Episodio> fromXMLtoEpisodios(File xmlFile) {
+        try {
+            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder builder = factory.newDocumentBuilder();
+            Document doc = builder.parse(xmlFile);
+            doc.getDocumentElement().normalize();
+
+            NodeList episodioNodes = doc.getElementsByTagName("episodio");
+            List<Episodio> episodios = new ArrayList<>();
+
+            for (int i = 0; i < episodioNodes.getLength(); i++) {
+                Element episodioElement = (Element) episodioNodes.item(i);
+                Episodio episodio = new Episodio();
+
+                episodio.setSeason(Integer.parseInt(getTagValue("season", episodioElement)));
+                episodio.setNumber(Integer.parseInt(getTagValue("number", episodioElement)));
+                episodio.setName(getTagValue("name", episodioElement));
+
+                episodios.add(episodio);
+            }
+
+            return episodios;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ArrayList<>();
+        }
+    }
+    public void saveXMLToFile(Document xmlDocument, File xmlFile) {
+        try {
+            TransformerFactory transformerFactory = TransformerFactory.newInstance();
+            Transformer transformer = transformerFactory.newTransformer();
+            DOMSource source = new DOMSource(xmlDocument);
+            StreamResult result = new StreamResult(xmlFile);
+            transformer.transform(source, result);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 }

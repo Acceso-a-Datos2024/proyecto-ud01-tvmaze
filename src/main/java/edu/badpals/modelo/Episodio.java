@@ -1,18 +1,9 @@
 package edu.badpals.modelo;
 
 public class Episodio {
-    private String name;
     private int season;
     private int number;
-
-    // Getters y setters
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
+    private String name;
 
     public int getSeason() {
         return season;
@@ -30,4 +21,11 @@ public class Episodio {
         this.number = number;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
