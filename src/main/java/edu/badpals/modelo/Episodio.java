@@ -1,5 +1,8 @@
 package edu.badpals.modelo;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Episodio {
     private int season;
     private int number;
