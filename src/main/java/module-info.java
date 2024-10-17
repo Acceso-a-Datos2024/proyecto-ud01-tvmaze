@@ -8,7 +8,7 @@ module edu.badpals.controlador {
     requires java.xml;
     requires com.fasterxml.jackson.dataformat.xml;
 
-
+    opens edu.badpals.modelo to com.fasterxml.jackson.databind;
     opens edu.badpals.controlador to javafx.fxml;
     exports edu.badpals.controlador;
     exports edu.badpals;

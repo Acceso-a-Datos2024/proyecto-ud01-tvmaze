@@ -1,15 +1,13 @@
 package edu.badpals.controlador;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
-import edu.badpals.modelo.Image;
-import edu.badpals.modelo.Rating;
-import edu.badpals.modelo.Schedule;
-import edu.badpals.modelo.Serie;
-import edu.badpals.modelo.Episodio;
+import edu.badpals.modelo.*;
 import org.w3c.dom.Element;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
@@ -23,6 +21,7 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.File;
+import java.io.IOException;
 import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.List;
@@ -179,20 +178,6 @@ public class JSONHandler {
         return null;
     }
 
-    public static Serie cargarSerie() {
-        try{
-            XmlMapper xmlMapper = new XmlMapper();
-            xmlMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-            xmlMapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
-            return xmlMapper.readValue(new File("data/Serie.xml"), Serie.class);
-
-        }
-        catch (Exception e){
-            System.out.println(e.getMessage());
-        }
-        return new Serie();
-    }
-
     public List<Episodio> JSONtoEpisodios(String json) {
         try {
             if (json != null) {
@@ -233,33 +218,51 @@ public class JSONHandler {
         return doc;
     }
 
-    public List<Episodio> fromXMLtoEpisodios(File xmlFile) {
-        try {
-            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-            DocumentBuilder builder = factory.newDocumentBuilder();
-            Document doc = builder.parse(xmlFile);
-            doc.getDocumentElement().normalize();
-
-            NodeList episodioNodes = doc.getElementsByTagName("episodio");
-            List<Episodio> episodios = new ArrayList<>();
-
-            for (int i = 0; i < episodioNodes.getLength(); i++) {
-                Element episodioElement = (Element) episodioNodes.item(i);
-                Episodio episodio = new Episodio();
-
-                episodio.setSeason(Integer.parseInt(getTagValue("season", episodioElement)));
-                episodio.setNumber(Integer.parseInt(getTagValue("number", episodioElement)));
-                episodio.setName(getTagValue("name", episodioElement));
-
-                episodios.add(episodio);
-            }
-
-            return episodios;
-        } catch (Exception e) {
-            e.printStackTrace();
-            return new ArrayList<>();
+    public Document actoresToXML(List<String> actores) throws ParserConfigurationException {
+        DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
+        Document doc = docBuilder.newDocument();
+        Element rootElement = doc.createElement("actores");
+        doc.appendChild(rootElement);
+        for (String actorData : actores) {
+            String[] datos = actorData.split(", Personaje: ");
+            String actorName = datos[0].replace("Actor: ", "").trim();
+            String characterName = datos.length > 1 ? datos[1].trim() : "Desconocido";
+            Element actorElement = doc.createElement("actor");
+            Element nombreElement = doc.createElement("nombre");
+            nombreElement.appendChild(doc.createTextNode(actorName));
+            actorElement.appendChild(nombreElement);
+            Element personajeElement = doc.createElement("personaje");
+            personajeElement.appendChild(doc.createTextNode(characterName));
+            actorElement.appendChild(personajeElement);
+            rootElement.appendChild(actorElement);
         }
+
+        return doc;
     }
+
+
+    public List<String> JSONtoActores(String json) {
+        List<String> nombres = new ArrayList<>();
+        try {
+            if (json != null) {
+                ObjectMapper objectMapper = new ObjectMapper();
+                /* Como la clase Actores coincide en estructura con el json,podemos leer el json y serializarlo a un
+                * array de objetos Actores*/
+                Actores[] actoresArray = objectMapper.readValue(json, Actores[].class);
+                for (Actores actor : actoresArray) {
+                    String actorName = actor.getPerson().getName();
+                    String characterName = actor.getCharacter().getName();
+                    nombres.add("Actor: " + actorName + ", Personaje: " + characterName);
+                }
+            }
+        } catch (JsonProcessingException e) {
+            System.out.println("Error al procesar el JSON: " + e.getMessage());
+        }
+        return nombres;
+    }
+
+
 
 
 
