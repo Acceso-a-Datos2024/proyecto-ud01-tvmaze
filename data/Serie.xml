@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <serie>
-    <id>139</id>
-    <name>Girls</name>
+    <id>76501</id>
+    <name>Geek Girl</name>
     <type>Scripted</type>
     <language>English</language>
     <genres>
         <genre>Drama</genre>
+        <genre>Comedy</genre>
         <genre>Romance</genre>
     </genres>
-    <status>Ended</status>
-    <premiered>2012-04-15</premiered>
-    <rating>6.4</rating>
+    <status>To Be Determined</status>
+    <premiered>2024-05-30</premiered>
+    <rating>7.9</rating>
     <schedule>
-        <time>22:00</time>
-        <days>
-            <day>Sunday</day>
-        </days>
+        <time/>
+        <days/>
     </schedule>
-    <image>https://static.tvmaze.com/uploads/images/medium_portrait/31/78286.jpg</image>
+    <image>https://static.tvmaze.com/uploads/images/medium_portrait/521/1303825.jpg</image>
 </serie>

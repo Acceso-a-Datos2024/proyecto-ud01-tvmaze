@@ -17,6 +17,11 @@ import javafx.stage.Stage;
 import org.w3c.dom.Document;
 
 
+import javax.xml.transform.OutputKeys;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -62,22 +67,12 @@ public class EpisodiosController implements Initializable {
 
     private void cargarEpisodios() {
         try {
-            // Obtener el JSON de episodios desde la conexión
-            String jsonEpisodios = conexion.getEpisodios(serie.getId());
 
+            List<Episodio> episodiosFromXML = jsonHandler.JSONtoEpisodios(conexion.getEpisodios(serie.getId()));
 
-            // Convertir el JSON a una lista de objetos Episodio utilizando el JSONHandler
-            List<Episodio> episodios = jsonHandler.JSONtoEpisodios(jsonEpisodios);
-
-            // Crear un documento XML a partir de la lista de episodios
-            Document xmlEpisodios = jsonHandler.episodiosToXML(episodios);
-
-            // Guardar el XML a un archivo
-            File xmlFile = new File("data/episodios.xml");
-            jsonHandler.saveXMLToFile(xmlEpisodios, xmlFile);
+            saveXML(episodiosFromXML);
 
             // Cargar los episodios desde el archivo XML
-            List<Episodio> episodiosFromXML = jsonHandler.fromXMLtoEpisodios(xmlFile);
 
             // Crear una lista observable para el ListView
             ObservableList<String> episodiosList = FXCollections.observableArrayList();
@@ -106,5 +101,20 @@ public class EpisodiosController implements Initializable {
 
         LinkPaginasController controller = fxmlLoader.getController();
         controller.setCampos();
+    }
+
+    public void saveXML(List<Episodio> episodiosFromXML) {
+        try {
+
+            Document xmlDocument = jsonHandler.episodiosToXML(episodiosFromXML);
+            File xmlFile = new File("data/episodios.xml");
+            Transformer transformer = TransformerFactory.newInstance().newTransformer();
+            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+            DOMSource source = new DOMSource(xmlDocument);
+            StreamResult result = new StreamResult(xmlFile);
+            transformer.transform(source, result);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

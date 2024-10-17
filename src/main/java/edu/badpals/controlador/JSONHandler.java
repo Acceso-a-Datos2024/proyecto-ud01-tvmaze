@@ -260,16 +260,7 @@ public class JSONHandler {
             return new ArrayList<>();
         }
     }
-    public void saveXMLToFile(Document xmlDocument, File xmlFile) {
-        try {
-            TransformerFactory transformerFactory = TransformerFactory.newInstance();
-            Transformer transformer = transformerFactory.newTransformer();
-            DOMSource source = new DOMSource(xmlDocument);
-            StreamResult result = new StreamResult(xmlFile);
-            transformer.transform(source, result);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+
+
 
 }
