@@ -22,4 +22,9 @@ public class Schedule {
     public void setDays(List<String> days) {
         this.days = days;
     }
+
+    @Override
+    public String toString() {
+        return time + " " + days.toString();
+    }
 }

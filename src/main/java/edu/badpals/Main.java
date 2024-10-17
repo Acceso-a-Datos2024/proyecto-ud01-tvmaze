@@ -20,9 +20,6 @@ public class Main extends Application {
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();
-        String jsonSerie = conexion.getSerie("girls");
-
-        System.out.println(jsonHandler.toSerieXML(jsonSerie));
     }
 
     public static void main(String[] args) {

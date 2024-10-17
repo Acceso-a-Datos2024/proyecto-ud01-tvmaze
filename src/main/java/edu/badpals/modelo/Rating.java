@@ -12,5 +12,8 @@ public class Rating {
         this.average = average;
     }
 
-
+    @Override
+    public String toString() {
+        return String.valueOf(average);
+    }
 }

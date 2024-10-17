@@ -1,5 +1,6 @@
 package edu.badpals.controlador;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import edu.badpals.modelo.Schedule;
 import edu.badpals.modelo.Serie;
@@ -43,6 +44,10 @@ public class JSONHandler {
             schedule.addContent(days);
             root.addContent(schedule);
 
+            root.addContent(new Element("image").setText(String.valueOf(serie.getImage())));
+
+
+
             return toXMLString(doc);
         } catch (Exception e) {
             e.printStackTrace();
@@ -54,5 +59,18 @@ public class JSONHandler {
         XMLOutputter xmlOutputter = new XMLOutputter();
         xmlOutputter.setFormat(Format.getPrettyFormat());
         return xmlOutputter.outputString(doc);
+    }
+
+    public Serie toSerie(String json) {
+        try {
+            if (json != null) {
+                ObjectMapper objectMapper = new ObjectMapper();
+                return objectMapper.readValue(json, Serie.class);
+            }
+        } catch (JsonProcessingException e) {
+            System.out.println(e.getMessage());
+        }
+        return new Serie();
+
     }
 }

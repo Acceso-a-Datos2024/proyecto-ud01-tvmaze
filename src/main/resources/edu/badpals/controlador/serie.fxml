@@ -20,7 +20,7 @@
             <Font size="20.0" />
          </font>
       </Button>
-      <ImageView fitHeight="295.0" fitWidth="210.0" layoutX="1128.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgSerie" fitHeight="295.0" fitWidth="210.0" layoutX="1209.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true" />
       <Label fx:id="lblSerie" layoutX="163.0" layoutY="75.0" prefHeight="141.0" prefWidth="250.0" text="ELIGE LA SERIE:">
          <font>
             <Font size="35.0" />
@@ -56,40 +56,45 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <Label fx:id="lblIdiomaResult" layoutX="298.0" layoutY="307.0" prefHeight="60.0" prefWidth="163.0">
+      <Label fx:id="lblIdiomaResult" layoutX="332.0" layoutY="307.0" prefHeight="60.0" prefWidth="163.0">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label fx:id="lblGeneroResult" layoutX="298.0" layoutY="367.0" prefHeight="60.0" prefWidth="428.0">
+      <Label fx:id="lblGeneroResult" layoutX="332.0" layoutY="367.0" prefHeight="60.0" prefWidth="428.0">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label fx:id="lblEstatusResult" layoutX="298.0" layoutY="420.0" prefHeight="60.0" prefWidth="163.0">
+      <Label fx:id="lblEstatusResult" layoutX="332.0" layoutY="420.0" prefHeight="60.0" prefWidth="163.0">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label fx:id="lblFechaInicioResult" layoutX="298.0" layoutY="480.0" prefHeight="60.0" prefWidth="163.0">
+      <Label fx:id="lblFechaInicioResult" layoutX="332.0" layoutY="480.0" prefHeight="60.0" prefWidth="163.0">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label fx:id="lblCalificacionResult" layoutX="298.0" layoutY="540.0" prefHeight="60.0" prefWidth="163.0">
+      <Label fx:id="lblCalificacionResult" layoutX="332.0" layoutY="533.0" prefHeight="60.0" prefWidth="418.0">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label fx:id="lblHorarioResult" layoutX="298.0" layoutY="600.0" prefHeight="60.0" prefWidth="163.0">
+      <Label fx:id="lblHorarioResult" layoutX="332.0" layoutY="600.0" prefHeight="60.0" prefWidth="163.0">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="txtSerie" layoutX="413.0" layoutY="108.0">
+      <TextField fx:id="txtBuscarSerie" layoutX="413.0" layoutY="108.0">
          <font>
             <Font size="35.0" />
          </font>
       </TextField>
+      <Button fx:id="btnBuscarSerie" layoutX="954.0" layoutY="124.0" mnemonicParsing="false" onAction="#buscarSerie" text="BUSCAR">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
    </children>
 </Pane>
