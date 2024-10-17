@@ -1,6 +1,7 @@
 module edu.badpals.controlador {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.net.http;
 
 
     opens edu.badpals.controlador to javafx.fxml;
