@@ -1,5 +1,8 @@
 package edu.badpals.controlador;
 
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.SerializationFeature;
+import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import edu.badpals.modelo.Episodio;
 import edu.badpals.modelo.Serie;
 import javafx.collections.FXCollections;
@@ -36,12 +39,24 @@ public class EpisodiosController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        // Lógica de inicialización si es necesario
+        cargarSerie();
+    }
+
+    private void cargarSerie() {
+        try{
+            XmlMapper xmlMapper = new XmlMapper();
+            xmlMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+            xmlMapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
+            setSerie(xmlMapper.readValue(new File("data/Serie.xml"), Serie.class));
+        }
+        catch (Exception e){
+            System.out.println(e.getMessage());
+        }
     }
 
     public void setSerie(Serie serie) {
         this.serie = serie;
-        lblNameSerieEpisodios.setText(serie.getName()); // Muestra el nombre de la serie
+        lblNameSerieEpisodios.setText(serie.getName().toUpperCase()); // Muestra el nombre de la serie
         cargarEpisodios(); // Cargar episodios al establecer la serie
     }
 
@@ -50,8 +65,6 @@ public class EpisodiosController implements Initializable {
             // Obtener el JSON de episodios desde la conexión
             String jsonEpisodios = conexion.getEpisodios(serie.getId());
 
-            // Imprimir el JSON para depuración
-            System.out.println("JSON de episodios: " + jsonEpisodios);
 
             // Convertir el JSON a una lista de objetos Episodio utilizando el JSONHandler
             List<Episodio> episodios = jsonHandler.JSONtoEpisodios(jsonEpisodios);
@@ -85,13 +98,13 @@ public class EpisodiosController implements Initializable {
 
 
     public void toSerie(ActionEvent actionEvent) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("episodios.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("serie.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1600, 900);
         Stage stage = (Stage) ((javafx.scene.Node) actionEvent.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
 
-        EpisodiosController controller = fxmlLoader.getController();
-        controller.setSerie(this.serie);
+        LinkPaginasController controller = fxmlLoader.getController();
+        controller.setCampos();
     }
 }

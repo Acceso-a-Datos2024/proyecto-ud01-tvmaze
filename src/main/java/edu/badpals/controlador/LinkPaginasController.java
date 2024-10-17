@@ -57,7 +57,7 @@ public class LinkPaginasController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        cargarSerie();
     }
 
     public Serie getSerie() {
@@ -167,7 +167,6 @@ public class LinkPaginasController implements Initializable {
             xmlMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
             xmlMapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
             setSerie(xmlMapper.readValue(new File("data/Serie.xml"), Serie.class));
-            System.out.println(serie);
         }
         catch (Exception e){
             System.out.println(e.getMessage());

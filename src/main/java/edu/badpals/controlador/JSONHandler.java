@@ -198,7 +198,6 @@ public class JSONHandler {
             if (json != null) {
                 ObjectMapper objectMapper = new ObjectMapper();
                 List<Episodio> episodios = Arrays.asList(objectMapper.readValue(json, Episodio[].class));
-                System.out.println("Episodios convertidos: " + episodios);
                 return episodios;
             }
         } catch (JsonProcessingException e) {
