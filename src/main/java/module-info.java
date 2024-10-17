@@ -5,6 +5,8 @@ module edu.badpals.controlador {
     requires org.json;
     requires jdom2;
     requires com.fasterxml.jackson.databind;
+    requires java.xml;
+    requires com.fasterxml.jackson.dataformat.xml;
 
 
     opens edu.badpals.controlador to javafx.fxml;

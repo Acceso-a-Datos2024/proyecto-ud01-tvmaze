@@ -1,11 +1,14 @@
 package edu.badpals.modelo;
 
 
+import java.io.Serializable;
 import java.util.List;
 
 public class Schedule {
     private String time;
     private List<String> days;
+
+    public Schedule(){}
 
     public String getTime() {
         return time;

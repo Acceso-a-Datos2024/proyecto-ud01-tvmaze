@@ -7,7 +7,7 @@ import java.net.URL;
 import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Serie {
+public class Serie{
     private int id;
     private String name;
     private String type;
@@ -18,6 +18,8 @@ public class Serie {
     private Rating rating;
     private Schedule schedule;
     private Image image;
+
+    public Serie(){}
 
     public Image getImage() {
         return image;

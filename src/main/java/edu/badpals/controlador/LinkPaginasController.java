@@ -1,25 +1,30 @@
 package edu.badpals.controlador;
 
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import edu.badpals.modelo.Schedule;
 import edu.badpals.modelo.Serie;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import javafx.stage.Stage;
 
-import java.io.IOException;
+import javax.xml.transform.OutputKeys;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+import java.io.*;
 import java.net.URL;
-import java.util.List;
 import java.util.ResourceBundle;
-import java.util.stream.Collectors;
 
 public class LinkPaginasController implements Initializable {
     private Conexion conexion = new Conexion();
@@ -64,7 +69,9 @@ public class LinkPaginasController implements Initializable {
     }
 
     public void buscarSerie(){
-        this.setSerie(jsonHandler.toSerie(conexion.getSerie(txtBuscarSerie.getText())));
+
+        guardarSerie(jsonHandler.JSONtoSerie(conexion.getSerie(txtBuscarSerie.getText())));
+        cargarSerie();
         if (this.serie == null) {
             showWarning("Serie no encontrada", "No se encontró ninguna serie con el nombre proporcionado.");
         } else {
@@ -74,6 +81,7 @@ public class LinkPaginasController implements Initializable {
 
     public void setCampos(){
         try {
+            cargarSerie();
             Schedule schedule = serie.getSchedule();
             lblIdiomaResult.setText(this.serie.getLanguage());
             lblGeneroResult.setText(String.join(", ", this.serie.getGenres()));
@@ -82,6 +90,7 @@ public class LinkPaginasController implements Initializable {
             lblCalificacionResult.setText(this.serie.getRating().toString());
             lblHorarioResult.setText(schedule.getTime() + " " + String.join(", ", schedule.getDays()));
             imgSerie.setImage(new Image(this.serie.getImage().getMedium(),true));
+            guardarSerie(this.serie);
         } catch (Exception e) {
             e.printStackTrace();
             showWarning("Image Load Error", "Failed to load image from URL: " + this.serie.getImage());
@@ -90,6 +99,23 @@ public class LinkPaginasController implements Initializable {
 
 
     }
+
+    public void toSerie(ActionEvent actionEvent){
+        try{
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("serie.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 1600, 900);
+            Stage stage = (Stage) ((javafx.scene.Node) actionEvent.getSource()).getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
+
+            LinkPaginasController controller = fxmlLoader.getController();
+            controller.setCampos();
+
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
 
     public void toEpisodios(ActionEvent actionEvent){
         try {
@@ -105,16 +131,6 @@ public class LinkPaginasController implements Initializable {
         }
     }
 
-    public void toSerie(ActionEvent actionEvent){
-        try{
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("serie.fxml"));
-            loadScene(actionEvent, fxmlLoader);
-
-        } catch (Exception e){
-            e.printStackTrace();
-        }
-    }
-
     public void toCast(ActionEvent actionEvent){
         try{
             if (this.serie == null) {
@@ -126,6 +142,30 @@ public class LinkPaginasController implements Initializable {
 
         } catch (Exception e){
             e.printStackTrace();
+        }
+    }
+
+    private void guardarSerie(Serie serie) {
+        try {
+            Transformer transformer = TransformerFactory.newInstance().newTransformer();
+            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+            transformer.transform(new DOMSource(jsonHandler.serieToXML(serie)), new StreamResult(new File("data/Serie.xml")));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    private void cargarSerie() {
+        try{
+            XmlMapper xmlMapper = new XmlMapper();
+            xmlMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+            xmlMapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
+            setSerie(xmlMapper.readValue(new File("data/Serie.xml"), Serie.class));
+            System.out.println(serie);
+        }
+        catch (Exception e){
+            System.out.println(e.getMessage());
         }
     }
 

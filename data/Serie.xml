@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<serie>
+    <id>139</id>
+    <name>Girls</name>
+    <type>Scripted</type>
+    <language>English</language>
+    <genres>
+        <genre>Drama</genre>
+        <genre>Romance</genre>
+    </genres>
+    <status>Ended</status>
+    <premiered>2012-04-15</premiered>
+    <rating>6.4</rating>
+    <schedule>
+        <time>22:00</time>
+        <days>
+            <day>Sunday</day>
+        </days>
+    </schedule>
+    <image>https://static.tvmaze.com/uploads/images/medium_portrait/31/78286.jpg</image>
+</serie>
