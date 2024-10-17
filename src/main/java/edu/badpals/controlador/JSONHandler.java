@@ -1,7 +1,10 @@
 package edu.badpals.controlador;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
+import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import edu.badpals.modelo.Image;
 import edu.badpals.modelo.Rating;
 import edu.badpals.modelo.Schedule;
@@ -172,5 +175,19 @@ public class JSONHandler {
             }
         }
         return null;
+    }
+
+    public static Serie cargarSerie() {
+        try{
+            XmlMapper xmlMapper = new XmlMapper();
+            xmlMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+            xmlMapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
+            return xmlMapper.readValue(new File("data/Serie.xml"), Serie.class);
+
+        }
+        catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+        return new Serie();
     }
 }

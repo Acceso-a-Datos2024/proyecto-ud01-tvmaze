@@ -123,10 +123,15 @@ public class LinkPaginasController implements Initializable {
                 showWarning("Serie no encontrada", "No se encontró ninguna serie con el nombre proporcionado.");
             } else {
                 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("episodios.fxml"));
-                loadScene(actionEvent, fxmlLoader);
-            }
+                Scene scene = new Scene(fxmlLoader.load(), 1600, 900);
+                Stage stage = (Stage) ((javafx.scene.Node) actionEvent.getSource()).getScene().getWindow();
+                stage.setScene(scene);
+                stage.show();
 
-        }catch (Exception e){
+                EpisodiosController controller = fxmlLoader.getController();
+                controller.setSerie(this.serie);
+            }
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -168,6 +173,8 @@ public class LinkPaginasController implements Initializable {
             System.out.println(e.getMessage());
         }
     }
+
+
 
     private static void loadScene(ActionEvent actionEvent, FXMLLoader fxmlLoader) throws IOException {
         Scene scene = new Scene(fxmlLoader.load(),1600,900);

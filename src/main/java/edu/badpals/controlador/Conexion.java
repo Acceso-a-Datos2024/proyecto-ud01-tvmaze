@@ -26,7 +26,7 @@ public class Conexion {
         return "";
     }
 
-    public String getEpisodios(String idSerie) {
+    public String getEpisodios(int idSerie) {
 
         try {
             HttpRequest request = HttpRequest.newBuilder()
@@ -39,7 +39,7 @@ public class Conexion {
         return "";
     }
 
-    public String getCast(String idSerie) {
+    public String getCast(int idSerie) {
 
         try {
             HttpRequest request = HttpRequest.newBuilder()
