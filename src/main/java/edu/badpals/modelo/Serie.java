@@ -19,7 +19,9 @@ public class Serie{
     private Schedule schedule;
     private Image image;
 
-    public Serie(){}
+    public Serie(){
+        this.id = 0;
+    }
 
     public Image getImage() {
         return image;

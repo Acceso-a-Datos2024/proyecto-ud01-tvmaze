@@ -10,6 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -24,6 +25,7 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.*;
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class LinkPaginasController implements Initializable {
@@ -55,6 +57,8 @@ public class LinkPaginasController implements Initializable {
     @FXML
     ImageView imgSerie;
 
+
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         cargarSerie();
@@ -69,12 +73,13 @@ public class LinkPaginasController implements Initializable {
     }
 
     public void buscarSerie(){
+        Serie serie = jsonHandler.JSONtoSerie(conexion.getSerie(txtBuscarSerie.getText()));
 
-        guardarSerie(jsonHandler.JSONtoSerie(conexion.getSerie(txtBuscarSerie.getText())));
-        cargarSerie();
-        if (this.serie == null) {
+        if (serie.getId() == 0) {
+            setSerie(serie);
             showWarning("Serie no encontrada", "No se encontró ninguna serie con el nombre proporcionado.");
         } else {
+            guardarSerie(serie);
             this.setCampos();
         }
     }
@@ -83,6 +88,7 @@ public class LinkPaginasController implements Initializable {
         try {
             cargarSerie();
             Schedule schedule = serie.getSchedule();
+            txtBuscarSerie.setText(this.serie.getName());
             lblIdiomaResult.setText(this.serie.getLanguage());
             lblGeneroResult.setText(String.join(", ", this.serie.getGenres()));
             lblEstatusResult.setText(this.serie.getStatus());
@@ -119,7 +125,7 @@ public class LinkPaginasController implements Initializable {
 
     public void toEpisodios(ActionEvent actionEvent){
         try {
-            if (this.serie == null) {
+            if (this.serie.getId() == 0) {
                 showWarning("Serie no encontrada", "No se encontró ninguna serie con el nombre proporcionado.");
             } else {
                 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("episodios.fxml"));
@@ -138,7 +144,7 @@ public class LinkPaginasController implements Initializable {
 
     public void toCast(ActionEvent actionEvent){
         try{
-            if (this.serie == null) {
+            if (this.serie.getId() == 0) {
                 showWarning("Serie no encontrada", "No se encontró ninguna serie con el nombre proporcionado.");
             } else {
                 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("cast.fxml"));
@@ -152,6 +158,10 @@ public class LinkPaginasController implements Initializable {
 
     private void guardarSerie(Serie serie) {
         try {
+            if (serie.getId() == 0){
+                this.serie = null;
+                return;
+            }
             File dataDir = new File("data");
             if (!dataDir.exists()) {
                 dataDir.mkdirs();
@@ -194,5 +204,15 @@ public class LinkPaginasController implements Initializable {
         alert.setHeaderText(null);
         alert.setContentText(message);
         alert.showAndWait();
+    }
+
+    private boolean mostrarConfirmacion() {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Confirmación");
+        alert.setHeaderText(null);
+        alert.setContentText("¿Desea cargar?");
+
+        Optional<ButtonType> result = alert.showAndWait();
+        return result.isPresent() && result.get() == ButtonType.OK;
     }
 }

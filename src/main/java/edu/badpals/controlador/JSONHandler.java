@@ -106,14 +106,19 @@ public class JSONHandler {
 
     public Serie JSONtoSerie(String json) {
         try {
-            if (json != null) {
+            if (json.startsWith("{")) {
                 ObjectMapper objectMapper = new ObjectMapper();
                 return objectMapper.readValue(json, Serie.class);
             }
+            Serie serie = new Serie();
+            serie.setId(0);
+            return serie;
         } catch (JsonProcessingException e) {
             System.out.println(e.getMessage());
         }
-        return new Serie();
+        Serie serie = new Serie();
+        serie.setId(0);
+        return serie;
 
     }
 
