@@ -74,6 +74,10 @@ public class CastController implements Initializable {
             Stage stage = (Stage) ((javafx.scene.Node) actionEvent.getSource()).getScene().getWindow();
             stage.setScene(scene);
             stage.show();
+            stage.setMaximized(false);
+            stage.setResizable(false);
+            stage.setTitle("Series");
+
             LinkPaginasController controller = fxmlLoader.getController();
             controller.setCampos();
         } catch (IOException e) {

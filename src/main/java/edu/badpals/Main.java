@@ -18,27 +18,19 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
 
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("controlador/serie.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 1600, 900);
-        stage.setTitle("Hello!");
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("controlador/login.fxml"));
+
+        Scene scene = new Scene(fxmlLoader.load(),500,600);
+
+        stage.setTitle("Login");
+
         stage.setScene(scene);
         stage.show();
-        if (mostrarConfirmacion()){
-            LinkPaginasController controller = fxmlLoader.getController();
-            controller.setCampos();
-        }
+
 
     }
 
-    private boolean mostrarConfirmacion() {
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Cargar Busqueda Pasada");
-        alert.setHeaderText(null);
-        alert.setContentText("¿Desea restaurar la busqueda anterior?");
 
-        Optional<ButtonType> result = alert.showAndWait();
-        return result.isPresent() && result.get() == ButtonType.OK;
-    }
 
     public static void main(String[] args) {
         launch();

@@ -129,11 +129,8 @@ public class LinkPaginasController implements Initializable {
                 showWarning("Serie no encontrada", "No se encontró ninguna serie con el nombre proporcionado.");
             } else {
                 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("episodios.fxml"));
-                Scene scene = new Scene(fxmlLoader.load(), 1600, 900);
-                Stage stage = (Stage) ((javafx.scene.Node) actionEvent.getSource()).getScene().getWindow();
-                stage.setScene(scene);
-                stage.show();
-
+                Stage stage = loadScene(actionEvent, fxmlLoader);
+                stage.setTitle("Episodios");
                 EpisodiosController controller = fxmlLoader.getController();
                 controller.setSerie(this.serie);
             }
@@ -148,7 +145,10 @@ public class LinkPaginasController implements Initializable {
                 showWarning("Serie no encontrada", "No se encontró ninguna serie con el nombre proporcionado.");
             } else {
                 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("cast.fxml"));
-                loadScene(actionEvent, fxmlLoader);
+                Stage stage = loadScene(actionEvent, fxmlLoader);
+                stage.setTitle("Cast");
+                CastController controller = fxmlLoader.getController();
+                controller.setSerie(this.serie);
             }
 
         } catch (Exception e){
@@ -165,8 +165,12 @@ public class LinkPaginasController implements Initializable {
 
             Stage stage = (Stage) ((javafx.scene.Node) actionEvent.getSource()).getScene().getWindow();
 
+            stage.setResizable(false);
+            stage.setTitle("Login");
+            stage.setMaximized(false);
             stage.setScene(scene);
             stage.show();
+
 
 
         } catch (Exception e){
@@ -207,13 +211,17 @@ public class LinkPaginasController implements Initializable {
 
 
 
-    private static void loadScene(ActionEvent actionEvent, FXMLLoader fxmlLoader) throws IOException {
+    private static Stage loadScene(ActionEvent actionEvent, FXMLLoader fxmlLoader) throws IOException {
         Scene scene = new Scene(fxmlLoader.load(),1600,900);
 
         Stage stage = (Stage) ((javafx.scene.Node) actionEvent.getSource()).getScene().getWindow();
 
         stage.setScene(scene);
         stage.show();
+        stage.setMaximized(false);
+        stage.setResizable(false);
+
+        return stage;
     }
 
     public static void showWarning(String title, String message) {
@@ -224,11 +232,12 @@ public class LinkPaginasController implements Initializable {
         alert.showAndWait();
     }
 
-    private boolean mostrarConfirmacion() {
+
+    public static boolean mostrarConfirmacion() {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Confirmación");
+        alert.setTitle("Cargar Busqueda Pasada");
         alert.setHeaderText(null);
-        alert.setContentText("¿Desea cargar?");
+        alert.setContentText("¿Desea restaurar la busqueda anterior?");
 
         Optional<ButtonType> result = alert.showAndWait();
         return result.isPresent() && result.get() == ButtonType.OK;

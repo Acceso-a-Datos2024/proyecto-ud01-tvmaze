@@ -84,11 +84,15 @@ public class EpisodiosController implements Initializable {
 
 
     public void toSerie(ActionEvent actionEvent) throws IOException {
+
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("serie.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1600, 900);
         Stage stage = (Stage) ((javafx.scene.Node) actionEvent.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
+        stage.setMaximized(false);
+        stage.setResizable(false);
+        stage.setTitle("Series");
 
         LinkPaginasController controller = fxmlLoader.getController();
         controller.setCampos();
