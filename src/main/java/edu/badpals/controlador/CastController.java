@@ -79,9 +79,14 @@ public class CastController implements Initializable {
 
     private void saveXML(List<String> actores) {
         try {
+
+            File dataDir = new File("data");
+            if (!dataDir.exists()) {
+                dataDir.mkdirs();
+            }
             XmlMapper xmlMapper = new XmlMapper();
             xmlMapper.configure(SerializationFeature.INDENT_OUTPUT, true);
-            xmlMapper.writeValue(new File("data/actores.xml"), actores);
+            xmlMapper.writeValue(new File(dataDir,"/actores.xml"), actores);
         } catch (Exception e) {
             e.printStackTrace();
 

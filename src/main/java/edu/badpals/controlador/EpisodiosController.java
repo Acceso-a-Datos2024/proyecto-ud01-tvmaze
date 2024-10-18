@@ -97,12 +97,14 @@ public class EpisodiosController implements Initializable {
     public void saveXML(List<Episodio> episodiosFromXML) {
         try {
 
-            Document xmlDocument = jsonHandler.episodiosToXML(episodiosFromXML);
-            File xmlFile = new File("data/episodios.xml");
+            File dataDir = new File("data");
+            if (!dataDir.exists()) {
+                dataDir.mkdirs();
+            }
             Transformer transformer = TransformerFactory.newInstance().newTransformer();
             transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-            DOMSource source = new DOMSource(xmlDocument);
-            StreamResult result = new StreamResult(xmlFile);
+            DOMSource source = new DOMSource(jsonHandler.episodiosToXML(episodiosFromXML));
+            StreamResult result = new StreamResult(new File(dataDir,"episodios.xml"));
             transformer.transform(source, result);
         } catch (Exception e) {
             e.printStackTrace();

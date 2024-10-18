@@ -152,9 +152,13 @@ public class LinkPaginasController implements Initializable {
 
     private void guardarSerie(Serie serie) {
         try {
+            File dataDir = new File("data");
+            if (!dataDir.exists()) {
+                dataDir.mkdirs();
+            }
             Transformer transformer = TransformerFactory.newInstance().newTransformer();
             transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-            transformer.transform(new DOMSource(jsonHandler.serieToXML(serie)), new StreamResult(new File("data/Serie.xml")));
+            transformer.transform(new DOMSource(jsonHandler.serieToXML(serie)), new StreamResult(new File(dataDir,"Serie.xml")));
         } catch (Exception e) {
             e.printStackTrace();
         }
