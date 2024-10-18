@@ -3,7 +3,7 @@ package edu.badpals.modelo;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Actores {
+public class Actor {
     private Person person;
     private Character character;
 
@@ -24,9 +24,10 @@ public class Actores {
         this.character = character;
     }
 
-
-
-
+    @Override
+    public String toString() {
+        return "Actor: " + this.person.toString() + ", Personaje: " + this.character.toString();
+    }
 }
 
 

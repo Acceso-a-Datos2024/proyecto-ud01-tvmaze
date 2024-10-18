@@ -1,11 +1,7 @@
 package edu.badpals.controlador;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.DeserializationFeature;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import edu.badpals.modelo.*;
 import org.w3c.dom.Element;
@@ -249,11 +245,9 @@ public class JSONHandler {
                 ObjectMapper objectMapper = new ObjectMapper();
                 /* Como la clase Actores coincide en estructura con el json,podemos leer el json y serializarlo a un
                 * array de objetos Actores*/
-                Actores[] actoresArray = objectMapper.readValue(json, Actores[].class);
-                for (Actores actor : actoresArray) {
-                    String actorName = actor.getPerson().getName();
-                    String characterName = actor.getCharacter().getName();
-                    nombres.add("Actor: " + actorName + ", Personaje: " + characterName);
+                Actor[] actoresArray = objectMapper.readValue(json, Actor[].class);
+                for (Actor actor : actoresArray) {
+                    nombres.add(actor.toString());
                 }
             }
         } catch (JsonProcessingException e) {
