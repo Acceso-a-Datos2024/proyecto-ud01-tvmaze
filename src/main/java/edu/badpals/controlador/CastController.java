@@ -67,14 +67,18 @@ public class CastController implements Initializable {
     }
 
 
-    public void toSerie(ActionEvent actionEvent) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("serie.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 1600, 900);
-        Stage stage = (Stage) ((javafx.scene.Node) actionEvent.getSource()).getScene().getWindow();
-        stage.setScene(scene);
-        stage.show();
-        LinkPaginasController controller = fxmlLoader.getController();
-        controller.setCampos();
+    public void toSerie(ActionEvent actionEvent)  {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("serie.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 1600, 900);
+            Stage stage = (Stage) ((javafx.scene.Node) actionEvent.getSource()).getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
+            LinkPaginasController controller = fxmlLoader.getController();
+            controller.setCampos();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private void saveXML(List<String> actores) {

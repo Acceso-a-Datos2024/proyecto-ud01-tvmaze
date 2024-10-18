@@ -96,5 +96,10 @@
             <Font size="20.0" />
          </font>
       </Button>
+      <Button fx:id="btnLogin" layoutX="35.0" layoutY="31.0" mnemonicParsing="false" onAction="#toLogin" text="LOGIN">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
    </children>
 </Pane>

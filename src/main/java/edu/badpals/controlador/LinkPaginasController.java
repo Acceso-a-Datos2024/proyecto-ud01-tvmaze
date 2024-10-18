@@ -156,6 +156,24 @@ public class LinkPaginasController implements Initializable {
         }
     }
 
+    public void toLogin(ActionEvent actionEvent){
+        try{
+
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("login.fxml"));
+
+            Scene scene = new Scene(fxmlLoader.load(),500,600);
+
+            Stage stage = (Stage) ((javafx.scene.Node) actionEvent.getSource()).getScene().getWindow();
+
+            stage.setScene(scene);
+            stage.show();
+
+
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
     private void guardarSerie(Serie serie) {
         try {
             if (serie.getId() == 0){
@@ -198,7 +216,7 @@ public class LinkPaginasController implements Initializable {
         stage.show();
     }
 
-    private void showWarning(String title, String message) {
+    public static void showWarning(String title, String message) {
         Alert alert = new Alert(Alert.AlertType.WARNING);
         alert.setTitle(title);
         alert.setHeaderText(null);
