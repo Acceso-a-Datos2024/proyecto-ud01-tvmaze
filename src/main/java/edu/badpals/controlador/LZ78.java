@@ -52,8 +52,4 @@ public class LZ78 {
         return encodedString.toString();
     }
 
-    public static void main(String[] args) {
-        System.out.println(encode("administrador,renaido"));
-    }
-
 }

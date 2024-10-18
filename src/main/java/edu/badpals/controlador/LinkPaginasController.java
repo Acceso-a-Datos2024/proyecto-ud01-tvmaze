@@ -50,6 +50,24 @@ public class LinkPaginasController implements Initializable {
     @FXML
     private Label lblHorarioResult;
 
+    @FXML
+    private ImageView imgLupa;
+    @FXML
+    private ImageView imgEpisodios;
+    @FXML
+    private ImageView imgComunidad;
+    @FXML
+    private ImageView imgLogin;
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        imgEpisodios.setImage(new Image(getClass().getResource("/img/episodios.png").toExternalForm()));
+        imgComunidad.setImage(new Image(getClass().getResource("/img/comunidad.png").toExternalForm()));
+        imgLupa.setImage(new Image(getClass().getResource("/img/lupa.png").toExternalForm()));
+        imgLogin.setImage(new Image(getClass().getResource("/img/login.png").toExternalForm()));
+        cargarSerie();
+    }
+
     private static Stage loadScene(ActionEvent actionEvent, FXMLLoader fxmlLoader) throws IOException {
         Scene scene = new Scene(fxmlLoader.load(), 1600, 900);
 
@@ -81,10 +99,6 @@ public class LinkPaginasController implements Initializable {
         return result.isPresent() && result.get() == ButtonType.OK;
     }
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        cargarSerie();
-    }
 
     public Serie getSerie() {
         return serie;
@@ -109,7 +123,7 @@ public class LinkPaginasController implements Initializable {
     public void setCampos() {
         try {
             cargarSerie();
-            if (getSerie().getId() == 0){
+            if (getSerie().getId() == 0) {
                 return;
             }
             Schedule schedule = serie.getSchedule();
