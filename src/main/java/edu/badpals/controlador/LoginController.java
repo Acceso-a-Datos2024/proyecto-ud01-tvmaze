@@ -42,6 +42,10 @@ public class LoginController {
         }
     }
 
+    public void registrarUser(){
+        JSONHandler.crearUser(this.txtFieldUser.getText(),this.txtFieldPwd.getText());
+    }
+
     public void acceder(ActionEvent actionEvent) {
         if (Objects.equals(JSONHandler.leerUsers().get(this.txtFieldUser.getText()), this.txtFieldPwd.getText())) {
             toSerie(actionEvent);

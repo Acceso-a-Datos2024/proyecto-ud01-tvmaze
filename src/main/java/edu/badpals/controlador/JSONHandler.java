@@ -257,23 +257,35 @@ public class JSONHandler {
         return nombres;
     }
 
+    public static void crearUser(String user, String pswd){
+        File dataDir = new File("data");
+        if (!dataDir.exists()) {
+            dataDir.mkdirs();
+        }
+        try(BufferedWriter lector = new BufferedWriter(new FileWriter("data/Users.txt",true))){
+            lector.newLine();
+            String coded = LZ78.encode(user + "," + pswd);
+            lector.write(coded);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     public static Map<String,String> leerUsers(){
         File dataDir = new File("data");
         if (!dataDir.exists()) {
             dataDir.mkdirs();
         }
         try(BufferedReader lector = new BufferedReader(new FileReader("data/Users.txt"))){
-            String linea = lector.readLine();
-            linea = linea.substring(9);
-            List<String> keys = Arrays.asList(linea.split(","));
-
-            linea = lector.readLine();
-            linea = linea.substring(12);
-            List<String> values = Arrays.asList(linea.split(","));
-
             Map<String,String> map = new HashMap<>();
-            for (int i = 0; i < keys.size(); i++) {
-                map.put(keys.get(i), values.get(i));
+            String linea;
+            while (((linea = lector.readLine()) != null)){
+                linea = LZ78.decode(linea);
+                String[] array = linea.split(",");
+                String user = array[0];
+                String pswd = array[1];
+                map.put(user,pswd);
             }
             return map;
         } catch (Exception e) {
