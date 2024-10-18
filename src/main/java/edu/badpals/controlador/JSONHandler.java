@@ -258,25 +258,23 @@ public class JSONHandler {
     }
 
     public static Map<String,String> leerUsers(){
+        File dataDir = new File("data");
+        if (!dataDir.exists()) {
+            dataDir.mkdirs();
+        }
         try(BufferedReader lector = new BufferedReader(new FileReader("data/Users.txt"))){
             String linea = lector.readLine();
-            System.out.println(linea);
             linea = linea.substring(9);
-            System.out.println(linea);
             List<String> keys = Arrays.asList(linea.split(","));
 
             linea = lector.readLine();
-            System.out.println(linea);
             linea = linea.substring(12);
-            System.out.println(linea);
             List<String> values = Arrays.asList(linea.split(","));
 
             Map<String,String> map = new HashMap<>();
-
             for (int i = 0; i < keys.size(); i++) {
                 map.put(keys.get(i), values.get(i));
             }
-
             return map;
         } catch (Exception e) {
             e.printStackTrace();

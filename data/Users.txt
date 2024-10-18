@@ -1,0 +1,2 @@
+Usuario: administrador
+Contraseña: renaido
