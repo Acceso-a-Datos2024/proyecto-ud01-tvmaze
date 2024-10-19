@@ -14,7 +14,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.ListView;
 import javafx.stage.Stage;
-import org.w3c.dom.Document;
 
 
 import javax.xml.transform.OutputKeys;
@@ -66,7 +65,7 @@ public class EpisodiosController implements Initializable {
     private void cargarEpisodios() {
         try {
 
-            List<Episodio> episodiosFromXML = jsonHandler.JSONtoEpisodios(conexion.getEpisodios(serie.getId()));
+            List<Episodio> episodiosFromXML = conexion.getEpisodios(serie.getId());
             saveXML(episodiosFromXML);
             ObservableList<String> episodiosList = FXCollections.observableArrayList();
             for (Episodio episodio : episodiosFromXML) {
@@ -106,7 +105,7 @@ public class EpisodiosController implements Initializable {
             }
             Transformer transformer = TransformerFactory.newInstance().newTransformer();
             transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-            DOMSource source = new DOMSource(jsonHandler.episodiosToXML(episodiosFromXML));
+            DOMSource source = new DOMSource(JSONHandler.episodiosToXML(episodiosFromXML));
             StreamResult result = new StreamResult(new File(dataDir,"episodios.xml"));
             transformer.transform(source, result);
         } catch (Exception e) {

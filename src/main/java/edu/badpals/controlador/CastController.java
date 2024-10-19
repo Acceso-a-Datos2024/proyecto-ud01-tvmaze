@@ -56,7 +56,7 @@ public class CastController implements Initializable {
 
     private void cargarActores() {
         try {
-            List<String> actoresFromJSON = jsonHandler.JSONtoActores(conexion.getCast(serie.getId()));
+            List<String> actoresFromJSON = conexion.getCast(serie.getId());
             saveXML(actoresFromJSON);
             ObservableList<String> actoresList = FXCollections.observableArrayList(actoresFromJSON);
             listViewCast.setItems(actoresList);

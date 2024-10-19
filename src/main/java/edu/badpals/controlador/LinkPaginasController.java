@@ -109,10 +109,9 @@ public class LinkPaginasController implements Initializable {
     }
 
     public void buscarSerie() {
-        Serie serie = jsonHandler.JSONtoSerie(conexion.getSerie(txtBuscarSerie.getText()));
+        setSerie(conexion.getSerie(txtBuscarSerie.getText()));
 
         if (serie.getId() == 0) {
-            setSerie(serie);
             showWarning("Serie no encontrada", "No se encontró ninguna serie con el nombre proporcionado.");
         } else {
             guardarSerie(serie);
@@ -233,7 +232,7 @@ public class LinkPaginasController implements Initializable {
             }
             Transformer transformer = TransformerFactory.newInstance().newTransformer();
             transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-            transformer.transform(new DOMSource(jsonHandler.serieToXML(serie)), new StreamResult(new File(dataDir, "Serie.xml")));
+            transformer.transform(new DOMSource(JSONHandler.serieToXML(serie)), new StreamResult(new File(dataDir, "Serie.xml")));
         } catch (Exception e) {
             System.out.println("Error al guardar Serie");
         }
