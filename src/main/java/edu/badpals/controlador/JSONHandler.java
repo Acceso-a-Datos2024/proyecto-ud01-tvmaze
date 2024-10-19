@@ -21,7 +21,7 @@ public class JSONHandler {
 
     // aqui sacamos los objetos del xml
     public static Serie fileToSerie(File xmlFile) {
-        return XMLToSerie(LectorFile(xmlFile).toString());
+        return XMLToSerieCache(LectorFile(xmlFile).toString());
     }
 
     public static List<Episodio> fileToEpisodios(File xmlFile) {
@@ -53,17 +53,19 @@ public class JSONHandler {
             Document document = builder.parse(new InputSource(new StringReader(xmlString)));
             document.getDocumentElement().normalize();
 
-            NodeList castNodes = document.getElementsByTagName("cast");
-            for (int i = 0; i < castNodes.getLength(); i++) {
-                Element castElement = (Element) castNodes.item(i);
+            NodeList actorNodes = document.getElementsByTagName("actor");
 
-                String name = getTagValue("name", castElement);
-                String character = getTagValue("character", castElement);
+            for (int i = 0; i < actorNodes.getLength(); i++) {
+                Element actorElement = (Element) actorNodes.item(i);
+
+                String name = actorElement.getElementsByTagName("nombre").item(0).getTextContent();
+                String character = actorElement.getElementsByTagName("personaje").item(0).getTextContent();
 
                 castList.add("Actor: " + name + ", Personaje: " + character);
             }
         } catch (Exception e) {
             e.printStackTrace();
+            System.out.println("Error parsing XML string");
         }
         return castList;
     }
@@ -164,7 +166,8 @@ public class JSONHandler {
             serie.setSchedule(schedule);
 
             Image image = new Image();
-            NodeList imageNodes = rootElement.getElementsByTagName("image");
+            image.setMedium(getTagValue("image",rootElement));
+            image.setOriginal(getTagValue("image",rootElement));
             serie.setImage(image);
 
             return serie;

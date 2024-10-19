@@ -40,7 +40,7 @@ public class Conexion {
                 guardarSerieCache(serie);
                 return serie;
             }
-            System.out.println("desde cache");
+            System.out.println("Serie desde cache");
             serie = JSONHandler.fileToSerie(isSerieCache(serieString));
             return serie;
 
@@ -58,7 +58,7 @@ public class Conexion {
         List<Episodio> episodios = new ArrayList<>();
         try {
             File serieDir = checkCache(idSerie);
-            if (serieDir == null || isEpisodiosCache(idSerie) == null) {
+            if (serieDir == null || isEpisodiosCache(idSerie) == null || isEpisodiosCache(idSerie).length() == 0) {
                 HttpRequest request = HttpRequest.newBuilder()
                         .uri(URI.create(URL + "shows/" + idSerie + "/episodes")).GET().build();
                 String respuesta = this.client.send(request, HttpResponse.BodyHandlers.ofString()).body();
@@ -66,7 +66,7 @@ public class Conexion {
                 guardarEpisodiosCache(episodios,idSerie);
                 return episodios;
             }
-            System.out.println("desde cache");
+            System.out.println("Episodios desde cache");
             episodios = JSONHandler.fileToEpisodios(isEpisodiosCache(idSerie));
             return episodios;
 
@@ -82,7 +82,7 @@ public class Conexion {
         try {
 
             File serieDir = checkCache(idSerie);
-            if (serieDir == null || isCastCache(idSerie) == null) {
+            if (serieDir == null || isCastCache(idSerie) == null  || isCastCache(idSerie).length() == 0) {
                 HttpRequest request = HttpRequest.newBuilder()
                         .uri(URI.create(URL + "shows/" + idSerie + "/cast")).GET().build();
                 String respuesta = this.client.send(request, HttpResponse.BodyHandlers.ofString()).body();
@@ -90,8 +90,8 @@ public class Conexion {
                 guardarCastCache(cast,idSerie);
                 return cast;
             }
-            System.out.println("desde cache");
-            cast = JSONHandler.fileToActores(isEpisodiosCache(idSerie));
+            System.out.println("Cast desde cache");
+            cast = JSONHandler.fileToActores(isCastCache(idSerie));
             return cast;
         } catch (Exception e) {
             System.out.println("Error al buscar el cast");
@@ -150,7 +150,6 @@ public class Conexion {
             transformer.setOutputProperty(OutputKeys.INDENT, "yes");
             transformer.transform(new DOMSource(JSONHandler.serieToXML(serie)), new StreamResult(isSerieCache(serie.getName())));
         } catch (Exception e) {
-            e.printStackTrace();
             System.out.println("Error al guardar Serie en cache");
         }
     }

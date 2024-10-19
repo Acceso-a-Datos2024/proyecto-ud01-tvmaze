@@ -174,8 +174,6 @@ public class LinkPaginasController implements Initializable {
                 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("episodios.fxml"));
                 Stage stage = loadScene(actionEvent, fxmlLoader);
                 stage.setTitle("Episodios");
-                EpisodiosController controller = fxmlLoader.getController();
-                controller.setSerie(this.serie);
             }
         } catch (Exception e) {
             System.out.println("Error al ir a episodios.fxml");
@@ -190,8 +188,6 @@ public class LinkPaginasController implements Initializable {
                 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("cast.fxml"));
                 Stage stage = loadScene(actionEvent, fxmlLoader);
                 stage.setTitle("Cast");
-                CastController controller = fxmlLoader.getController();
-                controller.setSerie(this.serie);
             }
 
         } catch (Exception e) {
