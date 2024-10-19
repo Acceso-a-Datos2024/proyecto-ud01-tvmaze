@@ -134,9 +134,14 @@ public class LinkPaginasController implements Initializable {
             lblCalificacionResult.setText(this.serie.getRating().toString());
             lblHorarioResult.setText(schedule.getTime() + " " + String.join(", ", schedule.getDays()));
             try {
-                if (this.serie.getImage() != null) {
+                if (this.serie.getImage() != null || !this.serie.getImage().getMedium().isEmpty()) {
                     String imageUrl = this.serie.getImage().getMedium() != null ? this.serie.getImage().getMedium() : this.serie.getImage().getOriginal();
-                    imgSerie.setImage(new Image(imageUrl, true));
+
+                    if (Conexion.isImageCache(serie.getId()).exists()) {
+                        imgSerie.setImage(new Image(Conexion.isImageCache(serie.getId()).toURI().toString()));
+                    } else {
+                        imgSerie.setImage(new Image(imageUrl, true));
+                    }
                 }
             } catch (Exception e) {
                 imgSerie.setImage(new Image(getClass().getResource("/img/imagenVacia.png").toExternalForm()));
@@ -235,8 +240,9 @@ public class LinkPaginasController implements Initializable {
     }
 
     private void cargarSerie() {
+        File fileSerie = new File("data/Serie.xml");
         try {
-            if (new File("data/Serie.xml").exists()) {
+            if (fileSerie.exists() && fileSerie.length() != 0) {
                 XmlMapper xmlMapper = new XmlMapper();
                 xmlMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
                 xmlMapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);

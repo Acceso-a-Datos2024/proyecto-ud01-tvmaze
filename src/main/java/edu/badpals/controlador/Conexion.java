@@ -1,6 +1,7 @@
 package edu.badpals.controlador;
 
 import edu.badpals.modelo.Episodio;
+import edu.badpals.modelo.Image;
 import edu.badpals.modelo.Serie;
 
 import javax.xml.transform.OutputKeys;
@@ -9,6 +10,8 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.InputStream;
 import java.io.StringReader;
 import java.net.URI;
 import java.net.URLEncoder;
@@ -31,7 +34,7 @@ public class Conexion {
         Serie serie = new Serie();
         try {
             File serieDir = checkCache(serieString);
-            if (serieDir == null || isSerieCache(serieString) == null) {
+            if (serieDir == null  || isSerieCache(serieString) == null || isSerieCache(serieString).length() == 0 ) {
                 String encodedSerie = URLEncoder.encode(serieString, StandardCharsets.UTF_8.toString());
                 HttpRequest request = HttpRequest.newBuilder()
                         .uri(URI.create(URL + "singlesearch/shows?q=" + encodedSerie)).GET().build();
@@ -42,6 +45,9 @@ public class Conexion {
             }
             System.out.println("Serie desde cache");
             serie = JSONHandler.fileToSerie(isSerieCache(serieString));
+            if (isImageCache(serie.getId()) == null){
+                guardarSerieCache(serie);
+            }
             return serie;
 
 
@@ -142,18 +148,26 @@ public class Conexion {
 
     private void guardarSerieCache(Serie serie) {
         try {
+            if (serie == null || serie.getName() == null){
+                return;
+            }
             File serieDir = checkCache(serie.getName());
             if (serieDir == null){
                 crearSerieDir(serie);
             }
+            if (serie.getImage() != null && !serie.getImage().getMedium().isEmpty()){
+                guardarImagenSerie(serie);
+                serie.getImage().setMedium(checkCache(serie.getName()) + "\\image.jpg");
+                serie.getImage().setOriginal(checkCache(serie.getName()) + "\\image.jpg");
+            }
             Transformer transformer = TransformerFactory.newInstance().newTransformer();
             transformer.setOutputProperty(OutputKeys.INDENT, "yes");
             transformer.transform(new DOMSource(JSONHandler.serieToXML(serie)), new StreamResult(isSerieCache(serie.getName())));
+
         } catch (Exception e) {
             System.out.println("Error al guardar Serie en cache");
         }
     }
-
 
 
     private void guardarEpisodiosCache(List<Episodio> episodios, int id) {
@@ -247,6 +261,23 @@ public class Conexion {
         return null;
     }
 
+    public static File isImageCache(int id) {
+        File cacheDir = checkCache(id);
+        if (cacheDir == null){
+            return null;
+        }
+        File[] cacheDirs = cacheDir.listFiles();
+        if (cacheDirs != null) {
+            for (File file : cacheDirs) {
+                if (file.getName().endsWith("image.jpg")) {
+                    return file;
+
+                }
+            }
+        }
+        return null;
+    }
+
     private void crearSerieDir(Serie serie) {
         try {
             File cacheDir = new File("data/cache/" + serie.getName().replaceAll("[\\\\/:*?\"<>|]", "") + "-" + serie.getId());
@@ -270,6 +301,38 @@ public class Conexion {
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println("Error al crear el directorio de la serie");
+        }
+    }
+
+
+    private void guardarImagenSerie(Serie serie) {
+        if (serie.getImage() == null || serie.getImage().getMedium().isBlank()){
+            return;
+        }
+        String imageUrl = serie.getImage().getMedium();
+        try {
+            HttpClient client = HttpClient.newHttpClient();
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(imageUrl))
+                    .build();
+
+            HttpResponse<InputStream> response = client.send(request, HttpResponse.BodyHandlers.ofInputStream());
+
+            if (response.statusCode() == 200) {
+                try (InputStream inputStream = response.body();
+                     FileOutputStream outputStream = new FileOutputStream(checkCache(serie.getName()) + "\\image.jpg")) {
+                    byte[] buffer = new byte[4096];
+                    int bytesRead;
+                    while ((bytesRead = inputStream.read(buffer)) != -1) {
+                        outputStream.write(buffer, 0, bytesRead);
+                    }
+                }
+            } else {
+                System.out.println("Failed to download image. HTTP response code: " + response.statusCode());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Error downloading image: " + e.getMessage());
         }
     }
 }

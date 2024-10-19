@@ -21,6 +21,11 @@ public class JSONHandler {
 
     // aqui sacamos los objetos del xml
     public static Serie fileToSerie(File xmlFile) {
+        if (xmlFile.length() == 0) {
+            Serie serie = new Serie();
+            serie.setId(0);
+            return serie;
+        }
         return XMLToSerieCache(LectorFile(xmlFile).toString());
     }
 
