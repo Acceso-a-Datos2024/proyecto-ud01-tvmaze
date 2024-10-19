@@ -44,7 +44,7 @@ public class CastController implements Initializable {
             xmlMapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
             setSerie(xmlMapper.readValue(new File("data/Serie.xml"), Serie.class));
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.out.println("Error al cargar la serie en castController");
         }
     }
 
@@ -62,7 +62,7 @@ public class CastController implements Initializable {
             listViewCast.setItems(actoresList);
 
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("Error al cargar los actores en castController");
         }
     }
 
@@ -81,7 +81,7 @@ public class CastController implements Initializable {
             LinkPaginasController controller = fxmlLoader.getController();
             controller.setCampos();
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("Error al cargar la ventana de serie en castController");
         }
     }
 
@@ -96,7 +96,7 @@ public class CastController implements Initializable {
             xmlMapper.configure(SerializationFeature.INDENT_OUTPUT, true);
             xmlMapper.writeValue(new File(dataDir,"/actores.xml"), actores);
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("Error al guardar el xml en CastController");
 
         }
     }

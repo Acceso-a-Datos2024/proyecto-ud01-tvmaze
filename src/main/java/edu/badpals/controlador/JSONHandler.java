@@ -80,7 +80,9 @@ public class JSONHandler {
         rootElement.appendChild(schedule);
 
         Element image = doc.createElement("image");
-        image.appendChild(doc.createTextNode(String.valueOf(serie.getImage().getMedium())));
+        if (serie.getImage() != null) {
+            image.appendChild(doc.createTextNode(serie.getImage().getMedium()));
+        }
         rootElement.appendChild(image);
 
         return doc;
@@ -110,7 +112,7 @@ public class JSONHandler {
             serie.setId(0);
             return serie;
         } catch (JsonProcessingException e) {
-            System.out.println(e.getMessage());
+            System.out.println("Error al parsear el json a serie");
         }
         Serie serie = new Serie();
         serie.setId(0);
@@ -183,7 +185,7 @@ public class JSONHandler {
                 return episodios;
             }
         } catch (JsonProcessingException e) {
-            System.out.println(e.getMessage());
+            System.out.println("Error al parsear el json a episodios");
         }
         return new ArrayList<>();
     }
@@ -252,7 +254,7 @@ public class JSONHandler {
                 }
             }
         } catch (JsonProcessingException e) {
-            System.out.println("Error al procesar el JSON: " + e.getMessage());
+            System.out.println("Error al parsear el json a cast");
         }
         return nombres;
     }
@@ -268,7 +270,7 @@ public class JSONHandler {
             lector.write(coded);
 
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("Error al registrar User");
         }
     }
 
@@ -289,7 +291,7 @@ public class JSONHandler {
             }
             return map;
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("Error al leer User.txt");
         }
         return null;
     }

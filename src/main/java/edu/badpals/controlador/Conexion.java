@@ -24,7 +24,7 @@ public class Conexion {
             return this.client.send(request, HttpResponse.BodyHandlers.ofString()).body();
 
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("Error al buscar la serie");
         }
         return "";
     }
@@ -37,7 +37,7 @@ public class Conexion {
             return this.client.send(request, HttpResponse.BodyHandlers.ofString()).body();
 
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("Error al buscar los episodios");
         }
         return "";
     }
@@ -50,7 +50,7 @@ public class Conexion {
             return this.client.send(request, HttpResponse.BodyHandlers.ofString()).body();
 
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("Error al buscar el cast");
         }
         return "";
     }

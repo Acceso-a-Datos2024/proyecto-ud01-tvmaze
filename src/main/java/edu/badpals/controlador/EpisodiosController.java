@@ -53,14 +53,14 @@ public class EpisodiosController implements Initializable {
             setSerie(xmlMapper.readValue(new File("data/Serie.xml"), Serie.class));
         }
         catch (Exception e){
-            System.out.println(e.getMessage());
+            System.out.println("Error al cargar la ventana de serie en episodiosController");
         }
     }
 
     public void setSerie(Serie serie) {
         this.serie = serie;
-        lblNameSerieEpisodios.setText(serie.getName().toUpperCase()); // Muestra el nombre de la serie
-        cargarEpisodios(); // Cargar episodios al establecer la serie
+        lblNameSerieEpisodios.setText(serie.getName().toUpperCase());
+        cargarEpisodios();
     }
 
     private void cargarEpisodios() {
@@ -74,11 +74,10 @@ public class EpisodiosController implements Initializable {
                 episodiosList.add(textoEpisodio);
             }
 
-            // Establecer la lista en el ListView
             listViewEpisodios.setItems(episodiosList);
 
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("Error al cargar los episodios");
         }
     }
 
@@ -111,7 +110,7 @@ public class EpisodiosController implements Initializable {
             StreamResult result = new StreamResult(new File(dataDir,"episodios.xml"));
             transformer.transform(source, result);
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("Error al guardar el episodios.xml");
         }
     }
 }

@@ -134,10 +134,16 @@ public class LinkPaginasController implements Initializable {
             lblFechaInicioResult.setText(this.serie.getPremiered());
             lblCalificacionResult.setText(this.serie.getRating().toString());
             lblHorarioResult.setText(schedule.getTime() + " " + String.join(", ", schedule.getDays()));
-            imgSerie.setImage(new Image(this.serie.getImage().getMedium(), true));
+            try {
+                if (this.serie.getImage() != null) {
+                    String imageUrl = this.serie.getImage().getMedium() != null ? this.serie.getImage().getMedium() : this.serie.getImage().getOriginal();
+                    imgSerie.setImage(new Image(imageUrl, true));
+                }
+            } catch (Exception e) {
+                imgSerie.setImage(new Image(getClass().getResource("/img/imagenVacia.png").toExternalForm()));
+            }
             guardarSerie(this.serie);
         } catch (Exception e) {
-            e.printStackTrace();
             showWarning("Image Load Error", "Failed to load image from URL: " + this.serie.getImage());
 
         }
@@ -173,7 +179,7 @@ public class LinkPaginasController implements Initializable {
                 controller.setSerie(this.serie);
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("Error al ir a episodios.fxml");
         }
     }
 
@@ -190,7 +196,7 @@ public class LinkPaginasController implements Initializable {
             }
 
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("Error al ir a cast.fxml");
         }
     }
 
@@ -211,7 +217,7 @@ public class LinkPaginasController implements Initializable {
 
 
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("Error al ir a login.fxml");
         }
     }
 
@@ -229,7 +235,7 @@ public class LinkPaginasController implements Initializable {
             transformer.setOutputProperty(OutputKeys.INDENT, "yes");
             transformer.transform(new DOMSource(jsonHandler.serieToXML(serie)), new StreamResult(new File(dataDir, "Serie.xml")));
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("Error al guardar Serie");
         }
     }
 
@@ -246,7 +252,7 @@ public class LinkPaginasController implements Initializable {
                 setSerie(serie);
             }
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.out.println("Error al cargar Serie");
         }
     }
 }
