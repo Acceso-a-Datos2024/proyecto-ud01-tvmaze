@@ -106,8 +106,65 @@ public class JSONHandler {
             serie.setSchedule(schedule);
 
             Image image = new Image();
-            image.setMedium(getTagValue("medium", rootElement));
-            image.setOriginal(getTagValue("original", rootElement));
+            NodeList imageNodes = rootElement.getElementsByTagName("image");
+            if (imageNodes != null && imageNodes.getLength() > 0) {
+                Node imageNode = imageNodes.item(0);
+                if (imageNode.hasChildNodes()) {
+                    image.setMedium(getTagValue("medium", rootElement));
+                    image.setOriginal(getTagValue("original", rootElement));
+                } else {
+                    image.setMedium(imageNode.getTextContent());
+                    image.setOriginal(imageNode.getTextContent());
+                }
+            }
+            serie.setImage(image);
+
+            return serie;
+        } catch (ParserConfigurationException | SAXException | IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public static Serie XMLToSerieCache(String xmlString) {
+        try {
+            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder builder = factory.newDocumentBuilder();
+            Document document = builder.parse(new InputSource(new StringReader(xmlString)));
+            document.getDocumentElement().normalize();
+
+            Element rootElement = document.getDocumentElement();
+
+            Serie serie = new Serie();
+            serie.setId(Integer.parseInt(getTagValue("id", rootElement)));
+            serie.setName(getTagValue("name", rootElement));
+            serie.setType(getTagValue("type", rootElement));
+            serie.setLanguage(getTagValue("language", rootElement));
+            serie.setStatus(getTagValue("status", rootElement));
+            serie.setPremiered(getTagValue("premiered", rootElement));
+            serie.setRating(new Rating(Double.parseDouble(getTagValue("rating", rootElement))));
+
+            List<String> genres = new ArrayList<>();
+            NodeList genreNodes = rootElement.getElementsByTagName("genre");
+            for (int i = 0; i < genreNodes.getLength(); i++) {
+                genres.add(genreNodes.item(i).getTextContent());
+            }
+            serie.setGenres(genres);
+
+            Schedule schedule = new Schedule();
+            Element scheduleElement = (Element) rootElement.getElementsByTagName("schedule").item(0);
+            schedule.setTime(getTagValue("time", scheduleElement));
+
+            List<String> days = new ArrayList<>();
+            NodeList dayNodes = scheduleElement.getElementsByTagName("day");
+            for (int i = 0; i < dayNodes.getLength(); i++) {
+                days.add(dayNodes.item(i).getTextContent());
+            }
+            schedule.setDays(days);
+            serie.setSchedule(schedule);
+
+            Image image = new Image();
+            NodeList imageNodes = rootElement.getElementsByTagName("image");
             serie.setImage(image);
 
             return serie;
