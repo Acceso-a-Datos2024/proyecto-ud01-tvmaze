@@ -226,23 +226,23 @@ git --version
 
 ## Inicio de Sesión
 1. Al abrir la aplicación, se mostrará la pantalla de inicio de sesión.
-- ![Inicio sesion app](src/main/resources/img/Login1.png)
+![Inicio sesion app](src/main/resources/img/Login1.png)
 2. Introduce tus credenciales (usuario y contraseña) y haz clic en **Acceder**.
 - Si intentas acceder con credenciales incorrectas, se mostrará un mensaje de error.
 - Si no tienes una cuenta, puedes registrarte haciendo clic en **Registrarse**.
-- ![Inicio sesion app](src/main/resources/img/Login2.png)
+![Inicio sesion app](src/main/resources/img/Login2.png)
 - Cuando creas una contraseña e usuario, esta se cifrará y almacenará para proteger tu información.
-- ![Inicio sesion app](src/main/resources/img/cifrado.png)
+![Inicio sesion app](src/main/resources/img/cifrado.png)
 3. Después de iniciar sesión correctamente, se mostrará una ventana para restaurar la sesión anterior o iniciar una nueva.
-- ![Inicio sesion app](src/main/resources/img/Login3.png)
+![Inicio sesion app](src/main/resources/img/Login3.png)
 - Si eliges **Aceptar**, se cargarán los datos de la sesión anterior.
-- ![Inicio sesion app](src/main/resources/img/Login4.png)
+![Inicio sesion app](src/main/resources/img/Login4.png)
 - Si eliges **Cancelar**, se mostrará la pantalla principal de la aplicación.
 4. Busca una serie por su nombre en el campo de búsqueda y haz clic en **Buscar**.
-- ![Inicio sesion app](src/main/resources/img/Busqueda.png)
+![Inicio sesion app](src/main/resources/img/Busqueda.png)
 5. Si pulsas en ver episodios, se mostrará una lista con los episodios de la serie seleccionada ordenados por temporada y número de episodio.
-- ![Inicio sesion app](src/main/resources/img/Episodios2.png)
+![Inicio sesion app](src/main/resources/img/Episodios2.png)
 6. Si pulsas en **Ver Cast** , se mostrará una lista con los actores que participan en la serie y los personajes que interpretan.
-- ![Inicio sesion app](src/main/resources/img/Cast.png)
+![Inicio sesion app](src/main/resources/img/Cast.png)
 
 
