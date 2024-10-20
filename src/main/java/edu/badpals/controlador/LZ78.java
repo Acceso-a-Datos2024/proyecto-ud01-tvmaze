@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 public class LZ78 {
     public static String decode(String encodedData) {
         List<DictionaryEntry> entries = new ArrayList<>();

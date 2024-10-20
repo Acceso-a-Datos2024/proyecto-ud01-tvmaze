@@ -15,7 +15,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 
-
 import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
@@ -28,9 +27,9 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class EpisodiosController implements Initializable {
-    private Conexion conexion = new Conexion();
+    private final Conexion conexion = new Conexion();
     private Serie serie;
-    private JSONHandler jsonHandler = new JSONHandler();
+    private final JSONHandler jsonHandler = new JSONHandler();
 
     @FXML
     private ListView<String> listViewEpisodios;
@@ -45,13 +44,12 @@ public class EpisodiosController implements Initializable {
     }
 
     private void cargarSerie() {
-        try{
+        try {
             XmlMapper xmlMapper = new XmlMapper();
             xmlMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
             xmlMapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
             setSerie(xmlMapper.readValue(new File("data/Serie.xml"), Serie.class));
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             System.out.println("Error al cargar la ventana de serie en episodiosController");
         }
     }
@@ -106,7 +104,7 @@ public class EpisodiosController implements Initializable {
             Transformer transformer = TransformerFactory.newInstance().newTransformer();
             transformer.setOutputProperty(OutputKeys.INDENT, "yes");
             DOMSource source = new DOMSource(JSONHandler.episodiosToXML(episodiosFromXML));
-            StreamResult result = new StreamResult(new File(dataDir,"episodios.xml"));
+            StreamResult result = new StreamResult(new File(dataDir, "episodios.xml"));
             transformer.transform(source, result);
         } catch (Exception e) {
             System.out.println("Error al guardar el episodios.xml");

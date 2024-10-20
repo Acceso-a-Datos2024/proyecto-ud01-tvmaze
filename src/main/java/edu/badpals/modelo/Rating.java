@@ -1,14 +1,13 @@
 package edu.badpals.modelo;
 
 
-import java.io.Serializable;
-
 public class Rating {
     private double average;
 
-    public Rating(){}
+    public Rating() {
+    }
 
-    public Rating(String rating){
+    public Rating(String rating) {
         this.average = Double.parseDouble(rating);
     }
 

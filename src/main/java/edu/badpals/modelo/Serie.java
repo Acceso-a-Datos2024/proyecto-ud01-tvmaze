@@ -2,12 +2,10 @@ package edu.badpals.modelo;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import java.io.Serializable;
-import java.net.URL;
 import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Serie{
+public class Serie {
     private int id;
     private String name;
     private String type;
@@ -19,7 +17,7 @@ public class Serie{
     private Schedule schedule;
     private Image image;
 
-    public Serie(){
+    public Serie() {
         this.id = 0;
     }
 

@@ -1,37 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
-<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
-
-<Pane fx:id="panCast" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #669CE3;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.badpals.controlador.CastController">
+<Pane xmlns:fx="http://javafx.com/fxml/1" fx:id="panCast" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+      minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #669CE3;"
+      xmlns="http://javafx.com/javafx/23" fx:controller="edu.badpals.controlador.CastController">
     <children>
-        <Button fx:id="btnVolverMenuCast" alignment="CENTER" contentDisplay="CENTER" layoutX="1414.0" layoutY="836.0" mnemonicParsing="false" onAction="#toSerie" prefHeight="30.0" prefWidth="111.0" style="-fx-background-color: #6675E3; -fx-text-fill: black; -fx-border-color: black; -fx-border-width: 1px; -fx-border-radius: 5px; -fx-background-radius: 5px;" text="Volver al menú" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS">
+        <Button fx:id="btnVolverMenuCast" alignment="CENTER" contentDisplay="CENTER" layoutX="1414.0" layoutY="836.0"
+                mnemonicParsing="false" onAction="#toSerie" prefHeight="30.0" prefWidth="111.0"
+                style="-fx-background-color: #6675E3; -fx-text-fill: black; -fx-border-color: black; -fx-border-width: 1px; -fx-border-radius: 5px; -fx-background-radius: 5px;"
+                text="Volver al menú" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS">
             <font>
-                <Font name="System Italic" size="13.0" />
+                <Font name="System Italic" size="13.0"/>
             </font>
         </Button>
-        <Label fx:id="lblCast" alignment="CENTER" layoutY="14.0" prefHeight="96.0" prefWidth="405.0" text="Cast" textAlignment="CENTER">
+        <Label fx:id="lblCast" alignment="CENTER" layoutY="14.0" prefHeight="96.0" prefWidth="405.0" text="Cast"
+               textAlignment="CENTER">
             <font>
-                <Font size="47.0" />
+                <Font size="47.0"/>
             </font>
         </Label>
-        <Label fx:id="lblNameSerieCast" alignment="CENTER" layoutX="35.0" layoutY="164.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="600.0" style="-fx-background-color: #f1f1f1;" textAlignment="CENTER">
+        <Label fx:id="lblNameSerieCast" alignment="CENTER" layoutX="35.0" layoutY="164.0" maxHeight="-Infinity"
+               maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="600.0"
+               style="-fx-background-color: #f1f1f1;" textAlignment="CENTER">
             <font>
-                <Font size="19.0" />
+                <Font size="19.0"/>
             </font>
         </Label>
-        <ListView fx:id="listViewCast" layoutX="30.0" layoutY="245.0" prefHeight="610.0" prefWidth="1133.0" />
-      <Separator layoutY="115.0" prefHeight="0.0" prefWidth="1643.0" />
-      <ImageView fitHeight="84.0" fitWidth="111.0" layoutX="35.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../img/comunidad.png" />
-         </image>
-      </ImageView>
+        <ListView fx:id="listViewCast" layoutX="30.0" layoutY="245.0" prefHeight="610.0" prefWidth="1133.0"/>
+        <Separator layoutY="115.0" prefHeight="0.0" prefWidth="1643.0"/>
+        <ImageView fitHeight="84.0" fitWidth="111.0" layoutX="35.0" layoutY="20.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@../../../img/comunidad.png"/>
+            </image>
+        </ImageView>
     </children>
 </Pane>

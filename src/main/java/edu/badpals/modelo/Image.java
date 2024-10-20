@@ -1,11 +1,11 @@
 package edu.badpals.modelo;
 
-import java.io.Serializable;
-
 public class Image {
     private String medium;
     private String original;
-    public Image(){}
+
+    public Image() {
+    }
 
     public Image(String medium) {
         this.medium = medium;

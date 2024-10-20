@@ -32,7 +32,7 @@ public class LoginController {
             stage.setResizable(false);
             stage.setTitle("Series");
 
-            if (LinkPaginasController.mostrarConfirmacion()){
+            if (LinkPaginasController.mostrarConfirmacion()) {
                 LinkPaginasController controller = fxmlLoader.getController();
                 controller.setCampos();
             }
@@ -42,8 +42,8 @@ public class LoginController {
         }
     }
 
-    public void registrarUser(){
-        JSONHandler.crearUser(this.txtFieldUser.getText(),this.txtFieldPwd.getText());
+    public void registrarUser() {
+        JSONHandler.crearUser(this.txtFieldUser.getText(), this.txtFieldPwd.getText());
     }
 
     public void acceder(ActionEvent actionEvent) {

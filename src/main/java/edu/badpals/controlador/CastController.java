@@ -11,8 +11,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
-import javafx.scene.control.ListView;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 
 import java.io.File;
@@ -22,9 +22,9 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class CastController implements Initializable {
-    private Conexion conexion = new Conexion();
+    private final Conexion conexion = new Conexion();
     private Serie serie;
-    private JSONHandler jsonHandler = new JSONHandler();
+    private final JSONHandler jsonHandler = new JSONHandler();
 
     @FXML
     private ListView<String> listViewCast;
@@ -67,7 +67,7 @@ public class CastController implements Initializable {
     }
 
 
-    public void toSerie(ActionEvent actionEvent)  {
+    public void toSerie(ActionEvent actionEvent) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("serie.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 1600, 900);
@@ -94,7 +94,7 @@ public class CastController implements Initializable {
             }
             XmlMapper xmlMapper = new XmlMapper();
             xmlMapper.configure(SerializationFeature.INDENT_OUTPUT, true);
-            xmlMapper.writeValue(new File(dataDir,"/actores.xml"), actores);
+            xmlMapper.writeValue(new File(dataDir, "/actores.xml"), actores);
         } catch (Exception e) {
             System.out.println("Error al guardar el xml en CastController");
 

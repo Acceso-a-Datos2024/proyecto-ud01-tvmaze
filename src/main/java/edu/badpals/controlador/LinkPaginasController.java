@@ -32,8 +32,8 @@ import java.util.ResourceBundle;
 public class LinkPaginasController implements Initializable {
     @FXML
     ImageView imgSerie;
-    private Conexion conexion = new Conexion();
-    private JSONHandler jsonHandler = new JSONHandler();
+    private final Conexion conexion = new Conexion();
+    public final Serie SERIEVACIA = new Serie();
     private Serie serie;
     @FXML
     private TextField txtBuscarSerie;
@@ -58,15 +58,6 @@ public class LinkPaginasController implements Initializable {
     private ImageView imgComunidad;
     @FXML
     private ImageView imgLogin;
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        imgEpisodios.setImage(new Image(getClass().getResource("/img/episodios.png").toExternalForm()));
-        imgComunidad.setImage(new Image(getClass().getResource("/img/comunidad.png").toExternalForm()));
-        imgLupa.setImage(new Image(getClass().getResource("/img/lupa.png").toExternalForm()));
-        imgLogin.setImage(new Image(getClass().getResource("/img/login.png").toExternalForm()));
-        cargarSerie();
-    }
 
     private static Stage loadScene(ActionEvent actionEvent, FXMLLoader fxmlLoader) throws IOException {
         Scene scene = new Scene(fxmlLoader.load(), 1600, 900);
@@ -99,6 +90,15 @@ public class LinkPaginasController implements Initializable {
         return result.isPresent() && result.get() == ButtonType.OK;
     }
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        this.SERIEVACIA.setId(0);
+        imgEpisodios.setImage(new Image(getClass().getResource("/img/episodios.png").toExternalForm()));
+        imgComunidad.setImage(new Image(getClass().getResource("/img/comunidad.png").toExternalForm()));
+        imgLupa.setImage(new Image(getClass().getResource("/img/lupa.png").toExternalForm()));
+        imgLogin.setImage(new Image(getClass().getResource("/img/login.png").toExternalForm()));
+        cargarSerie();
+    }
 
     public Serie getSerie() {
         return serie;
@@ -133,41 +133,27 @@ public class LinkPaginasController implements Initializable {
             lblFechaInicioResult.setText(this.serie.getPremiered());
             lblCalificacionResult.setText(this.serie.getRating().toString());
             lblHorarioResult.setText(schedule.getTime() + " " + String.join(", ", schedule.getDays()));
-            try {
-                if (this.serie.getImage() != null || !this.serie.getImage().getMedium().isEmpty()) {
-                    String imageUrl = this.serie.getImage().getMedium() != null ? this.serie.getImage().getMedium() : this.serie.getImage().getOriginal();
-
-                    if (Conexion.isImageCache(serie.getId()).exists()) {
-                        imgSerie.setImage(new Image(Conexion.isImageCache(serie.getId()).toURI().toString()));
-                    } else {
-                        imgSerie.setImage(new Image(imageUrl, true));
-                    }
-                }
-            } catch (Exception e) {
-                imgSerie.setImage(new Image(getClass().getResource("/img/imagenVacia.png").toExternalForm()));
-            }
+            ponerImagen();
             guardarSerie(this.serie);
         } catch (Exception e) {
             showWarning("Image Load Error", "Failed to load image from URL: " + this.serie.getImage());
 
         }
-
-
     }
 
-    public void toSerie(ActionEvent actionEvent) {
+    private void ponerImagen() {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("serie.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 1600, 900);
-            Stage stage = (Stage) ((javafx.scene.Node) actionEvent.getSource()).getScene().getWindow();
-            stage.setScene(scene);
-            stage.show();
+            if (this.serie.getImage() != null || !this.serie.getImage().getMedium().isEmpty()) {
+                String imageUrl = this.serie.getImage().getMedium() != null ? this.serie.getImage().getMedium() : this.serie.getImage().getOriginal();
 
-            LinkPaginasController controller = fxmlLoader.getController();
-            controller.setCampos();
-
+                if (Conexion.isImageCache(serie.getId()).exists()) {
+                    imgSerie.setImage(new Image(Conexion.isImageCache(serie.getId()).toURI().toString()));
+                } else {
+                    imgSerie.setImage(new Image(imageUrl, true));
+                }
+            }
         } catch (Exception e) {
-            e.printStackTrace();
+            imgSerie.setImage(new Image(getClass().getResource("/img/imagenVacia.png").toExternalForm()));
         }
     }
 
@@ -248,9 +234,7 @@ public class LinkPaginasController implements Initializable {
                 xmlMapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
                 setSerie(xmlMapper.readValue(new File("data/Serie.xml"), Serie.class));
             } else {
-                Serie serie = new Serie();
-                serie.setId(0);
-                setSerie(serie);
+                setSerie(SERIEVACIA);
             }
         } catch (Exception e) {
             System.out.println("Error al cargar Serie");

@@ -18,13 +18,10 @@ import java.util.*;
 
 public class JSONHandler {
 
-
-    // aqui sacamos los objetos del xml
+    // Aquí sacamos los objetos a partir del file en xml
     public static Serie fileToSerie(File xmlFile) {
         if (xmlFile.length() == 0) {
-            Serie serie = new Serie();
-            serie.setId(0);
-            return serie;
+            return new LinkPaginasController().SERIEVACIA;
         }
         return XMLToSerieCache(LectorFile(xmlFile).toString());
     }
@@ -37,6 +34,7 @@ public class JSONHandler {
         return XMLToCast(LectorFile(xmlFile).toString());
     }
 
+    // Método para leer el contenido de un archivo XML y devolverlo como un StringBuilder
     public static StringBuilder LectorFile(File xmlFile) {
         StringBuilder xmlContent = new StringBuilder();
         try (BufferedReader reader = new BufferedReader(new FileReader(xmlFile))) {
@@ -44,37 +42,13 @@ public class JSONHandler {
             while ((line = reader.readLine()) != null) {
                 xmlContent.append(line);
             }
-        } catch (IOException e){
+        } catch (IOException e) {
             System.out.println("Error lector File");
         }
         return xmlContent;
     }
 
-    public static List<String> XMLToCast(String xmlString) {
-        List<String> castList = new ArrayList<>();
-        try {
-            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-            DocumentBuilder builder = factory.newDocumentBuilder();
-            Document document = builder.parse(new InputSource(new StringReader(xmlString)));
-            document.getDocumentElement().normalize();
-
-            NodeList actorNodes = document.getElementsByTagName("actor");
-
-            for (int i = 0; i < actorNodes.getLength(); i++) {
-                Element actorElement = (Element) actorNodes.item(i);
-
-                String name = actorElement.getElementsByTagName("nombre").item(0).getTextContent();
-                String character = actorElement.getElementsByTagName("personaje").item(0).getTextContent();
-
-                castList.add("Actor: " + name + ", Personaje: " + character);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-            System.out.println("Error parsing XML string");
-        }
-        return castList;
-    }
-
+    // Método para convertir un XML en un objeto Serie
     public static Serie XMLToSerie(String xmlString) {
         try {
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -133,6 +107,7 @@ public class JSONHandler {
         }
     }
 
+    // Método para convertir un XML en un objeto Serie (con caché)
     public static Serie XMLToSerieCache(String xmlString) {
         try {
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -171,8 +146,8 @@ public class JSONHandler {
             serie.setSchedule(schedule);
 
             Image image = new Image();
-            image.setMedium(getTagValue("image",rootElement));
-            image.setOriginal(getTagValue("image",rootElement));
+            image.setMedium(getTagValue("image", rootElement));
+            image.setOriginal(getTagValue("image", rootElement));
             serie.setImage(image);
 
             return serie;
@@ -182,6 +157,7 @@ public class JSONHandler {
         }
     }
 
+    // Método para convertir un XML en una lista de episodios
     public static List<Episodio> XMLToEpisodios(String xmlString) {
         List<Episodio> episodios = new ArrayList<>();
         try {
@@ -207,9 +183,35 @@ public class JSONHandler {
         return episodios;
     }
 
+    // Método para convertir un XML en una lista de actores
+    public static List<String> XMLToCast(String xmlString) {
+        List<String> castList = new ArrayList<>();
+        try {
+            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder builder = factory.newDocumentBuilder();
+            Document document = builder.parse(new InputSource(new StringReader(xmlString)));
+            document.getDocumentElement().normalize();
 
-    // aqui pasamos de objetos a xml
+            NodeList actorNodes = document.getElementsByTagName("actor");
 
+            for (int i = 0; i < actorNodes.getLength(); i++) {
+                Element actorElement = (Element) actorNodes.item(i);
+
+                String name = actorElement.getElementsByTagName("nombre").item(0).getTextContent();
+                String character = actorElement.getElementsByTagName("personaje").item(0).getTextContent();
+
+                castList.add("Actor: " + name + ", Personaje: " + character);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Error parsing XML string");
+        }
+        return castList;
+    }
+
+    // Aquí pasamos de objetos a XML
+
+    // Método para convertir un objeto Serie a XML
     public static Document serieToXML(Serie serie) throws ParserConfigurationException {
         DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
@@ -277,6 +279,7 @@ public class JSONHandler {
         return doc;
     }
 
+    // Método para convertir una lista de episodios a XML
     public static Document episodiosToXML(List<Episodio> episodios) throws ParserConfigurationException {
         DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
@@ -304,6 +307,7 @@ public class JSONHandler {
         return doc;
     }
 
+    // Método para convertir una lista de actores a XML
     public static Document actoresToXML(List<String> actores) throws ParserConfigurationException {
         DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
@@ -327,27 +331,22 @@ public class JSONHandler {
         return doc;
     }
 
+    // Aquí manejamos los JSON
 
-    // Aqui manejamos los JSON
-
+    // Método para convertir un JSON a un objeto Serie
     public static Serie JSONtoSerie(String json) {
         try {
             if (json.startsWith("{")) {
                 ObjectMapper objectMapper = new ObjectMapper();
                 return objectMapper.readValue(json, Serie.class);
             }
-            Serie serie = new Serie();
-            serie.setId(0);
-            return serie;
         } catch (JsonProcessingException e) {
             System.out.println("Error al parsear el json a serie");
         }
-        Serie serie = new Serie();
-        serie.setId(0);
-        return serie;
-
+        return new LinkPaginasController().SERIEVACIA;
     }
 
+    // Método para convertir un JSON a una lista de episodios
     public static List<Episodio> JSONtoEpisodios(String json) {
         try {
             if (json != null) {
@@ -361,7 +360,7 @@ public class JSONHandler {
         return new ArrayList<>();
     }
 
-
+    // Método para convertir un JSON a una lista de actores
     public static List<String> JSONtoActores(String json) {
         List<String> nombres = new ArrayList<>();
         try {
@@ -378,8 +377,9 @@ public class JSONHandler {
         return nombres;
     }
 
-    // Aqui manejamos los Users del login
+    // Aquí manejamos los Users del login
 
+    // Método para crear un usuario y guardarlo en un archivo
     public static void crearUser(String user, String pswd) {
         File dataDir = new File("data");
         if (!dataDir.exists()) {
@@ -395,13 +395,14 @@ public class JSONHandler {
         }
     }
 
+    // Método para leer los usuarios desde un archivo y devolverlos en un mapa
     public static Map<String, String> leerUsers() {
         File dataDir = new File("data");
         if (!dataDir.exists()) {
             dataDir.mkdirs();
         }
+        Map<String, String> map = new HashMap<>();
         try (BufferedReader lector = new BufferedReader(new FileReader("data/Users.txt"))) {
-            Map<String, String> map = new HashMap<>();
             String linea;
             while (((linea = lector.readLine()) != null)) {
                 linea = LZ78.decode(linea);
@@ -410,26 +411,23 @@ public class JSONHandler {
                 String pswd = array[1];
                 map.put(user, pswd);
             }
-            return map;
         } catch (Exception e) {
             System.out.println("Error al leer User.txt");
         }
-        return null;
+        return map;
     }
 
+    // Métodos privados
 
-    // metodos privados
-
+    // Método para obtener el valor de una etiqueta XML
     private static String getTagValue(String tag, Element element) {
         NodeList nodeList = element.getElementsByTagName(tag);
-        if (nodeList != null && nodeList.getLength() > 0) {
+        if (nodeList.getLength() > 0) {
             Node node = nodeList.item(0);
             if (node != null && node.getNodeType() == Node.ELEMENT_NODE) {
                 return node.getTextContent();
             }
         }
-        return null;
+        return "";
     }
-
-
 }
