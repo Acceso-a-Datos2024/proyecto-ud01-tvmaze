@@ -27,21 +27,21 @@ Utilizamos postman para realizar las peticiones a la API y obtener la informaci�
 - **Método**: `GET`
 
 **Captura de Postman**:
-![Obtención de información de la serie](src/main/resources/img/Captura Postman 1.png)
+![Obtención de información de la serie](src/main/resources/img/Captura_Postman_1.png)
 
 #### Ejemplo de URL para obtener episodios de una serie:
 - **URL**: `https://api.tvmaze.com/shows/1/episodes`
 - **Método**: `GET`
 
 **Captura de Postman**:
-![Obtención de episodios](src/main/resources/img/Captura Postman 2.png)
+![Obtención de episodios](src/main/resources/img/Captura_Postman_2.png)
 
 #### Ejemplo de URL para obtener el reparto de una serie:
 - **URL**: `https://api.tvmaze.com/shows/1/cast`
 - **Método**: `GET`
 
 **Captura de Postman**:
-![Obtención del reparto](src/main/resources/img/Captura Postman 3.png)
+![Obtención del reparto](src/main/resources/img/Captura_Postman_3.png)
 
 ### 1.4 Tecnologías utilizadas
 Este proyecto ha sido desarrollado con las siguientes tecnologías:
@@ -215,17 +215,19 @@ git --version
     mvn  install
 ```
 ### 8. Ejecuta la aplicación:
+#### Para Crear el JAR
 ```bash
-  
+    mvn clean package
+```
+#### Para ejecutar con el JAR
+```bash
+    
+ java --module-path "C:\Users\a23joelfm\openjfx-21.0.5_windows-x64_bin-sdk\javafx-sdk-21.0.5\lib" --add-modules javafx.controls,javafx.fxml -jar .\target\controlador-1.0-SNAPSHOT.jar
 ```
 ## Notas:
 - Si solo vas a usar el programa sin necesidad de realizar cambios en el código, asegúrate de tener JDK 21, JavaFX 17 y el archivo JAR ejecutable en la carpeta del proyecto.
 - Git es opcional; puedes descargar el ZIP del repositorio y extraerlo sin necesidad de clonar.
 
-## Para Crear el JAR
-- mvn clean package
-## Para ejecutar con el JAR
-- java --module-path "C:\Users\a23joelfm\openjfx-21.0.5_windows-x64_bin-sdk\javafx-sdk-21.0.5\lib" --add-modules javafx.controls,javafx.fxml -jar .\target\controlador-1.0-SNAPSHOT.jar
 
 
 # <u>Manual de Usuario</u>
