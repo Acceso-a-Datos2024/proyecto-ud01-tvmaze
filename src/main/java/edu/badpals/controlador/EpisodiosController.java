@@ -94,6 +94,18 @@ public class EpisodiosController implements Initializable {
         controller.setCampos();
     }
 
+    public void toExportacion(ActionEvent actionEvent) throws IOException {
+
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("exportacion.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 1600, 900);
+        Stage stage = (Stage) ((javafx.scene.Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+        stage.setMaximized(false);
+        stage.setResizable(false);
+        stage.setTitle("Exportacion");
+    }
+
     public void saveXML(List<Episodio> episodiosFromXML) {
         try {
 

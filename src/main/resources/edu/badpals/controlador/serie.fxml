@@ -1,125 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.text.*?>
-<Pane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-      prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #669CE3;"
-      xmlns="http://javafx.com/javafx" fx:controller="edu.badpals.controlador.LinkPaginasController">
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #669CE3;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.badpals.controlador.LinkPaginasController">
     <children>
-        <Button layoutX="-296.0" layoutY="-173.0" mnemonicParsing="false" text="Button"/>
-        <Button fx:id="btnVerEpisodios" layoutX="1256.0" layoutY="690.0" mnemonicParsing="false" onAction="#toEpisodios"
-                style="-fx-background-color: #6675E3; -fx-text-fill: black; -fx-border-color: black; -fx-border-width: 1px; -fx-border-radius: 5px; -fx-background-radius: 5px;"
-                text="VER EPISODIOS">
+        <Button layoutX="-296.0" layoutY="-173.0" mnemonicParsing="false" text="Button" />
+        <Button fx:id="btnVerEpisodios" layoutX="1256.0" layoutY="690.0" mnemonicParsing="false" onAction="#toEpisodios" style="-fx-background-color: #6675E3; -fx-text-fill: black; -fx-border-color: black; -fx-border-width: 1px; -fx-border-radius: 5px; -fx-background-radius: 5px;" text="VER EPISODIOS">
             <font>
-                <Font size="20.0"/>
+                <Font size="20.0" />
             </font>
         </Button>
-        <Button fx:id="btnVerCast" layoutX="1256.0" layoutY="757.0" mnemonicParsing="false" onAction="#toCast"
-                prefHeight="44.0" prefWidth="163.0"
-                style="-fx-background-color: #6675E3; -fx-text-fill: black; -fx-border-color: black; -fx-border-width: 1px; -fx-border-radius: 5px; -fx-background-radius: 5px;"
-                text="VER CAST">
+        <Button fx:id="btnVerCast" layoutX="1256.0" layoutY="757.0" mnemonicParsing="false" onAction="#toCast" prefHeight="44.0" prefWidth="163.0" style="-fx-background-color: #6675E3; -fx-text-fill: black; -fx-border-color: black; -fx-border-width: 1px; -fx-border-radius: 5px; -fx-background-radius: 5px;" text="VER CAST">
             <font>
-                <Font size="20.0"/>
+                <Font size="20.0" />
             </font>
         </Button>
-        <ImageView fx:id="imgSerie" fitHeight="295.0" fitWidth="210.0" layoutX="1209.0" layoutY="168.0"
-                   pickOnBounds="true" preserveRatio="true"/>
-        <Label fx:id="lblSerie" layoutX="163.0" layoutY="108.0" prefHeight="75.0" prefWidth="250.0"
-               text="ELIGE LA SERIE:">
+        <ImageView fx:id="imgSerie" fitHeight="295.0" fitWidth="210.0" layoutX="1209.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true" />
+        <Label fx:id="lblSerie" layoutX="163.0" layoutY="108.0" prefHeight="75.0" prefWidth="250.0" text="ELIGE LA SERIE:">
             <font>
-                <Font size="35.0"/>
+                <Font size="35.0" />
             </font>
         </Label>
         <Label fx:id="lblIdioma" layoutX="135.0" layoutY="307.0" prefHeight="60.0" prefWidth="163.0" text="IDIOMA">
             <font>
-                <Font size="20.0"/>
+                <Font size="20.0" />
             </font>
         </Label>
         <Label fx:id="lblGenero" layoutX="135.0" layoutY="367.0" prefHeight="60.0" prefWidth="163.0" text="GENEROS">
             <font>
-                <Font size="20.0"/>
+                <Font size="20.0" />
             </font>
         </Label>
         <Label fx:id="lblStatus" layoutX="135.0" layoutY="420.0" prefHeight="60.0" prefWidth="163.0" text="STATUS">
             <font>
-                <Font size="20.0"/>
+                <Font size="20.0" />
             </font>
         </Label>
-        <Label fx:id="lblFechaInicio" layoutX="135.0" layoutY="480.0" prefHeight="60.0" prefWidth="163.0"
-               text="FECHA DE SALIDA">
+        <Label fx:id="lblFechaInicio" layoutX="135.0" layoutY="480.0" prefHeight="60.0" prefWidth="163.0" text="FECHA DE SALIDA">
             <font>
-                <Font size="20.0"/>
+                <Font size="20.0" />
             </font>
         </Label>
-        <Label fx:id="lblCalificacion" layoutX="135.0" layoutY="540.0" prefHeight="60.0" prefWidth="163.0"
-               text="CALIFICACIÓN">
+        <Label fx:id="lblCalificacion" layoutX="135.0" layoutY="540.0" prefHeight="60.0" prefWidth="163.0" text="CALIFICACIÓN">
             <font>
-                <Font size="20.0"/>
+                <Font size="20.0" />
             </font>
         </Label>
         <Label fx:id="lblHorario" layoutX="135.0" layoutY="600.0" prefHeight="60.0" prefWidth="163.0" text="HORARIO">
             <font>
-                <Font size="20.0"/>
+                <Font size="20.0" />
             </font>
         </Label>
         <Label fx:id="lblIdiomaResult" layoutX="332.0" layoutY="307.0" prefHeight="60.0" prefWidth="163.0">
             <font>
-                <Font size="20.0"/>
+                <Font size="20.0" />
             </font>
         </Label>
         <Label fx:id="lblGeneroResult" layoutX="332.0" layoutY="367.0" prefHeight="60.0" prefWidth="428.0">
             <font>
-                <Font size="20.0"/>
+                <Font size="20.0" />
             </font>
         </Label>
         <Label fx:id="lblEstatusResult" layoutX="332.0" layoutY="420.0" prefHeight="60.0" prefWidth="163.0">
             <font>
-                <Font size="20.0"/>
+                <Font size="20.0" />
             </font>
         </Label>
         <Label fx:id="lblFechaInicioResult" layoutX="332.0" layoutY="480.0" prefHeight="60.0" prefWidth="163.0">
             <font>
-                <Font size="20.0"/>
+                <Font size="20.0" />
             </font>
         </Label>
         <Label fx:id="lblCalificacionResult" layoutX="332.0" layoutY="533.0" prefHeight="60.0" prefWidth="418.0">
             <font>
-                <Font size="20.0"/>
+                <Font size="20.0" />
             </font>
         </Label>
         <Label fx:id="lblHorarioResult" layoutX="332.0" layoutY="600.0" prefHeight="60.0" prefWidth="497.0">
             <font>
-                <Font size="20.0"/>
+                <Font size="20.0" />
             </font>
         </Label>
         <TextField fx:id="txtBuscarSerie" layoutX="413.0" layoutY="108.0">
             <font>
-                <Font size="35.0"/>
+                <Font size="35.0" />
             </font>
         </TextField>
-        <Button fx:id="btnBuscarSerie" layoutX="953.0" layoutY="123.0" mnemonicParsing="false" onAction="#buscarSerie"
-                style="-fx-background-color: #6675E3; -fx-text-fill: black; -fx-border-color: black; -fx-border-width: 1px; -fx-border-radius: 5px; -fx-background-radius: 5px;"
-                text="BUSCAR">
+        <Button fx:id="btnBuscarSerie" layoutX="953.0" layoutY="123.0" mnemonicParsing="false" onAction="#buscarSerie" style="-fx-background-color: #6675E3; -fx-text-fill: black; -fx-border-color: black; -fx-border-width: 1px; -fx-border-radius: 5px; -fx-background-radius: 5px;" text="BUSCAR">
             <font>
-                <Font size="20.0"/>
+                <Font size="20.0" />
             </font>
         </Button>
-        <Button fx:id="btnLogin" layoutX="35.0" layoutY="31.0" mnemonicParsing="false" onAction="#toLogin"
-                style="-fx-background-color: #6675E3; -fx-text-fill: black; -fx-border-color: black; -fx-border-width: 1px; -fx-border-radius: 5px; -fx-background-radius: 5px;"
-                text="LOGIN">
+        <Button fx:id="btnLogin" layoutX="1368.0" layoutY="46.0" mnemonicParsing="false" onAction="#toLogin" style="-fx-background-color: #6675E3; -fx-text-fill: black; -fx-border-color: black; -fx-border-width: 1px; -fx-border-radius: 5px; -fx-background-radius: 5px;" text="LOGIN">
             <font>
-                <Font size="20.0"/>
+                <Font size="20.0" />
             </font>
         </Button>
-        <ImageView fitHeight="46.0" fitWidth="52.0" layoutX="1085.0" layoutY="123.0" pickOnBounds="true"
-                   preserveRatio="true" fx:id="imgLupa"/>
-        <ImageView fitHeight="46.0" fitWidth="52.0" layoutX="1446.0" layoutY="690.0" pickOnBounds="true"
-                   preserveRatio="true" fx:id="imgEpisodios"/>
-        <ImageView fitHeight="46.0" fitWidth="52.0" layoutX="1446.0" layoutY="757.0" pickOnBounds="true"
-                   preserveRatio="true" fx:id="imgComunidad"/>
-        <ImageView fitHeight="46.0" fitWidth="52.0" layoutX="140.0" layoutY="31.0" pickOnBounds="true"
-                   preserveRatio="true" fx:id="imgLogin"/>
+        <ImageView fx:id="imgLupa" fitHeight="46.0" fitWidth="52.0" layoutX="1085.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="imgEpisodios" fitHeight="46.0" fitWidth="52.0" layoutX="1446.0" layoutY="690.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="imgComunidad" fitHeight="46.0" fitWidth="52.0" layoutX="1446.0" layoutY="757.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="imgLogin" fitHeight="46.0" fitWidth="52.0" layoutX="1472.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true" />
     </children>
 </Pane>
