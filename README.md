@@ -222,6 +222,12 @@ git --version
 - Si solo vas a usar el programa sin necesidad de realizar cambios en el código, asegúrate de tener JDK 21, JavaFX 17 y el archivo JAR ejecutable en la carpeta del proyecto.
 - Git es opcional; puedes descargar el ZIP del repositorio y extraerlo sin necesidad de clonar.
 
+## Para Crear el JAR
+- mvn clean package
+## Para ejecutar con el JAR
+- java --module-path "C:\Users\a23joelfm\openjfx-21.0.5_windows-x64_bin-sdk\javafx-sdk-21.0.5\lib" --add-modules javafx.controls,javafx.fxml -jar .\target\controlador-1.0-SNAPSHOT.jar
+
+
 # <u>Manual de Usuario</u>
 
 ## Inicio de Sesión
@@ -268,5 +274,4 @@ git --version
 6. Si el contenido se encripta
 - Las contraseñas se cifran antes de ser almacenadas en el archivo Users.txt.
 - Se utiliza el algoritmo de cifrado LZ78 para proteger la información de los usuarios.
-
 
