@@ -245,4 +245,28 @@ git --version
 6. Si pulsas en **Ver Cast** , se mostrará una lista con los actores que participan en la serie y los personajes que interpretan.
 ![Inicio sesion app](src/main/resources/img/Cast.png)
 
+# Extras Realizados
+1. **Ordenación de resultados** de las consultas y almacenaje de los datos.
+- Las series aparecen ordenadas por temporada y número de episodio.
+2. **Control de errores (errores de ficheros, consultas sin resultados...).
+- Se muestran mensajes de error si no se encuentran resultados o si hay problemas con los ficheros.
+- Se manejan excepciones para evitar fallos en la aplicación.
+- Si el usuario introduce credenciales incorrectas, se muestra un mensaje de error.
+- Si el usuario borra el paquete data,este se genera automáticamente.
+- Si el usuario borra todos los usuarios,se puede crear uno nuevo sin problemas.
+3. **Uso de la aplicación offline** (en lugar de recurrir a la API, carga de ficheros en caché)
+- Se almacenan los datos de las series en un archivo XML para poder acceder a ellos sin conexión.
+- Si no hay conexión a Internet, la aplicación carga los datos de las series desde el archivo XML.
+4. **Almacenamiento del último estado de ejecución** de la aplicación (última consulta y resultados devueltos) 
+- Se guarda el estado de la aplicación y despues de iniciar sesión, se pregunta al usuario si desea restaurar la sesión anterior.
+- Si el usuario acepta, se cargan los datos de la sesión anterior.
+- Si el usuario cancela, se muestra la pantalla principal de la aplicación. 
+5. Adición de un login (control de acceso restringido) con usuario y contraseña contenidos en un fichero de Properties.
+- Se añade un sistema de inicio de sesión con credenciales almacenadas en un archivo Users.txt.
+- Los usuarios deben autenticarse para acceder a la aplicación.
+- Si el usuario no tiene una cuenta, puede registrarse y crear un nuevo usuario.
+6. Si el contenido se encripta
+- Las contraseñas se cifran antes de ser almacenadas en el archivo Users.txt.
+- Se utiliza el algoritmo de cifrado LZ78 para proteger la información de los usuarios.
+
 
