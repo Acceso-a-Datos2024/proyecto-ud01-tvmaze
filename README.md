@@ -254,11 +254,22 @@ git --version
 ![Inicio sesion app](src/main/resources/img/Cast.png)
 
 # Tiempo dedicado
-- **Víctor Sánchez Nogueira**: x horas
+- **Víctor Sánchez Nogueira**: 38 horas
 - Tareas:
+  - Caché
+  - JSONHandler
+  - Controlador(Login y LinkPaginas)
+  - Conexion
+  - Encriptado de contraseñas
+  - Exportaciones (BIN TXT XML)
       
-- **Joel Figueirido Molares**: x horas
+- **Joel Figueirido Molares**: 31 horas
 - Tareas:
+- Interfaz gráfica
+- Controlador(Episodios y Cast)
+- Exportaciones JSON
+- Documentación
+
       
 # Extras Realizados
 1. **Ordenación de resultados** de las consultas y almacenaje de los datos.
