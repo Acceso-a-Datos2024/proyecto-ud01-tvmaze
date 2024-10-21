@@ -277,3 +277,13 @@ git --version
 - Las contraseñas se cifran antes de ser almacenadas en el archivo Users.txt.
 - Se utiliza el algoritmo de cifrado LZ78 para proteger la información de los usuarios.
 
+# Propuestas de Mejora
+- **Mejora de la interfaz gráfica** para hacerla más atractiva y fácil de usar.
+- **Añadir más funcionalidades** como la posibilidad de marcar series como favoritas, ver recomendaciones personalizadas, etc.
+- **Incluir un sistema de notificaciones** para informar a los usuarios sobre nuevas series, episodios, etc.
+- **Mejorar el sistema de búsqueda** para que los usuarios puedan buscar series por género, año de estreno, etc.
+- **Añadir soporte para más idiomas** para que la aplicación pueda ser utilizada por usuarios de todo el mundo.
+- **Implementar un sistema de valoración** para que los usuarios puedan calificar las series y dejar comentarios.
+- **Incluir un sistema de recomendaciones** para sugerir series similares a las que le gustan al usuario.
+
+# Conclusiones
