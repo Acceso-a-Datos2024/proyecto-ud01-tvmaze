@@ -54,7 +54,7 @@ public class ExportacionController implements Initializable {
         try {
             File outputFile = new File("data/exportaciones/XML/" + txtRuta.getText() + ".xml");
             File exportaciones = new File("data/exportaciones");
-            File txt = new File("data/exportaciones/TXT");
+            File txt = new File("data/exportaciones/XML");
             if(!exportaciones.exists()){
                 exportaciones.mkdir();
             }
@@ -121,6 +121,15 @@ public class ExportacionController implements Initializable {
     public void toJSON(ActionEvent actionEvent) {
         try {
             File outputFile = new File("data/exportaciones/JSON/" + txtRuta.getText() + ".json");
+            File exportaciones = new File("data/exportaciones");
+            File json = new File("data/exportaciones/JSON");
+            if(!exportaciones.exists()){
+                exportaciones.mkdir();
+            }
+            if(!json.exists()){
+                json.mkdir();
+
+            }
             if (txtRuta.getText().contains(".")) {
                 this.txtRuta.setText("Sin extension PALETO");
                 return;

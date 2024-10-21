@@ -1,0 +1,3089 @@
+[ {
+  "season" : 1,
+  "number" : 1,
+  "name" : "Simpsons Roasting on an Open Fire"
+}, {
+  "season" : 1,
+  "number" : 2,
+  "name" : "Bart the Genius"
+}, {
+  "season" : 1,
+  "number" : 3,
+  "name" : "Homer's Odyssey"
+}, {
+  "season" : 1,
+  "number" : 4,
+  "name" : "There's No Disgrace Like Home"
+}, {
+  "season" : 1,
+  "number" : 5,
+  "name" : "Bart the General"
+}, {
+  "season" : 1,
+  "number" : 6,
+  "name" : "Moaning Lisa"
+}, {
+  "season" : 1,
+  "number" : 7,
+  "name" : "The Call of the Simpsons"
+}, {
+  "season" : 1,
+  "number" : 8,
+  "name" : "The Telltale Head"
+}, {
+  "season" : 1,
+  "number" : 9,
+  "name" : "Life on the Fast Lane"
+}, {
+  "season" : 1,
+  "number" : 10,
+  "name" : "Homer's Night Out"
+}, {
+  "season" : 1,
+  "number" : 11,
+  "name" : "The Crepes of Wrath"
+}, {
+  "season" : 1,
+  "number" : 12,
+  "name" : "Krusty Gets Busted"
+}, {
+  "season" : 1,
+  "number" : 13,
+  "name" : "Some Enchanted Evening"
+}, {
+  "season" : 2,
+  "number" : 1,
+  "name" : "Bart Gets an F"
+}, {
+  "season" : 2,
+  "number" : 2,
+  "name" : "Simpson and Delilah"
+}, {
+  "season" : 2,
+  "number" : 3,
+  "name" : "Treehouse of Horror"
+}, {
+  "season" : 2,
+  "number" : 4,
+  "name" : "Two Cars in Every Garage and Three Eyes on Every Fish"
+}, {
+  "season" : 2,
+  "number" : 5,
+  "name" : "Dancin' Homer"
+}, {
+  "season" : 2,
+  "number" : 6,
+  "name" : "Dead Putting Society"
+}, {
+  "season" : 2,
+  "number" : 7,
+  "name" : "Bart vs. Thanksgiving"
+}, {
+  "season" : 2,
+  "number" : 8,
+  "name" : "Bart the Daredevil"
+}, {
+  "season" : 2,
+  "number" : 9,
+  "name" : "Itchy &amp; Scratchy &amp; Marge"
+}, {
+  "season" : 2,
+  "number" : 10,
+  "name" : "Bart Gets Hit by a Car"
+}, {
+  "season" : 2,
+  "number" : 11,
+  "name" : "One Fish, Two Fish, Blowfish, Blue Fish"
+}, {
+  "season" : 2,
+  "number" : 12,
+  "name" : "The Way We Was"
+}, {
+  "season" : 2,
+  "number" : 13,
+  "name" : "Homer vs. Lisa and the Eighth Commandment"
+}, {
+  "season" : 2,
+  "number" : 14,
+  "name" : "Principal Charming"
+}, {
+  "season" : 2,
+  "number" : 15,
+  "name" : "Oh Brother, Where Art Thou?"
+}, {
+  "season" : 2,
+  "number" : 16,
+  "name" : "Bart's Dog Gets an F"
+}, {
+  "season" : 2,
+  "number" : 17,
+  "name" : "Old Money"
+}, {
+  "season" : 2,
+  "number" : 18,
+  "name" : "Brush with Greatness"
+}, {
+  "season" : 2,
+  "number" : 19,
+  "name" : "Lisa's Substitute"
+}, {
+  "season" : 2,
+  "number" : 20,
+  "name" : "The War of the Simpsons"
+}, {
+  "season" : 2,
+  "number" : 21,
+  "name" : "Three Men and a Comic Book"
+}, {
+  "season" : 2,
+  "number" : 22,
+  "name" : "Blood Feud"
+}, {
+  "season" : 3,
+  "number" : 1,
+  "name" : "Stark Raving Dad"
+}, {
+  "season" : 3,
+  "number" : 2,
+  "name" : "Mr. Lisa Goes to Washington"
+}, {
+  "season" : 3,
+  "number" : 3,
+  "name" : "When Flanders Failed"
+}, {
+  "season" : 3,
+  "number" : 4,
+  "name" : "Bart the Murderer"
+}, {
+  "season" : 3,
+  "number" : 5,
+  "name" : "Homer Defined"
+}, {
+  "season" : 3,
+  "number" : 6,
+  "name" : "Like Father Like Clown"
+}, {
+  "season" : 3,
+  "number" : 7,
+  "name" : "Treehouse of Horror II"
+}, {
+  "season" : 3,
+  "number" : 8,
+  "name" : "Lisa's Pony"
+}, {
+  "season" : 3,
+  "number" : 9,
+  "name" : "Saturdays of Thunder"
+}, {
+  "season" : 3,
+  "number" : 10,
+  "name" : "Flaming Moe's"
+}, {
+  "season" : 3,
+  "number" : 11,
+  "name" : "Burns Verkaufen der Kraftwerk"
+}, {
+  "season" : 3,
+  "number" : 12,
+  "name" : "I Married Marge"
+}, {
+  "season" : 3,
+  "number" : 13,
+  "name" : "Radio Bart"
+}, {
+  "season" : 3,
+  "number" : 14,
+  "name" : "Lisa the Greek"
+}, {
+  "season" : 3,
+  "number" : 15,
+  "name" : "Homer Alone"
+}, {
+  "season" : 3,
+  "number" : 16,
+  "name" : "Bart the Lover"
+}, {
+  "season" : 3,
+  "number" : 17,
+  "name" : "Homer at the Bat"
+}, {
+  "season" : 3,
+  "number" : 18,
+  "name" : "Separate Vocations"
+}, {
+  "season" : 3,
+  "number" : 19,
+  "name" : "Dog of Death"
+}, {
+  "season" : 3,
+  "number" : 20,
+  "name" : "Colonel Homer"
+}, {
+  "season" : 3,
+  "number" : 21,
+  "name" : "Black Widower"
+}, {
+  "season" : 3,
+  "number" : 22,
+  "name" : "The Otto Show"
+}, {
+  "season" : 3,
+  "number" : 23,
+  "name" : "Bart's Friend Falls in Love"
+}, {
+  "season" : 3,
+  "number" : 24,
+  "name" : "Brother, Can You Spare Two Dimes?"
+}, {
+  "season" : 4,
+  "number" : 1,
+  "name" : "Kamp Krusty"
+}, {
+  "season" : 4,
+  "number" : 2,
+  "name" : "A Streetcar Named Marge"
+}, {
+  "season" : 4,
+  "number" : 3,
+  "name" : "Homer the Heretic"
+}, {
+  "season" : 4,
+  "number" : 4,
+  "name" : "Lisa the Beauty Queen"
+}, {
+  "season" : 4,
+  "number" : 5,
+  "name" : "Treehouse of Horror III"
+}, {
+  "season" : 4,
+  "number" : 6,
+  "name" : "Itchy & Scratchy: The Movie"
+}, {
+  "season" : 4,
+  "number" : 7,
+  "name" : "Marge Gets a Job"
+}, {
+  "season" : 4,
+  "number" : 8,
+  "name" : "The New Kid on the Block"
+}, {
+  "season" : 4,
+  "number" : 9,
+  "name" : "Mr. Plow"
+}, {
+  "season" : 4,
+  "number" : 10,
+  "name" : "Lisa's First Word"
+}, {
+  "season" : 4,
+  "number" : 11,
+  "name" : "Homer's Triple Bypass"
+}, {
+  "season" : 4,
+  "number" : 12,
+  "name" : "Marge vs. the Monorail"
+}, {
+  "season" : 4,
+  "number" : 13,
+  "name" : "Selma's Choice"
+}, {
+  "season" : 4,
+  "number" : 14,
+  "name" : "Brother from the Same Planet"
+}, {
+  "season" : 4,
+  "number" : 15,
+  "name" : "I Love Lisa"
+}, {
+  "season" : 4,
+  "number" : 16,
+  "name" : "Duffless"
+}, {
+  "season" : 4,
+  "number" : 17,
+  "name" : "Last Exit to Springfield"
+}, {
+  "season" : 4,
+  "number" : 18,
+  "name" : "So It's Come to This: A Simpsons Clip Show"
+}, {
+  "season" : 4,
+  "number" : 19,
+  "name" : "The Front"
+}, {
+  "season" : 4,
+  "number" : 20,
+  "name" : "Whacking Day"
+}, {
+  "season" : 4,
+  "number" : 21,
+  "name" : "Marge in Chains"
+}, {
+  "season" : 4,
+  "number" : 22,
+  "name" : "Krusty Gets Kancelled"
+}, {
+  "season" : 5,
+  "number" : 1,
+  "name" : "Homer's Barbershop Quartet"
+}, {
+  "season" : 5,
+  "number" : 2,
+  "name" : "Cape Feare"
+}, {
+  "season" : 5,
+  "number" : 3,
+  "name" : "Homer Goes to College"
+}, {
+  "season" : 5,
+  "number" : 4,
+  "name" : "Rosebud"
+}, {
+  "season" : 5,
+  "number" : 5,
+  "name" : "Treehouse of Horror IV"
+}, {
+  "season" : 5,
+  "number" : 6,
+  "name" : "Marge on the Lam"
+}, {
+  "season" : 5,
+  "number" : 7,
+  "name" : "Bart's Inner Child"
+}, {
+  "season" : 5,
+  "number" : 8,
+  "name" : "Boy-Scoutz 'n the Hood"
+}, {
+  "season" : 5,
+  "number" : 9,
+  "name" : "The Last Temptation of Homer"
+}, {
+  "season" : 5,
+  "number" : 10,
+  "name" : "$pringfield (or, How I Learned to Stop Worrying and Love Legalized Gambling)"
+}, {
+  "season" : 5,
+  "number" : 11,
+  "name" : "Homer the Vigilante"
+}, {
+  "season" : 5,
+  "number" : 12,
+  "name" : "Bart Gets Famous"
+}, {
+  "season" : 5,
+  "number" : 13,
+  "name" : "Homer and Apu"
+}, {
+  "season" : 5,
+  "number" : 14,
+  "name" : "Lisa vs. Malibu Stacy"
+}, {
+  "season" : 5,
+  "number" : 15,
+  "name" : "Deep Space Homer"
+}, {
+  "season" : 5,
+  "number" : 16,
+  "name" : "Homer Loves Flanders"
+}, {
+  "season" : 5,
+  "number" : 17,
+  "name" : "Bart Gets an Elephant"
+}, {
+  "season" : 5,
+  "number" : 18,
+  "name" : "Burns' Heir"
+}, {
+  "season" : 5,
+  "number" : 19,
+  "name" : "Sweet Seymour Skinner's Baadasssss Song"
+}, {
+  "season" : 5,
+  "number" : 20,
+  "name" : "The Boy Who Knew Too Much"
+}, {
+  "season" : 5,
+  "number" : 21,
+  "name" : "Lady Bouvier's Lover"
+}, {
+  "season" : 5,
+  "number" : 22,
+  "name" : "Secrets of a Successful Marriage"
+}, {
+  "season" : 6,
+  "number" : 1,
+  "name" : "Bart of Darkness"
+}, {
+  "season" : 6,
+  "number" : 2,
+  "name" : "Lisa's Rival"
+}, {
+  "season" : 6,
+  "number" : 3,
+  "name" : "Another Simpsons Clip Show"
+}, {
+  "season" : 6,
+  "number" : 4,
+  "name" : "Itchy & Scratchy Land"
+}, {
+  "season" : 6,
+  "number" : 5,
+  "name" : "Sideshow Bob Roberts"
+}, {
+  "season" : 6,
+  "number" : 6,
+  "name" : "Treehouse of Horror V"
+}, {
+  "season" : 6,
+  "number" : 7,
+  "name" : "Bart's Girlfriend"
+}, {
+  "season" : 6,
+  "number" : 8,
+  "name" : "Lisa on Ice"
+}, {
+  "season" : 6,
+  "number" : 9,
+  "name" : "Homer Badman"
+}, {
+  "season" : 6,
+  "number" : 10,
+  "name" : "Grandpa vs. Sexual Inadequacy"
+}, {
+  "season" : 6,
+  "number" : 11,
+  "name" : "Fear of Flying"
+}, {
+  "season" : 6,
+  "number" : 12,
+  "name" : "Homer the Great"
+}, {
+  "season" : 6,
+  "number" : 13,
+  "name" : "And Maggie Makes Three"
+}, {
+  "season" : 6,
+  "number" : 14,
+  "name" : "Bart's Comet"
+}, {
+  "season" : 6,
+  "number" : 15,
+  "name" : "Homie the Clown"
+}, {
+  "season" : 6,
+  "number" : 16,
+  "name" : "Bart vs. Australia"
+}, {
+  "season" : 6,
+  "number" : 17,
+  "name" : "Homer vs. Patty and Selma"
+}, {
+  "season" : 6,
+  "number" : 18,
+  "name" : "A Star is Burns"
+}, {
+  "season" : 6,
+  "number" : 19,
+  "name" : "Lisa's Wedding"
+}, {
+  "season" : 6,
+  "number" : 20,
+  "name" : "Two Dozen and One Greyhounds"
+}, {
+  "season" : 6,
+  "number" : 21,
+  "name" : "The PTA Disbands"
+}, {
+  "season" : 6,
+  "number" : 22,
+  "name" : "Round Springfield"
+}, {
+  "season" : 6,
+  "number" : 23,
+  "name" : "The Springfield Connection"
+}, {
+  "season" : 6,
+  "number" : 24,
+  "name" : "Lemon of Troy"
+}, {
+  "season" : 6,
+  "number" : 25,
+  "name" : "Who Shot Mr. Burns? (1)"
+}, {
+  "season" : 7,
+  "number" : 1,
+  "name" : "Who Shot Mr. Burns? (2)"
+}, {
+  "season" : 7,
+  "number" : 2,
+  "name" : "Radioactive Man"
+}, {
+  "season" : 7,
+  "number" : 3,
+  "name" : "Home Sweet Homediddly-Dum-Doodily"
+}, {
+  "season" : 7,
+  "number" : 4,
+  "name" : "Bart Sells His Soul"
+}, {
+  "season" : 7,
+  "number" : 5,
+  "name" : "Lisa the Vegetarian"
+}, {
+  "season" : 7,
+  "number" : 6,
+  "name" : "Treehouse of Horror VI"
+}, {
+  "season" : 7,
+  "number" : 7,
+  "name" : "King-Size Homer"
+}, {
+  "season" : 7,
+  "number" : 8,
+  "name" : "Mother Simpson"
+}, {
+  "season" : 7,
+  "number" : 9,
+  "name" : "Sideshow Bob's Last Gleaming"
+}, {
+  "season" : 7,
+  "number" : 10,
+  "name" : "The Simpsons 138th Episode Spectacular"
+}, {
+  "season" : 7,
+  "number" : 11,
+  "name" : "Marge Be Not Proud"
+}, {
+  "season" : 7,
+  "number" : 12,
+  "name" : "Team Homer"
+}, {
+  "season" : 7,
+  "number" : 13,
+  "name" : "Two Bad Neighbors"
+}, {
+  "season" : 7,
+  "number" : 14,
+  "name" : "Scenes from the Class Struggle in Springfield"
+}, {
+  "season" : 7,
+  "number" : 15,
+  "name" : "Bart the Fink"
+}, {
+  "season" : 7,
+  "number" : 16,
+  "name" : "Lisa the Iconoclast"
+}, {
+  "season" : 7,
+  "number" : 17,
+  "name" : "Homer the Smithers"
+}, {
+  "season" : 7,
+  "number" : 18,
+  "name" : "The Day the Violence Died"
+}, {
+  "season" : 7,
+  "number" : 19,
+  "name" : "A Fish Called Selma"
+}, {
+  "season" : 7,
+  "number" : 20,
+  "name" : "Bart on the Road"
+}, {
+  "season" : 7,
+  "number" : 21,
+  "name" : "22 Short Films About Springfield"
+}, {
+  "season" : 7,
+  "number" : 22,
+  "name" : "Raging Abe Simpson and His Grumbling Grandson in \"The Curse of the Flying Hellfish\""
+}, {
+  "season" : 7,
+  "number" : 23,
+  "name" : "Much Apu About Nothing"
+}, {
+  "season" : 7,
+  "number" : 24,
+  "name" : "Homerpalooza"
+}, {
+  "season" : 7,
+  "number" : 25,
+  "name" : "Summer of 4 ft. 2"
+}, {
+  "season" : 8,
+  "number" : 1,
+  "name" : "Treehouse of Horror VII"
+}, {
+  "season" : 8,
+  "number" : 2,
+  "name" : "You Only Move Twice"
+}, {
+  "season" : 8,
+  "number" : 3,
+  "name" : "The Homer They Fall"
+}, {
+  "season" : 8,
+  "number" : 4,
+  "name" : "Burns, Baby Burns"
+}, {
+  "season" : 8,
+  "number" : 5,
+  "name" : "Bart After Dark"
+}, {
+  "season" : 8,
+  "number" : 6,
+  "name" : "A Milhouse Divided"
+}, {
+  "season" : 8,
+  "number" : 7,
+  "name" : "Lisa's Date with Density"
+}, {
+  "season" : 8,
+  "number" : 8,
+  "name" : "Hurricane Neddy"
+}, {
+  "season" : 8,
+  "number" : 9,
+  "name" : "El Viaje de Nuestro Jomer (The Mysterious Voyage of Homer)"
+}, {
+  "season" : 8,
+  "number" : 10,
+  "name" : "The Springfield Files"
+}, {
+  "season" : 8,
+  "number" : 11,
+  "name" : "The Twisted World of Marge Simpson"
+}, {
+  "season" : 8,
+  "number" : 12,
+  "name" : "Mountain of Madness"
+}, {
+  "season" : 8,
+  "number" : 13,
+  "name" : "Simpsoncalifragilisticexpiala (Annoyed Grunt) cious"
+}, {
+  "season" : 8,
+  "number" : 14,
+  "name" : "The Itchy & Scratchy & Poochie Show"
+}, {
+  "season" : 8,
+  "number" : 15,
+  "name" : "Homer's Phobia"
+}, {
+  "season" : 8,
+  "number" : 16,
+  "name" : "Brother from Another Series"
+}, {
+  "season" : 8,
+  "number" : 17,
+  "name" : "My Sister, My Sitter"
+}, {
+  "season" : 8,
+  "number" : 18,
+  "name" : "Homer vs. the Eighteenth Amendment"
+}, {
+  "season" : 8,
+  "number" : 19,
+  "name" : "Grade School Confidential"
+}, {
+  "season" : 8,
+  "number" : 20,
+  "name" : "The Canine Mutiny"
+}, {
+  "season" : 8,
+  "number" : 21,
+  "name" : "The Old Man and Lisa"
+}, {
+  "season" : 8,
+  "number" : 22,
+  "name" : "In Marge We Trust"
+}, {
+  "season" : 8,
+  "number" : 23,
+  "name" : "Homer's Enemy"
+}, {
+  "season" : 8,
+  "number" : 24,
+  "name" : "The Simpsons Spin-Off Showcase"
+}, {
+  "season" : 8,
+  "number" : 25,
+  "name" : "The Secret War of Lisa Simpson"
+}, {
+  "season" : 9,
+  "number" : 1,
+  "name" : "The City of New York vs. Homer Simpson"
+}, {
+  "season" : 9,
+  "number" : 2,
+  "name" : "The Principal and the Pauper"
+}, {
+  "season" : 9,
+  "number" : 3,
+  "name" : "Lisa's Sax"
+}, {
+  "season" : 9,
+  "number" : 4,
+  "name" : "Treehouse of Horror VIII"
+}, {
+  "season" : 9,
+  "number" : 5,
+  "name" : "The Cartridge Family"
+}, {
+  "season" : 9,
+  "number" : 6,
+  "name" : "Bart Star"
+}, {
+  "season" : 9,
+  "number" : 7,
+  "name" : "The Two Mrs. Nahasapeemapetilons"
+}, {
+  "season" : 9,
+  "number" : 8,
+  "name" : "Lisa the Skeptic"
+}, {
+  "season" : 9,
+  "number" : 9,
+  "name" : "Realty Bites"
+}, {
+  "season" : 9,
+  "number" : 10,
+  "name" : "Miracle on Evergreen Terrace"
+}, {
+  "season" : 9,
+  "number" : 11,
+  "name" : "All Singing, All Dancing"
+}, {
+  "season" : 9,
+  "number" : 12,
+  "name" : "Bart Carny"
+}, {
+  "season" : 9,
+  "number" : 13,
+  "name" : "The Joy of Sect"
+}, {
+  "season" : 9,
+  "number" : 14,
+  "name" : "Das Bus"
+}, {
+  "season" : 9,
+  "number" : 15,
+  "name" : "The Last Temptation of Krusty"
+}, {
+  "season" : 9,
+  "number" : 16,
+  "name" : "Dumbbell Indemnity"
+}, {
+  "season" : 9,
+  "number" : 17,
+  "name" : "Lisa the Simpson"
+}, {
+  "season" : 9,
+  "number" : 18,
+  "name" : "This Little Wiggy"
+}, {
+  "season" : 9,
+  "number" : 19,
+  "name" : "Simpson Tide"
+}, {
+  "season" : 9,
+  "number" : 20,
+  "name" : "The Trouble with Trillions"
+}, {
+  "season" : 9,
+  "number" : 21,
+  "name" : "Girly Edition"
+}, {
+  "season" : 9,
+  "number" : 22,
+  "name" : "Trash of the Titans"
+}, {
+  "season" : 9,
+  "number" : 23,
+  "name" : "King of the Hill"
+}, {
+  "season" : 9,
+  "number" : 24,
+  "name" : "Lost Our Lisa"
+}, {
+  "season" : 9,
+  "number" : 25,
+  "name" : "Natural Born Kissers"
+}, {
+  "season" : 10,
+  "number" : 1,
+  "name" : "Lard of the Dance"
+}, {
+  "season" : 10,
+  "number" : 2,
+  "name" : "The Wizard of Evergreen Terrace"
+}, {
+  "season" : 10,
+  "number" : 3,
+  "name" : "Bart the Mother"
+}, {
+  "season" : 10,
+  "number" : 4,
+  "name" : "Treehouse of Horror IX"
+}, {
+  "season" : 10,
+  "number" : 5,
+  "name" : "When You Dish Upon a Star"
+}, {
+  "season" : 10,
+  "number" : 6,
+  "name" : "D'Oh-in' in the Wind"
+}, {
+  "season" : 10,
+  "number" : 7,
+  "name" : "Lisa Gets an \"A\""
+}, {
+  "season" : 10,
+  "number" : 8,
+  "name" : "Homer Simpson in: \"Kidney Trouble\""
+}, {
+  "season" : 10,
+  "number" : 9,
+  "name" : "Mayored to the Mob"
+}, {
+  "season" : 10,
+  "number" : 10,
+  "name" : "Viva Ned Flanders"
+}, {
+  "season" : 10,
+  "number" : 11,
+  "name" : "Wild Barts Can't Be Broken"
+}, {
+  "season" : 10,
+  "number" : 12,
+  "name" : "Sunday, Cruddy Sunday"
+}, {
+  "season" : 10,
+  "number" : 13,
+  "name" : "Homer to the Max"
+}, {
+  "season" : 10,
+  "number" : 14,
+  "name" : "I'm with Cupid"
+}, {
+  "season" : 10,
+  "number" : 15,
+  "name" : "Marge Simpson in: \"Screaming Yellow Honkers\""
+}, {
+  "season" : 10,
+  "number" : 16,
+  "name" : "Make Room for Lisa"
+}, {
+  "season" : 10,
+  "number" : 17,
+  "name" : "Maximum Homerdrive"
+}, {
+  "season" : 10,
+  "number" : 18,
+  "name" : "Simpsons Bible Stories"
+}, {
+  "season" : 10,
+  "number" : 19,
+  "name" : "Mom and Pop Art"
+}, {
+  "season" : 10,
+  "number" : 20,
+  "name" : "The Old Man and the \"C\" Student"
+}, {
+  "season" : 10,
+  "number" : 21,
+  "name" : "Monty Can't Buy Me Love"
+}, {
+  "season" : 10,
+  "number" : 22,
+  "name" : "They Saved Lisa's Brain"
+}, {
+  "season" : 10,
+  "number" : 23,
+  "name" : "30 Minutes Over Tokyo"
+}, {
+  "season" : 11,
+  "number" : 1,
+  "name" : "Beyond Blunderdome"
+}, {
+  "season" : 11,
+  "number" : 2,
+  "name" : "Brother's Little Helper"
+}, {
+  "season" : 11,
+  "number" : 3,
+  "name" : "Guess Who's Coming to Criticize Dinner"
+}, {
+  "season" : 11,
+  "number" : 4,
+  "name" : "Treehouse of Horror X"
+}, {
+  "season" : 11,
+  "number" : 5,
+  "name" : "E-I-E-I-(Annoyed Grunt)"
+}, {
+  "season" : 11,
+  "number" : 6,
+  "name" : "Hello Gutter, Hello Fadder"
+}, {
+  "season" : 11,
+  "number" : 7,
+  "name" : "Eight Misbehavin"
+}, {
+  "season" : 11,
+  "number" : 8,
+  "name" : "Take My Wife, Sleaze"
+}, {
+  "season" : 11,
+  "number" : 9,
+  "name" : "Grift of the Magi"
+}, {
+  "season" : 11,
+  "number" : 10,
+  "name" : "Little Big Mom"
+}, {
+  "season" : 11,
+  "number" : 11,
+  "name" : "Faith Off"
+}, {
+  "season" : 11,
+  "number" : 12,
+  "name" : "The Mansion Family"
+}, {
+  "season" : 11,
+  "number" : 13,
+  "name" : "Saddlesore Galactica"
+}, {
+  "season" : 11,
+  "number" : 14,
+  "name" : "Alone Again Natura-Diddily"
+}, {
+  "season" : 11,
+  "number" : 15,
+  "name" : "Missionary Impossible"
+}, {
+  "season" : 11,
+  "number" : 16,
+  "name" : "Pygmoelian"
+}, {
+  "season" : 11,
+  "number" : 17,
+  "name" : "Bart to the Future"
+}, {
+  "season" : 11,
+  "number" : 18,
+  "name" : "Days of Wine and D'Ohses"
+}, {
+  "season" : 11,
+  "number" : 19,
+  "name" : "Kill the Alligator and Run"
+}, {
+  "season" : 11,
+  "number" : 20,
+  "name" : "Last Tap Dance in Springfield"
+}, {
+  "season" : 11,
+  "number" : 21,
+  "name" : "It's a Mad, Mad, Mad, Mad Marge"
+}, {
+  "season" : 11,
+  "number" : 22,
+  "name" : "Behind the Laughter"
+}, {
+  "season" : 12,
+  "number" : 1,
+  "name" : "Treehouse of Horror XI"
+}, {
+  "season" : 12,
+  "number" : 2,
+  "name" : "A Tale of Two Springfields"
+}, {
+  "season" : 12,
+  "number" : 3,
+  "name" : "Insane Clown Poppy"
+}, {
+  "season" : 12,
+  "number" : 4,
+  "name" : "Lisa the Treehugger"
+}, {
+  "season" : 12,
+  "number" : 5,
+  "name" : "Homer vs. Dignity"
+}, {
+  "season" : 12,
+  "number" : 6,
+  "name" : "The Computer Wore Menace Shoes"
+}, {
+  "season" : 12,
+  "number" : 7,
+  "name" : "The Great Money Caper"
+}, {
+  "season" : 12,
+  "number" : 8,
+  "name" : "Skinner's Sense of Snow"
+}, {
+  "season" : 12,
+  "number" : 9,
+  "name" : "HOMR"
+}, {
+  "season" : 12,
+  "number" : 10,
+  "name" : "Pokey Mom"
+}, {
+  "season" : 12,
+  "number" : 11,
+  "name" : "Worst Episode Ever"
+}, {
+  "season" : 12,
+  "number" : 12,
+  "name" : "Tennis the Menace"
+}, {
+  "season" : 12,
+  "number" : 13,
+  "name" : "Day of the Jackanapes"
+}, {
+  "season" : 12,
+  "number" : 14,
+  "name" : "New Kids on the Blecch"
+}, {
+  "season" : 12,
+  "number" : 15,
+  "name" : "Hungry Hungry Homer"
+}, {
+  "season" : 12,
+  "number" : 16,
+  "name" : "Bye Bye Nerdy"
+}, {
+  "season" : 12,
+  "number" : 17,
+  "name" : "Simpsons Safari"
+}, {
+  "season" : 12,
+  "number" : 18,
+  "name" : "Trilogy of Error"
+}, {
+  "season" : 12,
+  "number" : 19,
+  "name" : "I'm Goin' to Praise Land"
+}, {
+  "season" : 12,
+  "number" : 20,
+  "name" : "Children of a Lesser Clod"
+}, {
+  "season" : 12,
+  "number" : 21,
+  "name" : "Simpsons Tall Tales"
+}, {
+  "season" : 13,
+  "number" : 1,
+  "name" : "Treehouse of Horror XII"
+}, {
+  "season" : 13,
+  "number" : 2,
+  "name" : "The Parent Rap"
+}, {
+  "season" : 13,
+  "number" : 3,
+  "name" : "Homer the Moe"
+}, {
+  "season" : 13,
+  "number" : 4,
+  "name" : "Hunka Hunka Burns in Love"
+}, {
+  "season" : 13,
+  "number" : 5,
+  "name" : "The Blunder Years"
+}, {
+  "season" : 13,
+  "number" : 6,
+  "name" : "She of Little Faith"
+}, {
+  "season" : 13,
+  "number" : 7,
+  "name" : "Brawl in the Family"
+}, {
+  "season" : 13,
+  "number" : 8,
+  "name" : "Sweets and Sour Marge"
+}, {
+  "season" : 13,
+  "number" : 9,
+  "name" : "Jaws Wired Shut"
+}, {
+  "season" : 13,
+  "number" : 10,
+  "name" : "Half-Decent Proposal"
+}, {
+  "season" : 13,
+  "number" : 11,
+  "name" : "The Bart Wants What It Wants"
+}, {
+  "season" : 13,
+  "number" : 12,
+  "name" : "The Lastest Gun in the West"
+}, {
+  "season" : 13,
+  "number" : 13,
+  "name" : "The Old Man and the Key"
+}, {
+  "season" : 13,
+  "number" : 14,
+  "name" : "Tales from the Public Domain"
+}, {
+  "season" : 13,
+  "number" : 15,
+  "name" : "Blame It on Lisa"
+}, {
+  "season" : 13,
+  "number" : 16,
+  "name" : "Weekend at Burnsies"
+}, {
+  "season" : 13,
+  "number" : 17,
+  "name" : "Gump Roast"
+}, {
+  "season" : 13,
+  "number" : 18,
+  "name" : "I Am Furious Yellow"
+}, {
+  "season" : 13,
+  "number" : 19,
+  "name" : "The Sweetest Apu"
+}, {
+  "season" : 13,
+  "number" : 20,
+  "name" : "Little Girl in the Big Ten"
+}, {
+  "season" : 13,
+  "number" : 21,
+  "name" : "Frying Game"
+}, {
+  "season" : 13,
+  "number" : 22,
+  "name" : "Papa's Got a Brand New Badge"
+}, {
+  "season" : 14,
+  "number" : 1,
+  "name" : "Treehouse of Horror XIII"
+}, {
+  "season" : 14,
+  "number" : 2,
+  "name" : "How I Spent My Strummer Vacation"
+}, {
+  "season" : 14,
+  "number" : 3,
+  "name" : "Bart vs. Lisa vs. 3rd Grade"
+}, {
+  "season" : 14,
+  "number" : 4,
+  "name" : "Large Marge"
+}, {
+  "season" : 14,
+  "number" : 5,
+  "name" : "Helter Shelter"
+}, {
+  "season" : 14,
+  "number" : 6,
+  "name" : "The Great Louse Detective"
+}, {
+  "season" : 14,
+  "number" : 7,
+  "name" : "Special Edna (a.k.a. Love and Marking)"
+}, {
+  "season" : 14,
+  "number" : 8,
+  "name" : "The Dad Who Knew Too Little"
+}, {
+  "season" : 14,
+  "number" : 9,
+  "name" : "The Strong Arms of the Ma"
+}, {
+  "season" : 14,
+  "number" : 10,
+  "name" : "Pray Anything"
+}, {
+  "season" : 14,
+  "number" : 11,
+  "name" : "Barting Over"
+}, {
+  "season" : 14,
+  "number" : 12,
+  "name" : "I'm Spelling As Fast As I Can"
+}, {
+  "season" : 14,
+  "number" : 13,
+  "name" : "A Star is Born Again"
+}, {
+  "season" : 14,
+  "number" : 14,
+  "name" : "Mr. Spritz Goes to Washington"
+}, {
+  "season" : 14,
+  "number" : 15,
+  "name" : "C. E. D'oh"
+}, {
+  "season" : 14,
+  "number" : 16,
+  "name" : "'Scuse Me While I Miss the Sky"
+}, {
+  "season" : 14,
+  "number" : 17,
+  "name" : "Three Gays of the Condo"
+}, {
+  "season" : 14,
+  "number" : 18,
+  "name" : "Dude, Where's My Ranch?"
+}, {
+  "season" : 14,
+  "number" : 19,
+  "name" : "Old Yeller-Belly"
+}, {
+  "season" : 14,
+  "number" : 20,
+  "name" : "Brake My Wife, Please"
+}, {
+  "season" : 14,
+  "number" : 21,
+  "name" : "The Bart of War"
+}, {
+  "season" : 14,
+  "number" : 22,
+  "name" : "Moe Baby Blues"
+}, {
+  "season" : 15,
+  "number" : 1,
+  "name" : "Treehouse of Horror XIV"
+}, {
+  "season" : 15,
+  "number" : 2,
+  "name" : "My Mother the Carjacker"
+}, {
+  "season" : 15,
+  "number" : 3,
+  "name" : "The President Wore Pearls"
+}, {
+  "season" : 15,
+  "number" : 4,
+  "name" : "The Regina Monologues"
+}, {
+  "season" : 15,
+  "number" : 5,
+  "name" : "The Fat and the Furriest"
+}, {
+  "season" : 15,
+  "number" : 6,
+  "name" : "Today I Am a Klown"
+}, {
+  "season" : 15,
+  "number" : 7,
+  "name" : "'Tis the Fifteenth Season"
+}, {
+  "season" : 15,
+  "number" : 8,
+  "name" : "Marge vs. Singles, Seniors, Childless Couples and Teens, and Gays"
+}, {
+  "season" : 15,
+  "number" : 9,
+  "name" : "I, (Annoyed Grunt)-Bot"
+}, {
+  "season" : 15,
+  "number" : 10,
+  "name" : "Diatribe of a Mad Housewife"
+}, {
+  "season" : 15,
+  "number" : 11,
+  "name" : "Margical History Tour"
+}, {
+  "season" : 15,
+  "number" : 12,
+  "name" : "Milhouse Doesn't Live Here Anymore"
+}, {
+  "season" : 15,
+  "number" : 13,
+  "name" : "Smart & Smarter"
+}, {
+  "season" : 15,
+  "number" : 14,
+  "name" : "The Ziff Who Came to Dinner"
+}, {
+  "season" : 15,
+  "number" : 15,
+  "name" : "Co-Dependent's Day"
+}, {
+  "season" : 15,
+  "number" : 16,
+  "name" : "Wandering Juvie"
+}, {
+  "season" : 15,
+  "number" : 17,
+  "name" : "My Big Fat Geek Wedding"
+}, {
+  "season" : 15,
+  "number" : 18,
+  "name" : "Catch 'Em If You Can"
+}, {
+  "season" : 15,
+  "number" : 19,
+  "name" : "Simple Simpson"
+}, {
+  "season" : 15,
+  "number" : 20,
+  "name" : "The Way We Weren't"
+}, {
+  "season" : 15,
+  "number" : 21,
+  "name" : "Bart-Mangled Banner"
+}, {
+  "season" : 15,
+  "number" : 22,
+  "name" : "Fraudcast News"
+}, {
+  "season" : 16,
+  "number" : 1,
+  "name" : "Treehouse of Horror XV"
+}, {
+  "season" : 16,
+  "number" : 2,
+  "name" : "All's Fair in Oven War"
+}, {
+  "season" : 16,
+  "number" : 3,
+  "name" : "Sleeping with the Enemy"
+}, {
+  "season" : 16,
+  "number" : 4,
+  "name" : "She Used to Be My Girl"
+}, {
+  "season" : 16,
+  "number" : 5,
+  "name" : "Fat Man and Little Boy"
+}, {
+  "season" : 16,
+  "number" : 6,
+  "name" : "Midnight Rx"
+}, {
+  "season" : 16,
+  "number" : 7,
+  "name" : "Mommie Beerest"
+}, {
+  "season" : 16,
+  "number" : 8,
+  "name" : "Homer and Ned's Hail Mary Pass"
+}, {
+  "season" : 16,
+  "number" : 9,
+  "name" : "Pranksta Rap"
+}, {
+  "season" : 16,
+  "number" : 10,
+  "name" : "There's Something About Marrying"
+}, {
+  "season" : 16,
+  "number" : 11,
+  "name" : "On a Clear Day I Can't See My Sister"
+}, {
+  "season" : 16,
+  "number" : 12,
+  "name" : "Goo Goo Gai Pan"
+}, {
+  "season" : 16,
+  "number" : 13,
+  "name" : "Mobile Homer"
+}, {
+  "season" : 16,
+  "number" : 14,
+  "name" : "The Seven-Beer Snitch"
+}, {
+  "season" : 16,
+  "number" : 15,
+  "name" : "Future-Drama"
+}, {
+  "season" : 16,
+  "number" : 16,
+  "name" : "Don't Fear the Roofer"
+}, {
+  "season" : 16,
+  "number" : 17,
+  "name" : "The Heartbroke Kid"
+}, {
+  "season" : 16,
+  "number" : 18,
+  "name" : "A Star is Torn"
+}, {
+  "season" : 16,
+  "number" : 19,
+  "name" : "Thank God It's Doomsday"
+}, {
+  "season" : 16,
+  "number" : 20,
+  "name" : "Home Away from Homer"
+}, {
+  "season" : 16,
+  "number" : 21,
+  "name" : "Father, Son and Holy Guest-Star"
+}, {
+  "season" : 17,
+  "number" : 1,
+  "name" : "Bonfire of the Manatees"
+}, {
+  "season" : 17,
+  "number" : 2,
+  "name" : "The Girl Who Slept Too Little"
+}, {
+  "season" : 17,
+  "number" : 3,
+  "name" : "Millhouse Of Sand And Fog"
+}, {
+  "season" : 17,
+  "number" : 4,
+  "name" : "Treehouse of Horror XVI"
+}, {
+  "season" : 17,
+  "number" : 5,
+  "name" : "Marge's Son Poisoning"
+}, {
+  "season" : 17,
+  "number" : 6,
+  "name" : "See Homer Run"
+}, {
+  "season" : 17,
+  "number" : 7,
+  "name" : "The Last of the Red Hat Mamas"
+}, {
+  "season" : 17,
+  "number" : 8,
+  "name" : "The Italian Bob"
+}, {
+  "season" : 17,
+  "number" : 9,
+  "name" : "Simpsons Christmas Stories"
+}, {
+  "season" : 17,
+  "number" : 10,
+  "name" : "Homer's Paternity Coot"
+}, {
+  "season" : 17,
+  "number" : 11,
+  "name" : "We're on the Road to D'oh-where"
+}, {
+  "season" : 17,
+  "number" : 12,
+  "name" : "My Fair Laddy"
+}, {
+  "season" : 17,
+  "number" : 13,
+  "name" : "The Seemingly Never-Ending Story"
+}, {
+  "season" : 17,
+  "number" : 14,
+  "name" : "Bart Has Two Mommies"
+}, {
+  "season" : 17,
+  "number" : 15,
+  "name" : "Homer Simpson, This is Your Wife"
+}, {
+  "season" : 17,
+  "number" : 16,
+  "name" : "Million Dollar Abie"
+}, {
+  "season" : 17,
+  "number" : 17,
+  "name" : "Kiss Kiss Bang Bangalore"
+}, {
+  "season" : 17,
+  "number" : 18,
+  "name" : "The Wettest Stories Ever Told"
+}, {
+  "season" : 17,
+  "number" : 19,
+  "name" : "Girls Just Want to Have Sums"
+}, {
+  "season" : 17,
+  "number" : 20,
+  "name" : "Regarding Margie"
+}, {
+  "season" : 17,
+  "number" : 21,
+  "name" : "The Monkey Suit"
+}, {
+  "season" : 17,
+  "number" : 22,
+  "name" : "Marge and Homer Turn a Couple Play"
+}, {
+  "season" : 18,
+  "number" : 1,
+  "name" : "The Mook, the Chef, the Wife and Her Homer"
+}, {
+  "season" : 18,
+  "number" : 2,
+  "name" : "Jazzy and the Pussycats"
+}, {
+  "season" : 18,
+  "number" : 3,
+  "name" : "Please Homer, Don't Hammer 'em"
+}, {
+  "season" : 18,
+  "number" : 4,
+  "name" : "Treehouse of Horror XVII"
+}, {
+  "season" : 18,
+  "number" : 5,
+  "name" : "GI (Annoyed Grunt)"
+}, {
+  "season" : 18,
+  "number" : 6,
+  "name" : "Moe 'N' a Lisa"
+}, {
+  "season" : 18,
+  "number" : 7,
+  "name" : "Ice Cream of Margie (With the Light Blue Hair)"
+}, {
+  "season" : 18,
+  "number" : 8,
+  "name" : "The Haw-Hawed Couple"
+}, {
+  "season" : 18,
+  "number" : 9,
+  "name" : "Kill Gil (Parts I & II)"
+}, {
+  "season" : 18,
+  "number" : 10,
+  "name" : "The Wife Aquatic"
+}, {
+  "season" : 18,
+  "number" : 11,
+  "name" : "Revenge is a Dish Best Served Three Times"
+}, {
+  "season" : 18,
+  "number" : 12,
+  "name" : "Little Big Girl"
+}, {
+  "season" : 18,
+  "number" : 13,
+  "name" : "Springfield Up"
+}, {
+  "season" : 18,
+  "number" : 14,
+  "name" : "Yokel Chords"
+}, {
+  "season" : 18,
+  "number" : 15,
+  "name" : "Rome-old and Juli-eh"
+}, {
+  "season" : 18,
+  "number" : 16,
+  "name" : "Homerazzi"
+}, {
+  "season" : 18,
+  "number" : 17,
+  "name" : "Marge Gamer"
+}, {
+  "season" : 18,
+  "number" : 18,
+  "name" : "The Boys of Bummer"
+}, {
+  "season" : 18,
+  "number" : 19,
+  "name" : "Crook and Ladder"
+}, {
+  "season" : 18,
+  "number" : 20,
+  "name" : "Stop or My Dog Will Shoot"
+}, {
+  "season" : 18,
+  "number" : 21,
+  "name" : "24 Minutes"
+}, {
+  "season" : 18,
+  "number" : 22,
+  "name" : "You Kent Always Say What You Want"
+}, {
+  "season" : 19,
+  "number" : 1,
+  "name" : "He Loves to Fly and He D'ohs"
+}, {
+  "season" : 19,
+  "number" : 2,
+  "name" : "Homer of Seville"
+}, {
+  "season" : 19,
+  "number" : 3,
+  "name" : "Midnight Towboy"
+}, {
+  "season" : 19,
+  "number" : 4,
+  "name" : "I Don't Wanna Know Why the Caged Bird Sings"
+}, {
+  "season" : 19,
+  "number" : 5,
+  "name" : "Treehouse of Horror XVIII"
+}, {
+  "season" : 19,
+  "number" : 6,
+  "name" : "Little Orphan Millie"
+}, {
+  "season" : 19,
+  "number" : 7,
+  "name" : "Husbands and Knives"
+}, {
+  "season" : 19,
+  "number" : 8,
+  "name" : "Funeral for a Fiend"
+}, {
+  "season" : 19,
+  "number" : 9,
+  "name" : "Eternal Moonshine of the Simpson Mind"
+}, {
+  "season" : 19,
+  "number" : 10,
+  "name" : "E Pluribus Wiggum"
+}, {
+  "season" : 19,
+  "number" : 11,
+  "name" : "That 90's Show"
+}, {
+  "season" : 19,
+  "number" : 12,
+  "name" : "Love, Springfieldian Style"
+}, {
+  "season" : 19,
+  "number" : 13,
+  "name" : "The Debarted"
+}, {
+  "season" : 19,
+  "number" : 14,
+  "name" : "Dial 'N' for Nerder"
+}, {
+  "season" : 19,
+  "number" : 15,
+  "name" : "Smoke on the Daughter"
+}, {
+  "season" : 19,
+  "number" : 16,
+  "name" : "Papa Don't Leech"
+}, {
+  "season" : 19,
+  "number" : 17,
+  "name" : "Apocalypse Cow"
+}, {
+  "season" : 19,
+  "number" : 18,
+  "name" : "Any Given Sundance"
+}, {
+  "season" : 19,
+  "number" : 19,
+  "name" : "Mona Leaves-a"
+}, {
+  "season" : 19,
+  "number" : 20,
+  "name" : "All About Lisa"
+}, {
+  "season" : 20,
+  "number" : 1,
+  "name" : "Sex, Pies and Idiot Scrapes"
+}, {
+  "season" : 20,
+  "number" : 2,
+  "name" : "Lost Verizon"
+}, {
+  "season" : 20,
+  "number" : 3,
+  "name" : "Double, Double, Boy in Trouble"
+}, {
+  "season" : 20,
+  "number" : 4,
+  "name" : "Treehouse of Horror XIX"
+}, {
+  "season" : 20,
+  "number" : 5,
+  "name" : "Dangerous Curves"
+}, {
+  "season" : 20,
+  "number" : 6,
+  "name" : "Homer and Lisa Exchange Cross Words"
+}, {
+  "season" : 20,
+  "number" : 7,
+  "name" : "Mypods and Boomsticks"
+}, {
+  "season" : 20,
+  "number" : 8,
+  "name" : "The Burns and the Bees"
+}, {
+  "season" : 20,
+  "number" : 9,
+  "name" : "Lisa the Drama Queen"
+}, {
+  "season" : 20,
+  "number" : 10,
+  "name" : "Take My Life, Please"
+}, {
+  "season" : 20,
+  "number" : 11,
+  "name" : "How the Test Was Won"
+}, {
+  "season" : 20,
+  "number" : 12,
+  "name" : "No Loan Again, Naturally"
+}, {
+  "season" : 20,
+  "number" : 13,
+  "name" : "Gone Maggie Gone"
+}, {
+  "season" : 20,
+  "number" : 14,
+  "name" : "In the Name of the Grandfather"
+}, {
+  "season" : 20,
+  "number" : 15,
+  "name" : "Wedding for Disaster"
+}, {
+  "season" : 20,
+  "number" : 16,
+  "name" : "Eeny Teeny Maya Moe"
+}, {
+  "season" : 20,
+  "number" : 17,
+  "name" : "The Good, the Sad and the Drugly"
+}, {
+  "season" : 20,
+  "number" : 18,
+  "name" : "Father Knows Worst"
+}, {
+  "season" : 20,
+  "number" : 19,
+  "name" : "Waverly Hills, 9021-D'Oh"
+}, {
+  "season" : 20,
+  "number" : 20,
+  "name" : "Four Great Women and a Manicure"
+}, {
+  "season" : 20,
+  "number" : 21,
+  "name" : "Coming to Homerica"
+}, {
+  "season" : 21,
+  "number" : 1,
+  "name" : "Homer the Whopper"
+}, {
+  "season" : 21,
+  "number" : 2,
+  "name" : "Bart Gets a 'Z'"
+}, {
+  "season" : 21,
+  "number" : 3,
+  "name" : "The Great Wife Hope"
+}, {
+  "season" : 21,
+  "number" : 4,
+  "name" : "Treehouse of Horror XX"
+}, {
+  "season" : 21,
+  "number" : 5,
+  "name" : "The Devil Wears Nada"
+}, {
+  "season" : 21,
+  "number" : 6,
+  "name" : "Pranks and Greens"
+}, {
+  "season" : 21,
+  "number" : 7,
+  "name" : "Rednecks and Broomsticks"
+}, {
+  "season" : 21,
+  "number" : 8,
+  "name" : "O Brother, Where Bart Thou?"
+}, {
+  "season" : 21,
+  "number" : 9,
+  "name" : "Thursdays with Abie"
+}, {
+  "season" : 21,
+  "number" : 10,
+  "name" : "Once Upon a Time in Springfield"
+}, {
+  "season" : 21,
+  "number" : 11,
+  "name" : "Million Dollar Maybe"
+}, {
+  "season" : 21,
+  "number" : 12,
+  "name" : "Boy Meets Curl"
+}, {
+  "season" : 21,
+  "number" : 13,
+  "name" : "The Color Yellow"
+}, {
+  "season" : 21,
+  "number" : 14,
+  "name" : "Postcards from the Wedge"
+}, {
+  "season" : 21,
+  "number" : 15,
+  "name" : "Stealing First Base"
+}, {
+  "season" : 21,
+  "number" : 16,
+  "name" : "The Greatest Story Ever Doh'd"
+}, {
+  "season" : 21,
+  "number" : 17,
+  "name" : "American History X-cellent"
+}, {
+  "season" : 21,
+  "number" : 18,
+  "name" : "Chief of Hearts"
+}, {
+  "season" : 21,
+  "number" : 19,
+  "name" : "The Squirt and the Whale"
+}, {
+  "season" : 21,
+  "number" : 20,
+  "name" : "To Surveil with Love"
+}, {
+  "season" : 21,
+  "number" : 21,
+  "name" : "Moe Letter Blues"
+}, {
+  "season" : 21,
+  "number" : 22,
+  "name" : "The Bob Next Door"
+}, {
+  "season" : 21,
+  "number" : 23,
+  "name" : "Judge Me Tender"
+}, {
+  "season" : 22,
+  "number" : 1,
+  "name" : "Elementary School Musical"
+}, {
+  "season" : 22,
+  "number" : 2,
+  "name" : "Loan-a-Lisa"
+}, {
+  "season" : 22,
+  "number" : 3,
+  "name" : "Money Bart"
+}, {
+  "season" : 22,
+  "number" : 4,
+  "name" : "Treehouse of Horror XXI"
+}, {
+  "season" : 22,
+  "number" : 5,
+  "name" : "Lisa Simpson, This Isn't Your Life"
+}, {
+  "season" : 22,
+  "number" : 6,
+  "name" : "The Fool Monty"
+}, {
+  "season" : 22,
+  "number" : 7,
+  "name" : "How Munched is That Birdie in the Window"
+}, {
+  "season" : 22,
+  "number" : 8,
+  "name" : "The Fight Before Christmas"
+}, {
+  "season" : 22,
+  "number" : 9,
+  "name" : "Donnie Fatso"
+}, {
+  "season" : 22,
+  "number" : 10,
+  "name" : "Moms I'd Like to Forget"
+}, {
+  "season" : 22,
+  "number" : 11,
+  "name" : "Flaming Moe"
+}, {
+  "season" : 22,
+  "number" : 12,
+  "name" : "Homer the Father"
+}, {
+  "season" : 22,
+  "number" : 13,
+  "name" : "The Blue and the Gray"
+}, {
+  "season" : 22,
+  "number" : 14,
+  "name" : "Angry Dad: The Movie"
+}, {
+  "season" : 22,
+  "number" : 15,
+  "name" : "The Scorpion's Tale"
+}, {
+  "season" : 22,
+  "number" : 16,
+  "name" : "A Midsummer's Nice Dream"
+}, {
+  "season" : 22,
+  "number" : 17,
+  "name" : "Love is a Many Strangled Thing"
+}, {
+  "season" : 22,
+  "number" : 18,
+  "name" : "The Great Simpsina"
+}, {
+  "season" : 22,
+  "number" : 19,
+  "name" : "The Real Housewives of Fat Tony"
+}, {
+  "season" : 22,
+  "number" : 20,
+  "name" : "Homer Scissorhands"
+}, {
+  "season" : 22,
+  "number" : 21,
+  "name" : "500 Keys"
+}, {
+  "season" : 22,
+  "number" : 22,
+  "name" : "The Ned-Liest Catch"
+}, {
+  "season" : 23,
+  "number" : 1,
+  "name" : "The Falcon and the D'ohman"
+}, {
+  "season" : 23,
+  "number" : 2,
+  "name" : "Bart Stops to Smell the Roosevelts"
+}, {
+  "season" : 23,
+  "number" : 3,
+  "name" : "Treehouse of Horror XXII"
+}, {
+  "season" : 23,
+  "number" : 4,
+  "name" : "Replaceable You"
+}, {
+  "season" : 23,
+  "number" : 5,
+  "name" : "The Food Wife"
+}, {
+  "season" : 23,
+  "number" : 6,
+  "name" : "The Book Job"
+}, {
+  "season" : 23,
+  "number" : 7,
+  "name" : "The Man in the Blue Flannel Pants"
+}, {
+  "season" : 23,
+  "number" : 8,
+  "name" : "The Ten-Per-Cent Solution"
+}, {
+  "season" : 23,
+  "number" : 9,
+  "name" : "Holidays of Future Passed"
+}, {
+  "season" : 23,
+  "number" : 10,
+  "name" : "Politically Inept, with Homer Simpson"
+}, {
+  "season" : 23,
+  "number" : 11,
+  "name" : "The D'oh-cial Network"
+}, {
+  "season" : 23,
+  "number" : 12,
+  "name" : "Moe Goes from Rags to Riches"
+}, {
+  "season" : 23,
+  "number" : 13,
+  "name" : "The Daughter Also Rises"
+}, {
+  "season" : 23,
+  "number" : 14,
+  "name" : "At Long Last Leave"
+}, {
+  "season" : 23,
+  "number" : 15,
+  "name" : "Exit Through the Kwik-E-Mart"
+}, {
+  "season" : 23,
+  "number" : 16,
+  "name" : "How I Wet Your Mother"
+}, {
+  "season" : 23,
+  "number" : 17,
+  "name" : "Them, Robot"
+}, {
+  "season" : 23,
+  "number" : 18,
+  "name" : "Beware My Cheating Bart"
+}, {
+  "season" : 23,
+  "number" : 19,
+  "name" : "A Totally Fun Thing That Bart Will Never Do Again"
+}, {
+  "season" : 23,
+  "number" : 20,
+  "name" : "The Spy Who Learned Me"
+}, {
+  "season" : 23,
+  "number" : 21,
+  "name" : "Ned 'n' Edna's Blend"
+}, {
+  "season" : 23,
+  "number" : 22,
+  "name" : "Lisa Goes Gaga"
+}, {
+  "season" : 24,
+  "number" : 1,
+  "name" : "Moonshine River"
+}, {
+  "season" : 24,
+  "number" : 2,
+  "name" : "Treehouse of Horror XXIII"
+}, {
+  "season" : 24,
+  "number" : 3,
+  "name" : "Adventures in Baby-Getting"
+}, {
+  "season" : 24,
+  "number" : 4,
+  "name" : "Gone Abie Gone"
+}, {
+  "season" : 24,
+  "number" : 5,
+  "name" : "Penny-Wiseguys"
+}, {
+  "season" : 24,
+  "number" : 6,
+  "name" : "A Tree Grows in Springfield"
+}, {
+  "season" : 24,
+  "number" : 7,
+  "name" : "The Day the Earth Stood Cool"
+}, {
+  "season" : 24,
+  "number" : 8,
+  "name" : "To Cur with Love"
+}, {
+  "season" : 24,
+  "number" : 9,
+  "name" : "Homer Goes to Prep School"
+}, {
+  "season" : 24,
+  "number" : 10,
+  "name" : "A Test Before Trying"
+}, {
+  "season" : 24,
+  "number" : 11,
+  "name" : "The Changing of the Guardian"
+}, {
+  "season" : 24,
+  "number" : 12,
+  "name" : "Love is a Many-Splintered Thing"
+}, {
+  "season" : 24,
+  "number" : 13,
+  "name" : "Hardly Kirk-Ing"
+}, {
+  "season" : 24,
+  "number" : 14,
+  "name" : "Gorgeous Grampa"
+}, {
+  "season" : 24,
+  "number" : 15,
+  "name" : "Black-eyed, Please"
+}, {
+  "season" : 24,
+  "number" : 16,
+  "name" : "Dark Knight Court"
+}, {
+  "season" : 24,
+  "number" : 17,
+  "name" : "What Animated Women Want"
+}, {
+  "season" : 24,
+  "number" : 18,
+  "name" : "Pulpit Friction"
+}, {
+  "season" : 24,
+  "number" : 19,
+  "name" : "Whiskey Business"
+}, {
+  "season" : 24,
+  "number" : 20,
+  "name" : "The Fabulous Faker Boy"
+}, {
+  "season" : 24,
+  "number" : 21,
+  "name" : "The Saga of Carl"
+}, {
+  "season" : 24,
+  "number" : 22,
+  "name" : "Dangers on a Train"
+}, {
+  "season" : 25,
+  "number" : 1,
+  "name" : "Homerland"
+}, {
+  "season" : 25,
+  "number" : 2,
+  "name" : "Treehouse of Horror XXIV"
+}, {
+  "season" : 25,
+  "number" : 3,
+  "name" : "Four Regrettings and a Funeral"
+}, {
+  "season" : 25,
+  "number" : 4,
+  "name" : "YOLO"
+}, {
+  "season" : 25,
+  "number" : 5,
+  "name" : "Labor Pains"
+}, {
+  "season" : 25,
+  "number" : 6,
+  "name" : "The Kid is All Right"
+}, {
+  "season" : 25,
+  "number" : 7,
+  "name" : "Yellow Subterfuge"
+}, {
+  "season" : 25,
+  "number" : 8,
+  "name" : "White Christmas Blues"
+}, {
+  "season" : 25,
+  "number" : 9,
+  "name" : "Steal This Episode"
+}, {
+  "season" : 25,
+  "number" : 10,
+  "name" : "Married to the Blob"
+}, {
+  "season" : 25,
+  "number" : 11,
+  "name" : "Specs and the City"
+}, {
+  "season" : 25,
+  "number" : 12,
+  "name" : "Diggs"
+}, {
+  "season" : 25,
+  "number" : 13,
+  "name" : "The Man Who Grew Too Much"
+}, {
+  "season" : 25,
+  "number" : 14,
+  "name" : "The Winter of His Content"
+}, {
+  "season" : 25,
+  "number" : 15,
+  "name" : "The War of Art"
+}, {
+  "season" : 25,
+  "number" : 16,
+  "name" : "You Don't Have to Live Like a Referee"
+}, {
+  "season" : 25,
+  "number" : 17,
+  "name" : "Luca$"
+}, {
+  "season" : 25,
+  "number" : 18,
+  "name" : "Days of Future Future"
+}, {
+  "season" : 25,
+  "number" : 19,
+  "name" : "What to Expect When Bart's Expecting"
+}, {
+  "season" : 25,
+  "number" : 20,
+  "name" : "Brick Like Me"
+}, {
+  "season" : 25,
+  "number" : 21,
+  "name" : "Pay Pal"
+}, {
+  "season" : 25,
+  "number" : 22,
+  "name" : "The Yellow Badge of Cowardge"
+}, {
+  "season" : 26,
+  "number" : 1,
+  "name" : "Clown in the Dumps"
+}, {
+  "season" : 26,
+  "number" : 2,
+  "name" : "The Wreck of the Relationship"
+}, {
+  "season" : 26,
+  "number" : 3,
+  "name" : "Super Franchise Me"
+}, {
+  "season" : 26,
+  "number" : 4,
+  "name" : "Treehouse of Horror XXV"
+}, {
+  "season" : 26,
+  "number" : 5,
+  "name" : "Opposites A-frack"
+}, {
+  "season" : 26,
+  "number" : 6,
+  "name" : "Simpsorama"
+}, {
+  "season" : 26,
+  "number" : 7,
+  "name" : "Blazed and Confused"
+}, {
+  "season" : 26,
+  "number" : 8,
+  "name" : "Covercraft"
+}, {
+  "season" : 26,
+  "number" : 9,
+  "name" : "I Won't Be Home for Christmas"
+}, {
+  "season" : 26,
+  "number" : 10,
+  "name" : "The Man Who Came to Be Dinner"
+}, {
+  "season" : 26,
+  "number" : 11,
+  "name" : "Bart's New Friend"
+}, {
+  "season" : 26,
+  "number" : 12,
+  "name" : "The Musk Who Fell to Earth"
+}, {
+  "season" : 26,
+  "number" : 13,
+  "name" : "Walking Big & Tall"
+}, {
+  "season" : 26,
+  "number" : 14,
+  "name" : "My Fare Lady"
+}, {
+  "season" : 26,
+  "number" : 15,
+  "name" : "The Princess Guide"
+}, {
+  "season" : 26,
+  "number" : 16,
+  "name" : "Sky Police"
+}, {
+  "season" : 26,
+  "number" : 17,
+  "name" : "Waiting for Duffman"
+}, {
+  "season" : 26,
+  "number" : 18,
+  "name" : "Peeping Mom"
+}, {
+  "season" : 26,
+  "number" : 19,
+  "name" : "The Kids Are All Fight"
+}, {
+  "season" : 26,
+  "number" : 20,
+  "name" : "Let's Go Fly a Coot"
+}, {
+  "season" : 26,
+  "number" : 21,
+  "name" : "Bull-E"
+}, {
+  "season" : 26,
+  "number" : 22,
+  "name" : "Mathlete's Feat"
+}, {
+  "season" : 27,
+  "number" : 1,
+  "name" : "Every Man's Dream"
+}, {
+  "season" : 27,
+  "number" : 2,
+  "name" : "Cue Detective"
+}, {
+  "season" : 27,
+  "number" : 3,
+  "name" : "Puffless"
+}, {
+  "season" : 27,
+  "number" : 4,
+  "name" : "Halloween of Horror"
+}, {
+  "season" : 27,
+  "number" : 5,
+  "name" : "Treehouse of Horror XXVI"
+}, {
+  "season" : 27,
+  "number" : 6,
+  "name" : "Friend with Benefit"
+}, {
+  "season" : 27,
+  "number" : 7,
+  "name" : "Lisa with an 'S'"
+}, {
+  "season" : 27,
+  "number" : 8,
+  "name" : "Paths of Glory"
+}, {
+  "season" : 27,
+  "number" : 9,
+  "name" : "Barthood"
+}, {
+  "season" : 27,
+  "number" : 10,
+  "name" : "The Girl Code"
+}, {
+  "season" : 27,
+  "number" : 11,
+  "name" : "Teenage Mutant Milk-caused Hurdles"
+}, {
+  "season" : 27,
+  "number" : 12,
+  "name" : "Much Apu About Something"
+}, {
+  "season" : 27,
+  "number" : 13,
+  "name" : "Love is in the N2-O2-Ar-CO2-Ne-He-CH4"
+}, {
+  "season" : 27,
+  "number" : 14,
+  "name" : "Gal of Constant Sorrow"
+}, {
+  "season" : 27,
+  "number" : 15,
+  "name" : "Lisa the Veterinarian"
+}, {
+  "season" : 27,
+  "number" : 16,
+  "name" : "The Marge-ian Chronicles"
+}, {
+  "season" : 27,
+  "number" : 17,
+  "name" : "The Burns Cage"
+}, {
+  "season" : 27,
+  "number" : 18,
+  "name" : "How Lisa Got Her Marge Back"
+}, {
+  "season" : 27,
+  "number" : 19,
+  "name" : "Fland Canyon"
+}, {
+  "season" : 27,
+  "number" : 20,
+  "name" : "To Courier with Love"
+}, {
+  "season" : 27,
+  "number" : 21,
+  "name" : "Simprovised"
+}, {
+  "season" : 27,
+  "number" : 22,
+  "name" : "Orange is the New Yellow"
+}, {
+  "season" : 28,
+  "number" : 1,
+  "name" : "Monty Burns' Fleeing Circus"
+}, {
+  "season" : 28,
+  "number" : 2,
+  "name" : "Friends and Family"
+}, {
+  "season" : 28,
+  "number" : 3,
+  "name" : "The Town"
+}, {
+  "season" : 28,
+  "number" : 4,
+  "name" : "Treehouse of Horror XXVII"
+}, {
+  "season" : 28,
+  "number" : 5,
+  "name" : "Trust But Clarify"
+}, {
+  "season" : 28,
+  "number" : 6,
+  "name" : "There Will Be Buds"
+}, {
+  "season" : 28,
+  "number" : 7,
+  "name" : "Havana Wild Weekend"
+}, {
+  "season" : 28,
+  "number" : 8,
+  "name" : "Dad Behavior"
+}, {
+  "season" : 28,
+  "number" : 9,
+  "name" : "The Last Traction Hero"
+}, {
+  "season" : 28,
+  "number" : 10,
+  "name" : "The Nightmare After Krustmas"
+}, {
+  "season" : 28,
+  "number" : 11,
+  "name" : "Pork & Burns"
+}, {
+  "season" : 28,
+  "number" : 12,
+  "name" : "The Great Phatsby, Part One"
+}, {
+  "season" : 28,
+  "number" : 13,
+  "name" : "The Great Phatsby, Part Two"
+}, {
+  "season" : 28,
+  "number" : 14,
+  "name" : "Fatzcarraldo"
+}, {
+  "season" : 28,
+  "number" : 15,
+  "name" : "The Cad and the Hat"
+}, {
+  "season" : 28,
+  "number" : 16,
+  "name" : "Kamp Krustier"
+}, {
+  "season" : 28,
+  "number" : 17,
+  "name" : "22 for 30"
+}, {
+  "season" : 28,
+  "number" : 18,
+  "name" : "A Father's Watch"
+}, {
+  "season" : 28,
+  "number" : 19,
+  "name" : "Caper Chase"
+}, {
+  "season" : 28,
+  "number" : 20,
+  "name" : "Looking for Mr. Goodbart"
+}, {
+  "season" : 28,
+  "number" : 21,
+  "name" : "Moho House"
+}, {
+  "season" : 28,
+  "number" : 22,
+  "name" : "Dogtown"
+}, {
+  "season" : 29,
+  "number" : 1,
+  "name" : "The Serfsons"
+}, {
+  "season" : 29,
+  "number" : 2,
+  "name" : "Springfield Splendor"
+}, {
+  "season" : 29,
+  "number" : 3,
+  "name" : "Whistler's Father"
+}, {
+  "season" : 29,
+  "number" : 4,
+  "name" : "Treehouse of Horror XXVIII"
+}, {
+  "season" : 29,
+  "number" : 5,
+  "name" : "Grampy Can Ya Hear Me"
+}, {
+  "season" : 29,
+  "number" : 6,
+  "name" : "The Old Blue Mayor She Ain't What She Used to Be"
+}, {
+  "season" : 29,
+  "number" : 7,
+  "name" : "Singin' in the Lane"
+}, {
+  "season" : 29,
+  "number" : 8,
+  "name" : "Mr. Lisa's Opus"
+}, {
+  "season" : 29,
+  "number" : 9,
+  "name" : "Gone Boy"
+}, {
+  "season" : 29,
+  "number" : 10,
+  "name" : "Haw-Haw Land"
+}, {
+  "season" : 29,
+  "number" : 11,
+  "name" : "Frink Gets Testy"
+}, {
+  "season" : 29,
+  "number" : 12,
+  "name" : "Homer is Where the Art Isn't"
+}, {
+  "season" : 29,
+  "number" : 13,
+  "name" : "3 Scenes Plus a Tag from a Marriage"
+}, {
+  "season" : 29,
+  "number" : 14,
+  "name" : "Fears of a Clown"
+}, {
+  "season" : 29,
+  "number" : 15,
+  "name" : "No Good Read Goes Unpunished"
+}, {
+  "season" : 29,
+  "number" : 16,
+  "name" : "King Leer"
+}, {
+  "season" : 29,
+  "number" : 17,
+  "name" : "Lisa Gets the Blues"
+}, {
+  "season" : 29,
+  "number" : 18,
+  "name" : "Forgive and Regret"
+}, {
+  "season" : 29,
+  "number" : 19,
+  "name" : "Left Behind"
+}, {
+  "season" : 29,
+  "number" : 20,
+  "name" : "Throw Grampa from the Dane"
+}, {
+  "season" : 29,
+  "number" : 21,
+  "name" : "Flanders' Ladder"
+}, {
+  "season" : 30,
+  "number" : 1,
+  "name" : "Bart's Not Dead"
+}, {
+  "season" : 30,
+  "number" : 2,
+  "name" : "Heartbreak Hotel"
+}, {
+  "season" : 30,
+  "number" : 3,
+  "name" : "My Way or the Highway to Heaven"
+}, {
+  "season" : 30,
+  "number" : 4,
+  "name" : "Treehouse of Horror XXIX"
+}, {
+  "season" : 30,
+  "number" : 5,
+  "name" : "Baby You Can't Drive My Car"
+}, {
+  "season" : 30,
+  "number" : 6,
+  "name" : "From Russia Without Love"
+}, {
+  "season" : 30,
+  "number" : 7,
+  "name" : "Werking Mom"
+}, {
+  "season" : 30,
+  "number" : 8,
+  "name" : "Krusty the Clown"
+}, {
+  "season" : 30,
+  "number" : 9,
+  "name" : "Daddicus Finch"
+}, {
+  "season" : 30,
+  "number" : 10,
+  "name" : "'Tis the 30th Season"
+}, {
+  "season" : 30,
+  "number" : 11,
+  "name" : "Mad About the Toy"
+}, {
+  "season" : 30,
+  "number" : 12,
+  "name" : "The Girl on the Bus"
+}, {
+  "season" : 30,
+  "number" : 13,
+  "name" : "I'm Dancing as Fat as I Can"
+}, {
+  "season" : 30,
+  "number" : 14,
+  "name" : "The Clown Stays in the Picture"
+}, {
+  "season" : 30,
+  "number" : 15,
+  "name" : "101 Mitigations"
+}, {
+  "season" : 30,
+  "number" : 16,
+  "name" : "I Want You (She's So Heavy)"
+}, {
+  "season" : 30,
+  "number" : 17,
+  "name" : "E My Sports"
+}, {
+  "season" : 30,
+  "number" : 18,
+  "name" : "Bart vs. Itchy & Scratchy"
+}, {
+  "season" : 30,
+  "number" : 19,
+  "name" : "Girl's in the Band"
+}, {
+  "season" : 30,
+  "number" : 20,
+  "name" : "I'm Just a Girl Who Can't Say D'oh"
+}, {
+  "season" : 30,
+  "number" : 21,
+  "name" : "D'oh Canada"
+}, {
+  "season" : 30,
+  "number" : 22,
+  "name" : "Woo-Hoo Dunnit"
+}, {
+  "season" : 30,
+  "number" : 23,
+  "name" : "Crystal Blue-Haired Persuasion"
+}, {
+  "season" : 31,
+  "number" : 1,
+  "name" : "The Winter of Our Monetized Content"
+}, {
+  "season" : 31,
+  "number" : 2,
+  "name" : "Go Big or Go Homer"
+}, {
+  "season" : 31,
+  "number" : 3,
+  "name" : "The Fat Blue Line"
+}, {
+  "season" : 31,
+  "number" : 4,
+  "name" : "Treehouse of Horror XXX"
+}, {
+  "season" : 31,
+  "number" : 5,
+  "name" : "Gorillas on the Mast"
+}, {
+  "season" : 31,
+  "number" : 6,
+  "name" : "Marge the Lumberjill"
+}, {
+  "season" : 31,
+  "number" : 7,
+  "name" : "Livin La Pura Vida"
+}, {
+  "season" : 31,
+  "number" : 8,
+  "name" : "Thanksgiving of Horror"
+}, {
+  "season" : 31,
+  "number" : 9,
+  "name" : "Todd, Todd, Why Hast Thou Forsaken Me?"
+}, {
+  "season" : 31,
+  "number" : 10,
+  "name" : "Bobby, It's Cold Outside"
+}, {
+  "season" : 31,
+  "number" : 11,
+  "name" : "Hail to the Teeth"
+}, {
+  "season" : 31,
+  "number" : 12,
+  "name" : "The Miseducation of Lisa Simpson"
+}, {
+  "season" : 31,
+  "number" : 13,
+  "name" : "Frinkcoin"
+}, {
+  "season" : 31,
+  "number" : 14,
+  "name" : "Bart the Bad Guy"
+}, {
+  "season" : 31,
+  "number" : 15,
+  "name" : "Screenless"
+}, {
+  "season" : 31,
+  "number" : 16,
+  "name" : "Better Off Ned"
+}, {
+  "season" : 31,
+  "number" : 17,
+  "name" : "Highway to Well"
+}, {
+  "season" : 31,
+  "number" : 18,
+  "name" : "The Incredible Lightness of Being a Baby"
+}, {
+  "season" : 31,
+  "number" : 19,
+  "name" : "Warrin' Priests"
+}, {
+  "season" : 31,
+  "number" : 20,
+  "name" : "Warrin' Priests Part Two"
+}, {
+  "season" : 31,
+  "number" : 21,
+  "name" : "The Hateful Eight-Year-Olds"
+}, {
+  "season" : 31,
+  "number" : 22,
+  "name" : "The Way of the Dog"
+}, {
+  "season" : 32,
+  "number" : 1,
+  "name" : "Undercover Burns"
+}, {
+  "season" : 32,
+  "number" : 2,
+  "name" : "I, Carumbus"
+}, {
+  "season" : 32,
+  "number" : 3,
+  "name" : "Now Museum, Now You Don't"
+}, {
+  "season" : 32,
+  "number" : 4,
+  "name" : "Treehouse of Horror XXXI"
+}, {
+  "season" : 32,
+  "number" : 5,
+  "name" : "The 7 Beer Itch"
+}, {
+  "season" : 32,
+  "number" : 6,
+  "name" : "Podcast News"
+}, {
+  "season" : 32,
+  "number" : 7,
+  "name" : "Three Dreams Denied"
+}, {
+  "season" : 32,
+  "number" : 8,
+  "name" : "The Road To Cincinnati"
+}, {
+  "season" : 32,
+  "number" : 9,
+  "name" : "Sorry Not Sorry"
+}, {
+  "season" : 32,
+  "number" : 10,
+  "name" : "A Springfield Summer Christmas for Christmas"
+}, {
+  "season" : 32,
+  "number" : 11,
+  "name" : "The Dad-Feelings Limited"
+}, {
+  "season" : 32,
+  "number" : 12,
+  "name" : "Diary Queen"
+}, {
+  "season" : 32,
+  "number" : 13,
+  "name" : "Wad Goals"
+}, {
+  "season" : 32,
+  "number" : 14,
+  "name" : "Yokel Hero"
+}, {
+  "season" : 32,
+  "number" : 15,
+  "name" : "Do PizzaBots Dream of Electric Guitars?"
+}, {
+  "season" : 32,
+  "number" : 16,
+  "name" : "Manger Things"
+}, {
+  "season" : 32,
+  "number" : 17,
+  "name" : "Uncut Femmes"
+}, {
+  "season" : 32,
+  "number" : 18,
+  "name" : "Burger Kings"
+}, {
+  "season" : 32,
+  "number" : 19,
+  "name" : "Panic On The Streets Of Springfield"
+}, {
+  "season" : 32,
+  "number" : 20,
+  "name" : "Mother and Child Reunion"
+}, {
+  "season" : 32,
+  "number" : 21,
+  "name" : "The Man from G.R.A.M.P.A."
+}, {
+  "season" : 32,
+  "number" : 22,
+  "name" : "The Last Barfighter"
+}, {
+  "season" : 33,
+  "number" : 1,
+  "name" : "The Star of the Backstage"
+}, {
+  "season" : 33,
+  "number" : 2,
+  "name" : "Bart's in Jail"
+}, {
+  "season" : 33,
+  "number" : 3,
+  "name" : "Treehouse of Horror XXXII"
+}, {
+  "season" : 33,
+  "number" : 4,
+  "name" : "The Wayz We Were"
+}, {
+  "season" : 33,
+  "number" : 5,
+  "name" : "Lisa's Belly"
+}, {
+  "season" : 33,
+  "number" : 6,
+  "name" : "A Serious Flanders Part One"
+}, {
+  "season" : 33,
+  "number" : 7,
+  "name" : "A Serious Flanders Part Two"
+}, {
+  "season" : 33,
+  "number" : 8,
+  "name" : "Portrait of a Lackey on Fire"
+}, {
+  "season" : 33,
+  "number" : 9,
+  "name" : "Mothers and Other Strangers"
+}, {
+  "season" : 33,
+  "number" : 10,
+  "name" : "A Made Maggie"
+}, {
+  "season" : 33,
+  "number" : 11,
+  "name" : "The Longest Marge"
+}, {
+  "season" : 33,
+  "number" : 12,
+  "name" : "Pixelated and Afraid"
+}, {
+  "season" : 33,
+  "number" : 13,
+  "name" : "Boyz N The Highlands"
+}, {
+  "season" : 33,
+  "number" : 14,
+  "name" : "You Won't Believe What This Episode is About - Act Three Will Shock You!"
+}, {
+  "season" : 33,
+  "number" : 15,
+  "name" : "Bart the Cool Kid"
+}, {
+  "season" : 33,
+  "number" : 16,
+  "name" : "Pretty Whittle Liar"
+}, {
+  "season" : 33,
+  "number" : 17,
+  "name" : "The Sound of Bleeding Gums"
+}, {
+  "season" : 33,
+  "number" : 18,
+  "name" : "My Octopus and a Teacher"
+}, {
+  "season" : 33,
+  "number" : 19,
+  "name" : "Girls Just Shauna Have Fun"
+}, {
+  "season" : 33,
+  "number" : 20,
+  "name" : "Marge the Meanie"
+}, {
+  "season" : 33,
+  "number" : 21,
+  "name" : "Meat Is Murder"
+}, {
+  "season" : 33,
+  "number" : 22,
+  "name" : "Poorhouse Rock"
+}, {
+  "season" : 34,
+  "number" : 1,
+  "name" : "Habeas Tortoise"
+}, {
+  "season" : 34,
+  "number" : 2,
+  "name" : "One Angry Lisa"
+}, {
+  "season" : 34,
+  "number" : 3,
+  "name" : "Lisa the Boy Scout"
+}, {
+  "season" : 34,
+  "number" : 4,
+  "name" : "The King of Nice"
+}, {
+  "season" : 34,
+  "number" : 5,
+  "name" : "Treehouse of Horror Presents Not It"
+}, {
+  "season" : 34,
+  "number" : 6,
+  "name" : "Treehouse of Horror XXXIII"
+}, {
+  "season" : 34,
+  "number" : 7,
+  "name" : "From Beer to Paternity"
+}, {
+  "season" : 34,
+  "number" : 8,
+  "name" : "Step Brother from the Same Planet"
+}, {
+  "season" : 34,
+  "number" : 9,
+  "name" : "When Nelson Met Lisa"
+}, {
+  "season" : 34,
+  "number" : 10,
+  "name" : "Game Done Changed"
+}, {
+  "season" : 34,
+  "number" : 11,
+  "name" : "Top Goon"
+}, {
+  "season" : 34,
+  "number" : 12,
+  "name" : "My Life as a Vlog"
+}, {
+  "season" : 34,
+  "number" : 13,
+  "name" : "The Many Saints of Springfield"
+}, {
+  "season" : 34,
+  "number" : 14,
+  "name" : "Carl Carlson Rides Again"
+}, {
+  "season" : 34,
+  "number" : 15,
+  "name" : "Bartless"
+}, {
+  "season" : 34,
+  "number" : 16,
+  "name" : "Hostile Kirk Place"
+}, {
+  "season" : 34,
+  "number" : 17,
+  "name" : "Pin Gal"
+}, {
+  "season" : 34,
+  "number" : 18,
+  "name" : "Fan-ily Feud"
+}, {
+  "season" : 34,
+  "number" : 19,
+  "name" : "Write Off This Episode"
+}, {
+  "season" : 34,
+  "number" : 20,
+  "name" : "The Very Hungry Caterpillars"
+}, {
+  "season" : 34,
+  "number" : 21,
+  "name" : "Clown V. Board of Education"
+}, {
+  "season" : 34,
+  "number" : 22,
+  "name" : "Homer's Adventures Through the Windshield Glass"
+}, {
+  "season" : 35,
+  "number" : 1,
+  "name" : "Homer's Crossing"
+}, {
+  "season" : 35,
+  "number" : 2,
+  "name" : "A Mid-Childhood Night's Dream"
+}, {
+  "season" : 35,
+  "number" : 3,
+  "name" : "McMansion & Wife"
+}, {
+  "season" : 35,
+  "number" : 4,
+  "name" : "Thirst Trap: A Corporate Love Story"
+}, {
+  "season" : 35,
+  "number" : 5,
+  "name" : "Treehouse of Horror XXXIV"
+}, {
+  "season" : 35,
+  "number" : 6,
+  "name" : "Iron Marge"
+}, {
+  "season" : 35,
+  "number" : 7,
+  "name" : "It's a Blunderful Life"
+}, {
+  "season" : 35,
+  "number" : 8,
+  "name" : "Ae Bonny Romance"
+}, {
+  "season" : 35,
+  "number" : 9,
+  "name" : "Murder, She Boat"
+}, {
+  "season" : 35,
+  "number" : 10,
+  "name" : "Do The Wrong Thing"
+}, {
+  "season" : 35,
+  "number" : 11,
+  "name" : "Frinkenstein's Monster"
+}, {
+  "season" : 35,
+  "number" : 12,
+  "name" : "Lisa Gets an F1"
+}, {
+  "season" : 35,
+  "number" : 13,
+  "name" : "Clan of the Cave Mom"
+}, {
+  "season" : 35,
+  "number" : 14,
+  "name" : "Night of the Living Wage"
+}, {
+  "season" : 35,
+  "number" : 15,
+  "name" : "Cremains of the Day"
+}, {
+  "season" : 35,
+  "number" : 16,
+  "name" : "The Tell-Tale Pants"
+}, {
+  "season" : 35,
+  "number" : 17,
+  "name" : "The Tipping Point"
+}, {
+  "season" : 35,
+  "number" : 18,
+  "name" : "Bart's Brain"
+}, {
+  "season" : 36,
+  "number" : 1,
+  "name" : "Bart's Birthday"
+}, {
+  "season" : 36,
+  "number" : 2,
+  "name" : "The Yellow Lotus"
+}, {
+  "season" : 36,
+  "number" : 3,
+  "name" : "Desperately Seeking Lisa"
+}, {
+  "season" : 36,
+  "number" : 4,
+  "name" : "Shoddy Heat"
+} ]
