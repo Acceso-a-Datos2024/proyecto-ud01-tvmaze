@@ -270,6 +270,8 @@ git --version
   - Interfaz gráfica
   - Controlador(Episodios y Cast)
   - Exportaciones JSON
+  - JSONHandler
+  - Conexion
   - Documentación
 
       
