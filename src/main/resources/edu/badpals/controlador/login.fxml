@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.*?>
 <VBox xmlns:fx="http://javafx.com/fxml/1" alignment="CENTER" prefHeight="500.0" prefWidth="400.0" spacing="20.0"
-      style="-fx-background-color: #669CE3;" xmlns="http://javafx.com/javafx/23"
+      style="-fx-background-color: #669CE3;" xmlns="http://javafx.com/javafx"
       fx:controller="edu.badpals.controlador.LoginController">
     <children>
         <Label fx:id="lblLogin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"

@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 <Pane xmlns:fx="http://javafx.com/fxml/1" fx:id="panCast" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
       minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #669CE3;"
-      xmlns="http://javafx.com/javafx/23" fx:controller="edu.badpals.controlador.CastController">
+      xmlns="http://javafx.com/javafx" fx:controller="edu.badpals.controlador.CastController">
     <children>
         <Button fx:id="btnVolverMenuCast" alignment="CENTER" contentDisplay="CENTER" layoutX="1414.0" layoutY="836.0"
                 mnemonicParsing="false" onAction="#toSerie" prefHeight="30.0" prefWidth="111.0"

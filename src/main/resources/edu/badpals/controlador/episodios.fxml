@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 <Pane xmlns:fx="http://javafx.com/fxml/1" fx:id="panEpisodios" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
       minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #669CE3;"
-      xmlns="http://javafx.com/javafx/23" fx:controller="edu.badpals.controlador.EpisodiosController">
+      xmlns="http://javafx.com/javafx" fx:controller="edu.badpals.controlador.EpisodiosController">
     <children>
         <Button fx:id="btnVolverMenu" alignment="CENTER" contentDisplay="CENTER" layoutX="1429.0" layoutY="849.0"
                 mnemonicParsing="false" onAction="#toSerie" prefHeight="32.0" prefWidth="119.0"
