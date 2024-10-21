@@ -31,4 +31,13 @@ public class Episodio {
     public void setName(String name) {
         this.name = name;
     }
+
+    @Override
+    public String toString() {
+        return "Episodio{" +
+                "season=" + season +
+                ", number=" + number +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }

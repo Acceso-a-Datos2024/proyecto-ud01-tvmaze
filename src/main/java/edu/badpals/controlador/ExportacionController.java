@@ -51,7 +51,16 @@ public class ExportacionController implements Initializable {
 
     public void toXML(ActionEvent actionEvent){
         try {
-            File outputFile = new File("data/exportaciones/" + txtRuta.getText() + ".xml");
+            File outputFile = new File("data/exportaciones/XML/" + txtRuta.getText() + ".xml");
+            File exportaciones = new File("data/exportaciones");
+            File txt = new File("data/exportaciones/TXT");
+            if(!exportaciones.exists()){
+                exportaciones.mkdir();
+            }
+            if(!txt.exists()){
+                txt.mkdir();
+
+            }
             if(txtRuta.getText().contains(".")){
                 this.txtRuta.setText("Sin extension PALETO");
                 return;
@@ -69,6 +78,40 @@ public class ExportacionController implements Initializable {
             Transformer transformer = TransformerFactory.newInstance().newTransformer();
             transformer.setOutputProperty(OutputKeys.INDENT, "yes");
             transformer.transform(new DOMSource(JSONHandler.episodiosToXML(this.episodios)), new StreamResult(outputFile));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void toTXT(ActionEvent actionEvent){
+        try {
+            File outputFile = new File("data/exportaciones/TXT/" + txtRuta.getText() + ".txt");
+            File exportaciones = new File("data/exportaciones");
+            File txt = new File("data/exportaciones/TXT");
+            if(!exportaciones.exists()){
+                exportaciones.mkdir();
+            }
+            if(!txt.exists()){
+                txt.mkdir();
+
+            }
+            if(txtRuta.getText().contains(".")){
+                this.txtRuta.setText("Sin extension PALETO");
+                return;
+            }
+            if (outputFile.isDirectory()) {
+                this.txtRuta.setText("The specified path is a directory, not a file: " + txtRuta.getText());
+                return;
+            }
+
+            if (!outputFile.getParentFile().canWrite()) {
+                this.txtRuta.setText("Cannot write to the specified directory: " + outputFile.getParent());
+                return;
+            }
+
+            for (Episodio episodio: this.episodios){
+                JSONHandler.EscritorFile(episodio.toString(),outputFile);
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
