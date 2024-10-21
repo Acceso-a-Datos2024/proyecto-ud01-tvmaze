@@ -253,6 +253,13 @@ git --version
 6. Si pulsas en **Ver Cast** , se mostrará una lista con los actores que participan en la serie y los personajes que interpretan.
 ![Inicio sesion app](src/main/resources/img/Cast.png)
 
+# Tiempo dedicado
+- **Víctor Sánchez Nogueira**: x horas
+- Tareas:
+      
+- **Joel Figueirido Molares**: x horas
+- Tareas:
+      
 # Extras Realizados
 1. **Ordenación de resultados** de las consultas y almacenaje de los datos.
 - Las series aparecen ordenadas por temporada y número de episodio.
@@ -287,3 +294,9 @@ git --version
 - **Incluir un sistema de recomendaciones** para sugerir series similares a las que le gustan al usuario.
 
 # Conclusiones
+- En este proyecto,hemos aprendido a utilizar y manejar javafx,hemos aprendido a crear una interfaz gráfica de usuario y a conectarla con la lógica de negocio.
+- Hemos aprendido a trabajar con archivos XML y a almacenar datos en caché para mejorar el rendimiento de la aplicación.
+- Nos gustaría que las especificaciones de los requisitos hubieran sido mas detalladas desde el principio,comenzando por la eleccion de la api a utilizar.
+- También nos gustaría haber tenido mas especificaciones sobre algun extra,ya que no sabíamos si era necesario implementar todos los extras ni tampoco como podiamos hacerlo,ya que usamos cosas que no dimos en clase,como el cifrado de contraseñas asi como el mismo javafx,ya que empezamos a ciegas.
+- En general,ha sido un proyecto  interesante a la par que desquiciante debido a la cantidad de configuraciones y problemas que hemos tenido que solucionar tanto de java como tal,como de javafx y maven ademas de incompatibilidades entre si.
+
