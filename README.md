@@ -50,6 +50,8 @@ Este proyecto ha sido desarrollado con las siguientes tecnologías:
 - **FXML**: Lenguaje utilizado para diseñar las vistas de la aplicación.
 - **Maven**: Utilizado para la gestión de dependencias y la construcción del proyecto.
 - **API REST**: Para obtener los datos de series a través de solicitudes HTTP.
+- **W3C**: Para manejar el mappeado a XML y JSON.
+- **JDOM2**: Para manejar el mappeado a XML.
 
 ## 2. Estructura del Proyecto
 
@@ -265,10 +267,10 @@ git --version
       
 - **Joel Figueirido Molares**: 31 horas
 - Tareas:
-- Interfaz gráfica
-- Controlador(Episodios y Cast)
-- Exportaciones JSON
-- Documentación
+  - Interfaz gráfica
+  - Controlador(Episodios y Cast)
+  - Exportaciones JSON
+  - Documentación
 
       
 # Extras Realizados

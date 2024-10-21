@@ -3,6 +3,7 @@ package edu.badpals.controlador;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import edu.badpals.modelo.*;
+import org.jdom2.input.SAXBuilder;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -131,48 +132,46 @@ public class JSONHandler {
     // Método para convertir un XML en un objeto Serie (con caché)
     public static Serie XMLToSerieCache(String xmlString) {
         try {
-            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-            DocumentBuilder builder = factory.newDocumentBuilder();
-            Document document = builder.parse(new InputSource(new StringReader(xmlString)));
-            document.getDocumentElement().normalize();
-
-            Element rootElement = document.getDocumentElement();
+            SAXBuilder saxBuilder = new SAXBuilder();
+            org.jdom2.Document document = saxBuilder.build(new StringReader(xmlString));
+            org.jdom2.Element rootElement = document.getRootElement();
 
             Serie serie = new Serie();
-            serie.setId(Integer.parseInt(getTagValue("id", rootElement)));
-            serie.setName(getTagValue("name", rootElement));
-            serie.setType(getTagValue("type", rootElement));
-            serie.setLanguage(getTagValue("language", rootElement));
-            serie.setStatus(getTagValue("status", rootElement));
-            serie.setPremiered(getTagValue("premiered", rootElement));
-            serie.setRating(new Rating(Double.parseDouble(getTagValue("rating", rootElement))));
+            serie.setId(Integer.parseInt(rootElement.getChildText("id")));
+            serie.setName(rootElement.getChildText("name"));
+            serie.setType(rootElement.getChildText("type"));
+            serie.setLanguage(rootElement.getChildText("language"));
+            serie.setStatus(rootElement.getChildText("status"));
+            serie.setPremiered(rootElement.getChildText("premiered"));
+            serie.setRating(new Rating(Double.parseDouble(rootElement.getChildText("rating"))));
 
             List<String> genres = new ArrayList<>();
-            NodeList genreNodes = rootElement.getElementsByTagName("genre");
-            for (int i = 0; i < genreNodes.getLength(); i++) {
-                genres.add(genreNodes.item(i).getTextContent());
+            for (org.jdom2.Element genreElement : rootElement.getChildren("genre")) {
+                genres.add(genreElement.getText());
             }
             serie.setGenres(genres);
 
+            org.jdom2.Element scheduleElement = rootElement.getChild("schedule");
             Schedule schedule = new Schedule();
-            Element scheduleElement = (Element) rootElement.getElementsByTagName("schedule").item(0);
-            schedule.setTime(getTagValue("time", scheduleElement));
+            schedule.setTime(scheduleElement.getChildText("time"));
 
             List<String> days = new ArrayList<>();
-            NodeList dayNodes = scheduleElement.getElementsByTagName("day");
-            for (int i = 0; i < dayNodes.getLength(); i++) {
-                days.add(dayNodes.item(i).getTextContent());
+            for (org.jdom2.Element dayElement : scheduleElement.getChildren("day")) {
+                days.add(dayElement.getText());
             }
             schedule.setDays(days);
             serie.setSchedule(schedule);
 
+            org.jdom2.Element imageElement = rootElement.getChild("image");
             Image image = new Image();
-            image.setMedium(getTagValue("image", rootElement));
-            image.setOriginal(getTagValue("image", rootElement));
+            if (imageElement != null) {
+                image.setMedium(imageElement.getChildText("medium"));
+                image.setOriginal(imageElement.getChildText("original"));
+            }
             serie.setImage(image);
 
             return serie;
-        } catch (ParserConfigurationException | SAXException | IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
