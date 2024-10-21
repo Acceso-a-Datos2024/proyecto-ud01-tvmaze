@@ -117,6 +117,40 @@ public class ExportacionController implements Initializable {
         }
     }
 
+    public void toBIN(ActionEvent actionEvent){
+        try {
+            File outputFile = new File("data/exportaciones/BIN/" + txtRuta.getText() + ".bin");
+            File exportaciones = new File("data/exportaciones");
+            File bin = new File("data/exportaciones/BIN");
+            if(!exportaciones.exists()){
+                exportaciones.mkdir();
+            }
+            if(!bin.exists()){
+                bin.mkdir();
+
+            }
+            if(txtRuta.getText().contains(".")){
+                this.txtRuta.setText("Sin extension PALETO");
+                return;
+            }
+            if (outputFile.isDirectory()) {
+                this.txtRuta.setText("The specified path is a directory, not a file: " + txtRuta.getText());
+                return;
+            }
+
+            if (!outputFile.getParentFile().canWrite()) {
+                this.txtRuta.setText("Cannot write to the specified directory: " + outputFile.getParent());
+                return;
+            }
+
+            for (Episodio episodio: this.episodios){
+                JSONHandler.EscritorObjects(episodio,outputFile);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     public void setEpisodios(List<Episodio> episodios) {
         this.episodios = episodios;
     }

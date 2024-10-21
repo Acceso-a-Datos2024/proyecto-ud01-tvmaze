@@ -14,6 +14,8 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.*;
 
 public class JSONHandler {
@@ -48,11 +50,20 @@ public class JSONHandler {
         return xmlContent;
     }
 
-    // Método para leer el contenido de un archivo XML y devolverlo como un StringBuilder
+    // Método para escribir el texto
     public static void EscritorFile(String texto, File file) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(file,true))) {
             writer.newLine();
             writer.write(texto);
+        } catch (IOException e) {
+            System.out.println("Error lector File");
+        }
+    }
+
+    // Método para escribir el objeto
+    public static void EscritorObjects(Object o, File file) {
+        try (ObjectOutputStream writer = new ObjectOutputStream(new FileOutputStream(file, true))) {
+            writer.writeObject(o);
         } catch (IOException e) {
             System.out.println("Error lector File");
         }
