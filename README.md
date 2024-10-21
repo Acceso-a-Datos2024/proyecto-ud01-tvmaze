@@ -236,7 +236,7 @@ git --version
 2. Introduce tus credenciales (usuario y contraseña) y haz clic en **Acceder**.
 - Si intentas acceder con credenciales incorrectas, se mostrará un mensaje de error.
 - Si no tienes una cuenta, puedes registrarte haciendo clic en **Registrarse**.
-![Inicio sesion app](src/main/resources/img/Login2.png)
+![Inicio sesion app](src/main/resources/img/login2.png)
 - Cuando creas una contraseña e usuario, esta se cifrará y almacenará para proteger tu información.
 ![Inicio sesion app](src/main/resources/img/cifrado.png)
 3. Después de iniciar sesión correctamente, se mostrará una ventana para restaurar la sesión anterior o iniciar una nueva.
