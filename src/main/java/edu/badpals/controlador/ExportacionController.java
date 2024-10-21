@@ -1,6 +1,7 @@
 package edu.badpals.controlador;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import edu.badpals.modelo.Episodio;
@@ -112,6 +113,31 @@ public class ExportacionController implements Initializable {
             for (Episodio episodio: this.episodios){
                 JSONHandler.EscritorFile(episodio.toString(),outputFile);
             }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void toJSON(ActionEvent actionEvent) {
+        try {
+            File outputFile = new File("data/exportaciones/JSON/" + txtRuta.getText() + ".json");
+            if (txtRuta.getText().contains(".")) {
+                this.txtRuta.setText("Sin extension PALETO");
+                return;
+            }
+            if (outputFile.isDirectory()) {
+                this.txtRuta.setText("The specified path is a directory, not a file: " + txtRuta.getText());
+                return;
+            }
+
+            if (!outputFile.getParentFile().canWrite()) {
+                this.txtRuta.setText("Cannot write to the specified directory: " + outputFile.getParent());
+                return;
+            }
+
+            ObjectMapper objectMapper = new ObjectMapper();
+            objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
+            objectMapper.writeValue(outputFile, this.episodios);
         } catch (Exception e) {
             e.printStackTrace();
         }
