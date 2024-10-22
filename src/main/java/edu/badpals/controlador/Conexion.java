@@ -20,12 +20,12 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class Conexion {
 
     private static final String URL = "https://api.tvmaze.com/";
     private final HttpClient client = HttpClient.newHttpClient();
 
+    // Método para verificar si una serie está en la caché
     public static File checkCache(String nombre) {
         nombre = nombre.replaceAll("[\\\\/:*?\"<>|]", "");
         File cacheDir = cacheExists();
@@ -43,6 +43,7 @@ public class Conexion {
         return null;
     }
 
+    // Método para verificar si una serie está en la caché por ID
     public static File checkCache(int id) {
         File cacheDir = cacheExists();
         if (cacheDir == null) {
@@ -59,6 +60,7 @@ public class Conexion {
         return null;
     }
 
+    // Método para verificar si el directorio de caché existe
     private static File cacheExists() {
         File cacheDir = new File("data/cache");
         if (!cacheDir.exists()) {
@@ -67,6 +69,7 @@ public class Conexion {
         return cacheDir;
     }
 
+    // Método para obtener el directorio de una serie por ID
     private static File getDirSerie(int id) {
         File cacheDir = new File("data/cache");
         File[] cacheDirs = cacheDir.listFiles();
@@ -80,6 +83,7 @@ public class Conexion {
         return null;
     }
 
+    // Método para verificar si una serie está en la caché por nombre
     private static File isSerieCache(String serie) {
         serie = serie.replaceAll("[\\\\/:*?\"<>|]", "");
         File cacheDir = checkCache(serie);
@@ -91,13 +95,13 @@ public class Conexion {
             for (File file : cacheDirs) {
                 if (file.getName().endsWith("Serie.xml")) {
                     return file;
-
                 }
             }
         }
         return null;
     }
 
+    // Método para verificar si los episodios de una serie están en la caché por ID
     private static File isEpisodiosCache(int id) {
         File cacheDir = checkCache(id);
         if (cacheDir == null) {
@@ -108,13 +112,13 @@ public class Conexion {
             for (File file : cacheDirs) {
                 if (file.getName().endsWith("episodios.xml")) {
                     return file;
-
                 }
             }
         }
         return null;
     }
 
+    // Método para verificar si el elenco de una serie está en la caché por ID
     private static File isCastCache(int id) {
         File cacheDir = checkCache(id);
         if (cacheDir == null) {
@@ -125,13 +129,13 @@ public class Conexion {
             for (File file : cacheDirs) {
                 if (file.getName().endsWith("cast.xml")) {
                     return file;
-
                 }
             }
         }
         return null;
     }
 
+    // Método para verificar si la imagen de una serie está en la caché por ID
     public static File isImageCache(int id) {
         File cacheDir = checkCache(id);
         if (cacheDir == null) {
@@ -142,15 +146,14 @@ public class Conexion {
             for (File file : cacheDirs) {
                 if (file.getName().endsWith("image.jpg")) {
                     return file;
-
                 }
             }
         }
         return null;
     }
 
+    // Método para obtener una serie por nombre
     public Serie getSerie(String serieString) {
-
         Serie serie = new Serie();
         try {
             File serieDir = checkCache(serieString);
@@ -169,8 +172,6 @@ public class Conexion {
                 guardarSerieCache(serie);
             }
             return serie;
-
-
         } catch (Exception e) {
             System.out.println("Error al buscar la serie");
         }
@@ -178,8 +179,8 @@ public class Conexion {
         return serie;
     }
 
+    // Método para obtener los episodios de una serie por ID
     public List<Episodio> getEpisodios(int idSerie) {
-
         List<Episodio> episodios = new ArrayList<>();
         try {
             File serieDir = checkCache(idSerie);
@@ -194,17 +195,16 @@ public class Conexion {
             System.out.println("Episodios desde cache");
             episodios = JSONHandler.fileToEpisodios(isEpisodiosCache(idSerie));
             return episodios;
-
         } catch (Exception e) {
             System.out.println("Error al buscar los episodios");
         }
         return episodios;
     }
 
+    // Método para obtener el elenco de una serie por ID
     public List<String> getCast(int idSerie) {
         List<String> cast = new ArrayList<>();
         try {
-
             File serieDir = checkCache(idSerie);
             if (serieDir == null || isCastCache(idSerie) == null || isCastCache(idSerie).length() == 0) {
                 HttpRequest request = HttpRequest.newBuilder()
@@ -223,8 +223,7 @@ public class Conexion {
         return cast;
     }
 
-    //Aqui checkeo q existan los files dentro del file contenedor en el cache
-
+    // Método para guardar una serie en la caché
     private void guardarSerieCache(Serie serie) {
         try {
             if (serie == null || serie.getName() == null) {
@@ -242,12 +241,12 @@ public class Conexion {
             Transformer transformer = TransformerFactory.newInstance().newTransformer();
             transformer.setOutputProperty(OutputKeys.INDENT, "yes");
             transformer.transform(new DOMSource(JSONHandler.serieToXML(serie)), new StreamResult(isSerieCache(serie.getName())));
-
         } catch (Exception e) {
             System.out.println("Error al guardar Serie en cache");
         }
     }
 
+    // Método para guardar los episodios de una serie en la caché
     private void guardarEpisodiosCache(List<Episodio> episodios, int id) {
         try {
             Transformer transformer = TransformerFactory.newInstance().newTransformer();
@@ -258,6 +257,7 @@ public class Conexion {
         }
     }
 
+    // Método para guardar el elenco de una serie en la caché
     private void guardarCastCache(List<String> cast, int id) {
         try {
             Transformer transformer = TransformerFactory.newInstance().newTransformer();
@@ -268,21 +268,21 @@ public class Conexion {
         }
     }
 
+    // Método para leer los episodios de una serie desde la caché
     private List<Episodio> leerEpisodiosCache(int id) {
         return JSONHandler.XMLToEpisodios(JSONHandler.LectorFile(isEpisodiosCache(id)).toString());
     }
 
+    // Método para crear el directorio de una serie en la caché
     private void crearSerieDir(Serie serie) {
         try {
             File cacheDir = new File("data/cache/" + serie.getName().replaceAll("[\\\\/:*?\"<>|]", "") + "-" + serie.getId());
             if (!cacheDir.exists()) {
                 cacheDir.mkdirs();
             }
-
             File serieFile = new File(cacheDir, "Serie.xml");
             File episodiosFile = new File(cacheDir, "episodios.xml");
             File castFile = new File(cacheDir, "cast.xml");
-
             if (!serieFile.exists()) {
                 serieFile.createNewFile();
             }
@@ -298,7 +298,7 @@ public class Conexion {
         }
     }
 
-
+    // Método para guardar la imagen de una serie en la caché
     private void guardarImagenSerie(Serie serie) {
         if (serie.getImage() == null || serie.getImage().getMedium().isBlank()) {
             return;
@@ -309,9 +309,7 @@ public class Conexion {
             HttpRequest request = HttpRequest.newBuilder()
                     .uri(URI.create(imageUrl))
                     .build();
-
             HttpResponse<InputStream> response = client.send(request, HttpResponse.BodyHandlers.ofInputStream());
-
             if (response.statusCode() == 200) {
                 try (InputStream inputStream = response.body();
                      FileOutputStream outputStream = new FileOutputStream(checkCache(serie.getName()) + "\\image.jpg")) {

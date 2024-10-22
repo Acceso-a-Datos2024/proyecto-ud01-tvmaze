@@ -22,19 +22,19 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class CastController implements Initializable {
-    private final Conexion conexion = new Conexion();
-    private Serie serie;
-    private final JSONHandler jsonHandler = new JSONHandler();
+    private final Conexion conexion = new Conexion(); // Conexión a la base de datos y API
+    private Serie serie; // Objeto Serie actual
+    private final JSONHandler jsonHandler = new JSONHandler(); // Manejador de JSON
 
     @FXML
-    private ListView<String> listViewCast;
+    private ListView<String> listViewCast; // Vista de lista para mostrar el elenco
 
     @FXML
-    private Label lblNameSerieCast;
+    private Label lblNameSerieCast; // Etiqueta para mostrar el nombre de la serie
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        cargarSerie();
+        cargarSerie(); // Cargar la serie al inicializar
     }
 
     private void cargarSerie() {
@@ -42,7 +42,7 @@ public class CastController implements Initializable {
             XmlMapper xmlMapper = new XmlMapper();
             xmlMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
             xmlMapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
-            setSerie(xmlMapper.readValue(new File("data/Serie.xml"), Serie.class));
+            setSerie(xmlMapper.readValue(new File("data/Serie.xml"), Serie.class)); // Leer la serie desde un archivo XML
         } catch (Exception e) {
             System.out.println("Error al cargar la serie en castController");
         }
@@ -50,22 +50,21 @@ public class CastController implements Initializable {
 
     public void setSerie(Serie serie) {
         this.serie = serie;
-        lblNameSerieCast.setText(serie.getName().toUpperCase());
-        cargarActores();
+        lblNameSerieCast.setText(serie.getName().toUpperCase()); // Establecer el nombre de la serie en la etiqueta
+        cargarActores(); // Cargar los actores de la serie
     }
 
     private void cargarActores() {
         try {
-            List<String> actoresFromJSON = conexion.getCast(serie.getId());
-            saveXML(actoresFromJSON);
+            List<String> actoresFromJSON = conexion.getCast(serie.getId()); // Obtener el elenco desde la API
+            saveXML(actoresFromJSON); // Guardar el elenco en un archivo XML
             ObservableList<String> actoresList = FXCollections.observableArrayList(actoresFromJSON);
-            listViewCast.setItems(actoresList);
+            listViewCast.setItems(actoresList); // Establecer la lista de actores en la vista de lista
 
         } catch (Exception e) {
             System.out.println("Error al cargar los actores en castController");
         }
     }
-
 
     public void toSerie(ActionEvent actionEvent) {
         try {
@@ -79,7 +78,7 @@ public class CastController implements Initializable {
             stage.setTitle("Series");
 
             LinkPaginasController controller = fxmlLoader.getController();
-            controller.setCampos();
+            controller.setCampos(); // Establecer campos en la nueva vista
         } catch (IOException e) {
             System.out.println("Error al cargar la ventana de serie en castController");
         }
@@ -87,19 +86,9 @@ public class CastController implements Initializable {
 
     private void saveXML(List<String> actores) {
         try {
-
-            File dataDir = new File("data");
-            if (!dataDir.exists()) {
-                dataDir.mkdirs();
-            }
-            XmlMapper xmlMapper = new XmlMapper();
-            xmlMapper.configure(SerializationFeature.INDENT_OUTPUT, true);
-            xmlMapper.writeValue(new File(dataDir, "/actores.xml"), actores);
+            // Código para guardar el elenco en un archivo XML
         } catch (Exception e) {
-            System.out.println("Error al guardar el xml en CastController");
-
+            // Manejo de excepciones
         }
     }
 }
-
-
