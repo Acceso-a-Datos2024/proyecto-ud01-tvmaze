@@ -3,7 +3,4 @@
 /data/*.xml
 /data/cache/
 /target/
-/data/exportaciones/XML/*
-/data/exportaciones/BIN/*
-/data/exportaciones/JSON/*
-/data/exportaciones/TXT/*
+/data/exportaciones/

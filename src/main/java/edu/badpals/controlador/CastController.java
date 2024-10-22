@@ -86,9 +86,15 @@ public class CastController implements Initializable {
 
     private void saveXML(List<String> actores) {
         try {
-            // Código para guardar el elenco en un archivo XML
+            File dataDir = new File("data");
+            if (!dataDir.exists()) {
+                dataDir.mkdirs();
+            }
+            XmlMapper xmlMapper = new XmlMapper();
+            xmlMapper.configure(SerializationFeature.INDENT_OUTPUT, true);
+            xmlMapper.writeValue(new File(dataDir, "/actores.xml"), actores); // Guardar el elenco en un archivo XML
         } catch (Exception e) {
-            // Manejo de excepciones
+            System.out.println("Error al guardar el xml en CastController");
         }
     }
 }

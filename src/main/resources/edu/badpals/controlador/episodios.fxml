@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:id="panEpisodios" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #669CE3;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.badpals.controlador.EpisodiosController">
+<Pane fx:id="panEpisodios" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #669CE3;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="edu.badpals.controlador.EpisodiosController">
     <children>
         <Button fx:id="btnVolverMenu" alignment="CENTER" contentDisplay="CENTER" layoutX="1429.0" layoutY="849.0" mnemonicParsing="false" onAction="#toSerie" prefHeight="32.0" prefWidth="119.0" style="-fx-background-color: #6675E3; -fx-text-fill: black; -fx-border-color: black; -fx-border-width: 1px; -fx-border-radius: 5px; -fx-background-radius: 5px;" text="Volver al menú" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS">
             <font>

@@ -41,32 +41,37 @@ public class ExportacionController implements Initializable {
         }
     }
 
+    // Método auxiliar para preparar el directorio de exportación y validar la ruta
+    private boolean prepareExportDirectory(String subDir, String extension) {
+        File exportaciones = new File("data/exportaciones");
+        File subDirectory = new File("data/exportaciones/" + subDir);
+        if (!exportaciones.exists()) {
+            exportaciones.mkdir(); // Crear directorio de exportaciones si no existe
+        }
+        if (!subDirectory.exists()) {
+            subDirectory.mkdir(); // Crear subdirectorio si no existe
+        }
+        if (txtRuta.getText().contains(".")) {
+            this.txtRuta.setText("Sin extension PALETO");
+            return false;
+        }
+        File outputFile = new File(subDirectory, txtRuta.getText() + extension);
+        if (outputFile.isDirectory()) {
+            this.txtRuta.setText("The specified path is a directory, not a file: " + txtRuta.getText());
+            return false;
+        }
+        if (!outputFile.getParentFile().canWrite()) {
+            this.txtRuta.setText("Cannot write to the specified directory: " + outputFile.getParent());
+            return false;
+        }
+        return true;
+    }
+
     // Método para exportar episodios a XML
-    public void toXML(ActionEvent actionEvent){
+    public void toXML(ActionEvent actionEvent) {
+        if (!prepareExportDirectory("XML", ".xml")) return;
         try {
             File outputFile = new File("data/exportaciones/XML/" + txtRuta.getText() + ".xml");
-            File exportaciones = new File("data/exportaciones");
-            File txt = new File("data/exportaciones/XML");
-            if(!exportaciones.exists()){
-                exportaciones.mkdir(); // Crear directorio de exportaciones si no existe
-            }
-            if(!txt.exists()){
-                txt.mkdir(); // Crear directorio XML si no existe
-            }
-            if(txtRuta.getText().contains(".")){
-                this.txtRuta.setText("Sin extension PALETO");
-                return;
-            }
-            if (outputFile.isDirectory()) {
-                this.txtRuta.setText("The specified path is a directory, not a file: " + txtRuta.getText());
-                return;
-            }
-
-            if (!outputFile.getParentFile().canWrite()) {
-                this.txtRuta.setText("Cannot write to the specified directory: " + outputFile.getParent());
-                return;
-            }
-
             Transformer transformer = TransformerFactory.newInstance().newTransformer();
             transformer.setOutputProperty(OutputKeys.INDENT, "yes");
             transformer.transform(new DOMSource(JSONHandler.episodiosToXML(this.episodios)), new StreamResult(outputFile));
@@ -76,33 +81,12 @@ public class ExportacionController implements Initializable {
     }
 
     // Método para exportar episodios a TXT
-    public void toTXT(ActionEvent actionEvent){
+    public void toTXT(ActionEvent actionEvent) {
+        if (!prepareExportDirectory("TXT", ".txt")) return;
         try {
             File outputFile = new File("data/exportaciones/TXT/" + txtRuta.getText() + ".txt");
-            File exportaciones = new File("data/exportaciones");
-            File txt = new File("data/exportaciones/TXT");
-            if(!exportaciones.exists()){
-                exportaciones.mkdir(); // Crear directorio de exportaciones si no existe
-            }
-            if(!txt.exists()){
-                txt.mkdir(); // Crear directorio TXT si no existe
-            }
-            if(txtRuta.getText().contains(".")){
-                this.txtRuta.setText("Sin extension PALETO");
-                return;
-            }
-            if (outputFile.isDirectory()) {
-                this.txtRuta.setText("The specified path is a directory, not a file: " + txtRuta.getText());
-                return;
-            }
-
-            if (!outputFile.getParentFile().canWrite()) {
-                this.txtRuta.setText("Cannot write to the specified directory: " + outputFile.getParent());
-                return;
-            }
-
-            for (Episodio episodio: this.episodios){
-                JSONHandler.EscritorFile(episodio.toString(),outputFile); // Escribir episodios en archivo TXT
+            for (Episodio episodio : this.episodios) {
+                JSONHandler.EscritorFile(episodio.toString(), outputFile); // Escribir episodios en archivo TXT
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -111,30 +95,9 @@ public class ExportacionController implements Initializable {
 
     // Método para exportar episodios a JSON
     public void toJSON(ActionEvent actionEvent) {
+        if (!prepareExportDirectory("JSON", ".json")) return;
         try {
             File outputFile = new File("data/exportaciones/JSON/" + txtRuta.getText() + ".json");
-            File exportaciones = new File("data/exportaciones");
-            File json = new File("data/exportaciones/JSON");
-            if(!exportaciones.exists()){
-                exportaciones.mkdir(); // Crear directorio de exportaciones si no existe
-            }
-            if(!json.exists()){
-                json.mkdir(); // Crear directorio JSON si no existe
-            }
-            if (txtRuta.getText().contains(".")) {
-                this.txtRuta.setText("Sin extension PALETO");
-                return;
-            }
-            if (outputFile.isDirectory()) {
-                this.txtRuta.setText("The specified path is a directory, not a file: " + txtRuta.getText());
-                return;
-            }
-
-            if (!outputFile.getParentFile().canWrite()) {
-                this.txtRuta.setText("Cannot write to the specified directory: " + outputFile.getParent());
-                return;
-            }
-
             ObjectMapper objectMapper = new ObjectMapper();
             objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
             objectMapper.writeValue(outputFile, this.episodios); // Escribir episodios en archivo JSON
@@ -144,33 +107,12 @@ public class ExportacionController implements Initializable {
     }
 
     // Método para exportar episodios a BIN
-    public void toBIN(ActionEvent actionEvent){
+    public void toBIN(ActionEvent actionEvent) {
+        if (!prepareExportDirectory("BIN", ".bin")) return;
         try {
             File outputFile = new File("data/exportaciones/BIN/" + txtRuta.getText() + ".bin");
-            File exportaciones = new File("data/exportaciones");
-            File bin = new File("data/exportaciones/BIN");
-            if(!exportaciones.exists()){
-                exportaciones.mkdir(); // Crear directorio de exportaciones si no existe
-            }
-            if(!bin.exists()){
-                bin.mkdir(); // Crear directorio BIN si no existe
-            }
-            if(txtRuta.getText().contains(".")){
-                this.txtRuta.setText("Sin extension PALETO");
-                return;
-            }
-            if (outputFile.isDirectory()) {
-                this.txtRuta.setText("The specified path is a directory, not a file: " + txtRuta.getText());
-                return;
-            }
-
-            if (!outputFile.getParentFile().canWrite()) {
-                this.txtRuta.setText("Cannot write to the specified directory: " + outputFile.getParent());
-                return;
-            }
-
-            for (Episodio episodio: this.episodios){
-                JSONHandler.EscritorObjects(episodio,outputFile); // Escribir episodios en archivo BIN
+            for (Episodio episodio : this.episodios) {
+                JSONHandler.EscritorObjects(episodio, outputFile); // Escribir episodios en archivo BIN
             }
         } catch (Exception e) {
             e.printStackTrace();
