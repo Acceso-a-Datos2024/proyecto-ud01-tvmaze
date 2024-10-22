@@ -278,7 +278,7 @@ git --version
 # Extras Realizados
 1. **Ordenación de resultados** de las consultas y almacenaje de los datos.
 - Las series aparecen ordenadas por temporada y número de episodio.
-2. **Control de errores (errores de ficheros, consultas sin resultados...).
+2. **Control de errores** (errores de ficheros, consultas sin resultados...).
 - Se muestran mensajes de error si no se encuentran resultados o si hay problemas con los ficheros.
 - Se manejan excepciones para evitar fallos en la aplicación.
 - Si el usuario introduce credenciales incorrectas, se muestra un mensaje de error.
