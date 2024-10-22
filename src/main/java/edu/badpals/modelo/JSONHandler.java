@@ -1,8 +1,8 @@
-package edu.badpals.controlador;
+package edu.badpals.modelo;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import edu.badpals.modelo.*;
+import edu.badpals.controlador.LinkPaginasController;
 import org.jdom2.input.SAXBuilder;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;

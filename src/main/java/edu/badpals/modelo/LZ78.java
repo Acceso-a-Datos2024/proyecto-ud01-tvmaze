@@ -1,4 +1,4 @@
-package edu.badpals.controlador;
+package edu.badpals.modelo;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -12,7 +12,7 @@ public class LZ78 {
         List<DictionaryEntry> entries = new ArrayList<>();
         // Iterar sobre los datos codificados en pasos de 2
         for (int i = 0; i < encodedData.length(); i += 2) {
-            int index = Character.getNumericValue(encodedData.charAt(i));
+            int index = java.lang.Character.getNumericValue(encodedData.charAt(i));
             char character = encodedData.charAt(i + 1);
             entries.add(new DictionaryEntry(index, character));
         }

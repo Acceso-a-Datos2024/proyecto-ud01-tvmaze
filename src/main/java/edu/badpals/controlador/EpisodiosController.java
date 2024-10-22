@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import edu.badpals.modelo.Episodio;
+import edu.badpals.modelo.JSONHandler;
 import edu.badpals.modelo.Serie;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

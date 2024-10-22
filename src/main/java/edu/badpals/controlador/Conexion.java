@@ -1,6 +1,7 @@
 package edu.badpals.controlador;
 
 import edu.badpals.modelo.Episodio;
+import edu.badpals.modelo.JSONHandler;
 import edu.badpals.modelo.Serie;
 
 import javax.xml.transform.OutputKeys;

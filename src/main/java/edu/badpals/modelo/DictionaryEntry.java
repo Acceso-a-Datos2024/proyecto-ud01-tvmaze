@@ -1,4 +1,4 @@
-package edu.badpals.controlador;
+package edu.badpals.modelo;
 
 public class DictionaryEntry {
     public final int index;

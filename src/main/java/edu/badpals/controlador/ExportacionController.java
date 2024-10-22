@@ -3,6 +3,7 @@ package edu.badpals.controlador;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import edu.badpals.modelo.Episodio;
+import edu.badpals.modelo.JSONHandler;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

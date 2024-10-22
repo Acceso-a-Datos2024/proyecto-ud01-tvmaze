@@ -1,5 +1,6 @@
 package edu.badpals.controlador;
 
+import edu.badpals.modelo.JSONHandler;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
